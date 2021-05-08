@@ -30,7 +30,7 @@ println(currency.symbol) // £
 Information was taken from [here](https://github.com/mhs/world-currencies/blob/master/currencies.json), so please go and
 start that repo
 
-[badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/live-core/0.0.30?style=flat
+[badge-maven]: https://img.shields.io/maven-central/v/tz.co.asoft/kash-core/0.0.10?style=flat
 
 [badge-mpp]: https://img.shields.io/badge/kotlin-multiplatform-blue?style=flat
 
