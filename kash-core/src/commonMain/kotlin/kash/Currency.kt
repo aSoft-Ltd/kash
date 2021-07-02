@@ -2,7 +2,10 @@
 
 package kash
 
+import kotlin.jvm.JvmSynthetic
+
 enum class Currency(val symbol: String, val details: String,val lowestDenomination: UShort) {
+
 	/**UAE dirham*/
 	AED("د.إ;","UAE dirham",100u),
 
@@ -469,6 +472,13 @@ enum class Currency(val symbol: String, val details: String,val lowestDenominati
 	ZMK("ZK","Zambian kwacha",100u),
 
 	/**Zimbabwean dollar*/
-	ZWR("Z$","Zimbabwean dollar",100u),
+	ZWR("Z$","Zimbabwean dollar",100u);
 
+    fun of(amount: UInt) = Money((amount * lowestDenomination).toULong(), this)
+    fun of(amount: ULong) = Money((amount * lowestDenomination).toULong(), this)
+    fun of(amount: Double) = Money((amount * lowestDenomination.toShort()).toULong(), this)
+    @JvmSynthetic
+    fun of(amount: Int) = Money((amount * lowestDenomination.toShort()).toULong(), this)
+    @JvmSynthetic
+    fun of(amount: Long) = Money((amount * lowestDenomination.toShort()).toULong(), this)
 }

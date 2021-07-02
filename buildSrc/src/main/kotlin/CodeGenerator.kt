@@ -39,17 +39,35 @@ open class CodeGenerator : DefaultTask() {
             
             package $packageName
             
+            import kotlin.jvm.JvmSynthetic
+            
             enum class $className(val symbol: String, val details: String,val lowestDenomination: UShort) {${"\n"}
         """.trimIndent()
         )
 
+        output.appendText("\n")
         for (entry in currencies) {
             val name = entry["name"]
             output.appendText("\t/**$name*/\n")
-            output.appendText("""${"\t"}${entry["cc"]}("${symbol(entry["symbol"]!!)}","$name",${entry["lowestDenomination"]}u),${"\n\n"}""")
+            output.appendText("""${"\t"}${entry["cc"]}("${symbol(entry["symbol"]!!)}","$name",${entry["lowestDenomination"]}u)""")
+            output.appendText(if (currencies.last() == entry) ";" else ",")
+            output.appendText("\n\n")
         }
-
-        output.appendText("}")
+        output.appendText(listOf("UInt", "ULong", "Double").joinToString("\n") { type ->
+            val multiplier = "lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
+            """
+            |    fun of(amount: $type) = Money((amount * $multiplier).toULong(), this)
+            """.trimMargin()
+        })
+        output.appendText("\n")
+        output.appendText(listOf("Int", "Long").joinToString("\n") { type ->
+            val multiplier = "lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
+            """
+            |    @JvmSynthetic
+            |    fun of(amount: $type) = Money((amount * $multiplier).toULong(), this)
+            """.trimMargin()
+        })
+        output.appendText("\n}")
 
         return currencies
     }
@@ -66,22 +84,79 @@ open class CodeGenerator : DefaultTask() {
             import kotlinx.serialization.Serializable
             import kotlinx.serialization.UseSerializers
             import kotlinx.serialization.builtins.LongAsStringSerializer
+            import kotlin.jvm.JvmStatic
+            import kotlin.jvm.JvmSynthetic
+            import kotlin.math.floor
 
             @Serializable
-            data class Money(
+            data class Money internal constructor(
                 /** In the lowest denomination */
                 val amount: ULong,
                 val currency: $className
             ) {
+               
+                companion object {
+            ${
+                listOf("UInt", "ULong", "Double").joinToString("\n") { type ->
+                    val multiplier = "currency.lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
+                    """
+                    @JvmStatic
+                    fun of(amount: $type, currency: $className) = Money((amount * $multiplier).toULong(), currency)
+                   """
+                }
+            }
+            
+             ${
+                listOf("Int", "Long").joinToString("\n") { type ->
+                    val multiplier = "currency.lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
+                    """
+                    @JvmStatic
+                    @JvmSynthetic
+                    fun of(amount: $type, currency: $className) = Money((amount * $multiplier).toULong(), currency)
+                   """
+                }
+            }
+                }
                 val readableValue get() = amount.toDouble() / currency.lowestDenomination.toDouble()
                 
-                val readableString get() = "${"$"}{currency.name} ${"$"}readableValue"
+                   val readableString
+        get() = (currency.name + " " + if (readableValue - floor(readableValue) == 0.0) "${"$"}readableValue.0" else readableValue).replace(
+            ".0.0",
+            ".0"
+        )
             }
         """.trimIndent()
         )
     }
 
-    fun generateUtils(currencyNames: List<Map<String, String>>) {
+    fun generateMoneyBuilder(currencyNames: List<Map<String, String>>) {
+        val output = File(outputDir, "MoneyBuilders.kt")
+        if (!output.exists()) output.createNewFile()
+        output.writeText(
+            """
+            @file:JvmName("MoneyBuilders")
+            @file:Suppress("unused")
+            
+            package $packageName${"\n"}
+            
+            import kotlin.jvm.JvmName${"\n\n"}
+        """.trimIndent()
+        )
+        for (curr in currencyNames) {
+            val name = curr["cc"]
+            for (type in listOf("Double", "UInt", "ULong")) {
+                output.appendText(
+                    """
+                    /**${curr["name"]}*/
+                    fun $name(amount: $type) = Money.of(amount, $className.$name)${"\n"}
+                """.trimIndent()
+                )
+            }
+            output.appendText("\n")
+        }
+    }
+
+    fun generateKashUtils(currencyNames: List<Map<String, String>>) {
         val output = File(outputDir, "KashUtils.kt")
         if (!output.exists()) output.createNewFile()
         output.writeText(
@@ -93,17 +168,11 @@ open class CodeGenerator : DefaultTask() {
         )
         for (curr in currencyNames) {
             val name = curr["cc"]
-            val denom = curr["lowestDenomination"]
-            for (type in listOf("Int", "Long", "Double", "UInt", "ULong")) {
-                val convetor = when (type) {
-                    "Int", "Long", "UInt" -> "toULong() * ${denom}u"
-                    "ULong" -> "this * ${denom}u"
-                    else -> "(toDouble() * $denom).toULong()"
-                }
+            for (type in listOf("Double", "UInt", "ULong", "Int", "Long")) {
                 output.appendText(
                     """
                     /**${curr["name"]}*/
-                    inline val $type.$name get() = Money($convetor, $className.$name)${"\n"}
+                    inline val $type.$name get() = Money.of(this, $className.$name)${"\n"}
                 """.trimIndent()
                 )
             }
@@ -115,7 +184,8 @@ open class CodeGenerator : DefaultTask() {
     fun execute() {
         val currencies = generateCurrencies()
         generateMoney()
-        generateUtils(currencies)
+        generateKashUtils(currencies)
+        generateMoneyBuilder(currencies)
     }
 
     private fun symbol(input: String): String {
