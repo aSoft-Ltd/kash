@@ -3,20 +3,30 @@ plugins {
     kotlin("plugin.serialization")
     id("tz.co.asoft.library")
     id("io.codearte.nexus-staging")
-    id("dev.zacsweers.kgp-150-leak-patcher") version "1.0.1"
     signing
 }
 
 kotlin {
-    jvm { library() }
+    jvm {
+        library();
+        withJava();
+    }
     js(IR) { library() }
-    macosX64 { }
-    ios()
-    tvos()
-    watchos()
-    linuxArm64()
-    linuxArm32Hfp()
-    linuxX64()
+    val darwinTargets = listOf(
+        macosX64(),
+        iosArm64(),
+        iosArm32(),// comment this out if IDEA can't resolve source sets
+        iosX64(),
+        watchosArm32(),
+        watchosArm64(),
+        watchosX86(), // comment this out if IDEA can't resolve source sets
+        tvosArm64(),
+        tvosX64()
+    )
+
+    val linuxTargets = listOf(
+        linuxX64()
+    )
 
     sourceSets {
         val commonMain by getting {

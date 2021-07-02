@@ -3,1718 +3,1718 @@
 package kash
 
 /**UAE dirham*/
-inline val Int.AED get() = Money(toULong() * 100u, Currency.AED)
+inline val Double.AED get() = Money.of(this, Currency.AED)
 /**UAE dirham*/
-inline val Long.AED get() = Money(toULong() * 100u, Currency.AED)
+inline val UInt.AED get() = Money.of(this, Currency.AED)
 /**UAE dirham*/
-inline val Double.AED get() = Money((toDouble() * 100).toULong(), Currency.AED)
+inline val ULong.AED get() = Money.of(this, Currency.AED)
 /**UAE dirham*/
-inline val UInt.AED get() = Money(toULong() * 100u, Currency.AED)
+inline val Int.AED get() = Money.of(this, Currency.AED)
 /**UAE dirham*/
-inline val ULong.AED get() = Money(this * 100u, Currency.AED)
+inline val Long.AED get() = Money.of(this, Currency.AED)
 
 /**Afghan afghani*/
-inline val Int.AFN get() = Money(toULong() * 100u, Currency.AFN)
+inline val Double.AFN get() = Money.of(this, Currency.AFN)
 /**Afghan afghani*/
-inline val Long.AFN get() = Money(toULong() * 100u, Currency.AFN)
+inline val UInt.AFN get() = Money.of(this, Currency.AFN)
 /**Afghan afghani*/
-inline val Double.AFN get() = Money((toDouble() * 100).toULong(), Currency.AFN)
+inline val ULong.AFN get() = Money.of(this, Currency.AFN)
 /**Afghan afghani*/
-inline val UInt.AFN get() = Money(toULong() * 100u, Currency.AFN)
+inline val Int.AFN get() = Money.of(this, Currency.AFN)
 /**Afghan afghani*/
-inline val ULong.AFN get() = Money(this * 100u, Currency.AFN)
+inline val Long.AFN get() = Money.of(this, Currency.AFN)
 
 /**Albanian lek*/
-inline val Int.ALL get() = Money(toULong() * 100u, Currency.ALL)
+inline val Double.ALL get() = Money.of(this, Currency.ALL)
 /**Albanian lek*/
-inline val Long.ALL get() = Money(toULong() * 100u, Currency.ALL)
+inline val UInt.ALL get() = Money.of(this, Currency.ALL)
 /**Albanian lek*/
-inline val Double.ALL get() = Money((toDouble() * 100).toULong(), Currency.ALL)
+inline val ULong.ALL get() = Money.of(this, Currency.ALL)
 /**Albanian lek*/
-inline val UInt.ALL get() = Money(toULong() * 100u, Currency.ALL)
+inline val Int.ALL get() = Money.of(this, Currency.ALL)
 /**Albanian lek*/
-inline val ULong.ALL get() = Money(this * 100u, Currency.ALL)
+inline val Long.ALL get() = Money.of(this, Currency.ALL)
 
 /**Armenian dram*/
-inline val Int.AMD get() = Money(toULong() * 100u, Currency.AMD)
+inline val Double.AMD get() = Money.of(this, Currency.AMD)
 /**Armenian dram*/
-inline val Long.AMD get() = Money(toULong() * 100u, Currency.AMD)
+inline val UInt.AMD get() = Money.of(this, Currency.AMD)
 /**Armenian dram*/
-inline val Double.AMD get() = Money((toDouble() * 100).toULong(), Currency.AMD)
+inline val ULong.AMD get() = Money.of(this, Currency.AMD)
 /**Armenian dram*/
-inline val UInt.AMD get() = Money(toULong() * 100u, Currency.AMD)
+inline val Int.AMD get() = Money.of(this, Currency.AMD)
 /**Armenian dram*/
-inline val ULong.AMD get() = Money(this * 100u, Currency.AMD)
+inline val Long.AMD get() = Money.of(this, Currency.AMD)
 
 /**Netherlands Antillean gulden*/
-inline val Int.ANG get() = Money(toULong() * 100u, Currency.ANG)
+inline val Double.ANG get() = Money.of(this, Currency.ANG)
 /**Netherlands Antillean gulden*/
-inline val Long.ANG get() = Money(toULong() * 100u, Currency.ANG)
+inline val UInt.ANG get() = Money.of(this, Currency.ANG)
 /**Netherlands Antillean gulden*/
-inline val Double.ANG get() = Money((toDouble() * 100).toULong(), Currency.ANG)
+inline val ULong.ANG get() = Money.of(this, Currency.ANG)
 /**Netherlands Antillean gulden*/
-inline val UInt.ANG get() = Money(toULong() * 100u, Currency.ANG)
+inline val Int.ANG get() = Money.of(this, Currency.ANG)
 /**Netherlands Antillean gulden*/
-inline val ULong.ANG get() = Money(this * 100u, Currency.ANG)
+inline val Long.ANG get() = Money.of(this, Currency.ANG)
 
 /**Angolan kwanza*/
-inline val Int.AOA get() = Money(toULong() * 100u, Currency.AOA)
+inline val Double.AOA get() = Money.of(this, Currency.AOA)
 /**Angolan kwanza*/
-inline val Long.AOA get() = Money(toULong() * 100u, Currency.AOA)
+inline val UInt.AOA get() = Money.of(this, Currency.AOA)
 /**Angolan kwanza*/
-inline val Double.AOA get() = Money((toDouble() * 100).toULong(), Currency.AOA)
+inline val ULong.AOA get() = Money.of(this, Currency.AOA)
 /**Angolan kwanza*/
-inline val UInt.AOA get() = Money(toULong() * 100u, Currency.AOA)
+inline val Int.AOA get() = Money.of(this, Currency.AOA)
 /**Angolan kwanza*/
-inline val ULong.AOA get() = Money(this * 100u, Currency.AOA)
+inline val Long.AOA get() = Money.of(this, Currency.AOA)
 
 /**Argentine peso*/
-inline val Int.ARS get() = Money(toULong() * 100u, Currency.ARS)
+inline val Double.ARS get() = Money.of(this, Currency.ARS)
 /**Argentine peso*/
-inline val Long.ARS get() = Money(toULong() * 100u, Currency.ARS)
+inline val UInt.ARS get() = Money.of(this, Currency.ARS)
 /**Argentine peso*/
-inline val Double.ARS get() = Money((toDouble() * 100).toULong(), Currency.ARS)
+inline val ULong.ARS get() = Money.of(this, Currency.ARS)
 /**Argentine peso*/
-inline val UInt.ARS get() = Money(toULong() * 100u, Currency.ARS)
+inline val Int.ARS get() = Money.of(this, Currency.ARS)
 /**Argentine peso*/
-inline val ULong.ARS get() = Money(this * 100u, Currency.ARS)
+inline val Long.ARS get() = Money.of(this, Currency.ARS)
 
 /**Australian dollar*/
-inline val Int.AUD get() = Money(toULong() * 100u, Currency.AUD)
+inline val Double.AUD get() = Money.of(this, Currency.AUD)
 /**Australian dollar*/
-inline val Long.AUD get() = Money(toULong() * 100u, Currency.AUD)
+inline val UInt.AUD get() = Money.of(this, Currency.AUD)
 /**Australian dollar*/
-inline val Double.AUD get() = Money((toDouble() * 100).toULong(), Currency.AUD)
+inline val ULong.AUD get() = Money.of(this, Currency.AUD)
 /**Australian dollar*/
-inline val UInt.AUD get() = Money(toULong() * 100u, Currency.AUD)
+inline val Int.AUD get() = Money.of(this, Currency.AUD)
 /**Australian dollar*/
-inline val ULong.AUD get() = Money(this * 100u, Currency.AUD)
+inline val Long.AUD get() = Money.of(this, Currency.AUD)
 
 /**Aruban florin*/
-inline val Int.AWG get() = Money(toULong() * 100u, Currency.AWG)
+inline val Double.AWG get() = Money.of(this, Currency.AWG)
 /**Aruban florin*/
-inline val Long.AWG get() = Money(toULong() * 100u, Currency.AWG)
+inline val UInt.AWG get() = Money.of(this, Currency.AWG)
 /**Aruban florin*/
-inline val Double.AWG get() = Money((toDouble() * 100).toULong(), Currency.AWG)
+inline val ULong.AWG get() = Money.of(this, Currency.AWG)
 /**Aruban florin*/
-inline val UInt.AWG get() = Money(toULong() * 100u, Currency.AWG)
+inline val Int.AWG get() = Money.of(this, Currency.AWG)
 /**Aruban florin*/
-inline val ULong.AWG get() = Money(this * 100u, Currency.AWG)
+inline val Long.AWG get() = Money.of(this, Currency.AWG)
 
 /**Azerbaijani manat*/
-inline val Int.AZN get() = Money(toULong() * 100u, Currency.AZN)
+inline val Double.AZN get() = Money.of(this, Currency.AZN)
 /**Azerbaijani manat*/
-inline val Long.AZN get() = Money(toULong() * 100u, Currency.AZN)
+inline val UInt.AZN get() = Money.of(this, Currency.AZN)
 /**Azerbaijani manat*/
-inline val Double.AZN get() = Money((toDouble() * 100).toULong(), Currency.AZN)
+inline val ULong.AZN get() = Money.of(this, Currency.AZN)
 /**Azerbaijani manat*/
-inline val UInt.AZN get() = Money(toULong() * 100u, Currency.AZN)
+inline val Int.AZN get() = Money.of(this, Currency.AZN)
 /**Azerbaijani manat*/
-inline val ULong.AZN get() = Money(this * 100u, Currency.AZN)
+inline val Long.AZN get() = Money.of(this, Currency.AZN)
 
 /**Bosnia and Herzegovina konvertibilna marka*/
-inline val Int.BAM get() = Money(toULong() * 100u, Currency.BAM)
+inline val Double.BAM get() = Money.of(this, Currency.BAM)
 /**Bosnia and Herzegovina konvertibilna marka*/
-inline val Long.BAM get() = Money(toULong() * 100u, Currency.BAM)
+inline val UInt.BAM get() = Money.of(this, Currency.BAM)
 /**Bosnia and Herzegovina konvertibilna marka*/
-inline val Double.BAM get() = Money((toDouble() * 100).toULong(), Currency.BAM)
+inline val ULong.BAM get() = Money.of(this, Currency.BAM)
 /**Bosnia and Herzegovina konvertibilna marka*/
-inline val UInt.BAM get() = Money(toULong() * 100u, Currency.BAM)
+inline val Int.BAM get() = Money.of(this, Currency.BAM)
 /**Bosnia and Herzegovina konvertibilna marka*/
-inline val ULong.BAM get() = Money(this * 100u, Currency.BAM)
+inline val Long.BAM get() = Money.of(this, Currency.BAM)
 
 /**Barbadian dollar*/
-inline val Int.BBD get() = Money(toULong() * 100u, Currency.BBD)
+inline val Double.BBD get() = Money.of(this, Currency.BBD)
 /**Barbadian dollar*/
-inline val Long.BBD get() = Money(toULong() * 100u, Currency.BBD)
+inline val UInt.BBD get() = Money.of(this, Currency.BBD)
 /**Barbadian dollar*/
-inline val Double.BBD get() = Money((toDouble() * 100).toULong(), Currency.BBD)
+inline val ULong.BBD get() = Money.of(this, Currency.BBD)
 /**Barbadian dollar*/
-inline val UInt.BBD get() = Money(toULong() * 100u, Currency.BBD)
+inline val Int.BBD get() = Money.of(this, Currency.BBD)
 /**Barbadian dollar*/
-inline val ULong.BBD get() = Money(this * 100u, Currency.BBD)
+inline val Long.BBD get() = Money.of(this, Currency.BBD)
 
 /**Bangladeshi taka*/
-inline val Int.BDT get() = Money(toULong() * 100u, Currency.BDT)
+inline val Double.BDT get() = Money.of(this, Currency.BDT)
 /**Bangladeshi taka*/
-inline val Long.BDT get() = Money(toULong() * 100u, Currency.BDT)
+inline val UInt.BDT get() = Money.of(this, Currency.BDT)
 /**Bangladeshi taka*/
-inline val Double.BDT get() = Money((toDouble() * 100).toULong(), Currency.BDT)
+inline val ULong.BDT get() = Money.of(this, Currency.BDT)
 /**Bangladeshi taka*/
-inline val UInt.BDT get() = Money(toULong() * 100u, Currency.BDT)
+inline val Int.BDT get() = Money.of(this, Currency.BDT)
 /**Bangladeshi taka*/
-inline val ULong.BDT get() = Money(this * 100u, Currency.BDT)
+inline val Long.BDT get() = Money.of(this, Currency.BDT)
 
 /**Bulgarian lev*/
-inline val Int.BGN get() = Money(toULong() * 100u, Currency.BGN)
+inline val Double.BGN get() = Money.of(this, Currency.BGN)
 /**Bulgarian lev*/
-inline val Long.BGN get() = Money(toULong() * 100u, Currency.BGN)
+inline val UInt.BGN get() = Money.of(this, Currency.BGN)
 /**Bulgarian lev*/
-inline val Double.BGN get() = Money((toDouble() * 100).toULong(), Currency.BGN)
+inline val ULong.BGN get() = Money.of(this, Currency.BGN)
 /**Bulgarian lev*/
-inline val UInt.BGN get() = Money(toULong() * 100u, Currency.BGN)
+inline val Int.BGN get() = Money.of(this, Currency.BGN)
 /**Bulgarian lev*/
-inline val ULong.BGN get() = Money(this * 100u, Currency.BGN)
+inline val Long.BGN get() = Money.of(this, Currency.BGN)
 
 /**Bahraini dinar*/
-inline val Int.BHD get() = Money(toULong() * 100u, Currency.BHD)
+inline val Double.BHD get() = Money.of(this, Currency.BHD)
 /**Bahraini dinar*/
-inline val Long.BHD get() = Money(toULong() * 100u, Currency.BHD)
+inline val UInt.BHD get() = Money.of(this, Currency.BHD)
 /**Bahraini dinar*/
-inline val Double.BHD get() = Money((toDouble() * 100).toULong(), Currency.BHD)
+inline val ULong.BHD get() = Money.of(this, Currency.BHD)
 /**Bahraini dinar*/
-inline val UInt.BHD get() = Money(toULong() * 100u, Currency.BHD)
+inline val Int.BHD get() = Money.of(this, Currency.BHD)
 /**Bahraini dinar*/
-inline val ULong.BHD get() = Money(this * 100u, Currency.BHD)
+inline val Long.BHD get() = Money.of(this, Currency.BHD)
 
 /**Burundi franc*/
-inline val Int.BIF get() = Money(toULong() * 100u, Currency.BIF)
+inline val Double.BIF get() = Money.of(this, Currency.BIF)
 /**Burundi franc*/
-inline val Long.BIF get() = Money(toULong() * 100u, Currency.BIF)
+inline val UInt.BIF get() = Money.of(this, Currency.BIF)
 /**Burundi franc*/
-inline val Double.BIF get() = Money((toDouble() * 100).toULong(), Currency.BIF)
+inline val ULong.BIF get() = Money.of(this, Currency.BIF)
 /**Burundi franc*/
-inline val UInt.BIF get() = Money(toULong() * 100u, Currency.BIF)
+inline val Int.BIF get() = Money.of(this, Currency.BIF)
 /**Burundi franc*/
-inline val ULong.BIF get() = Money(this * 100u, Currency.BIF)
+inline val Long.BIF get() = Money.of(this, Currency.BIF)
 
 /**Bermudian dollar*/
-inline val Int.BMD get() = Money(toULong() * 100u, Currency.BMD)
+inline val Double.BMD get() = Money.of(this, Currency.BMD)
 /**Bermudian dollar*/
-inline val Long.BMD get() = Money(toULong() * 100u, Currency.BMD)
+inline val UInt.BMD get() = Money.of(this, Currency.BMD)
 /**Bermudian dollar*/
-inline val Double.BMD get() = Money((toDouble() * 100).toULong(), Currency.BMD)
+inline val ULong.BMD get() = Money.of(this, Currency.BMD)
 /**Bermudian dollar*/
-inline val UInt.BMD get() = Money(toULong() * 100u, Currency.BMD)
+inline val Int.BMD get() = Money.of(this, Currency.BMD)
 /**Bermudian dollar*/
-inline val ULong.BMD get() = Money(this * 100u, Currency.BMD)
+inline val Long.BMD get() = Money.of(this, Currency.BMD)
 
 /**Brunei dollar*/
-inline val Int.BND get() = Money(toULong() * 100u, Currency.BND)
+inline val Double.BND get() = Money.of(this, Currency.BND)
 /**Brunei dollar*/
-inline val Long.BND get() = Money(toULong() * 100u, Currency.BND)
+inline val UInt.BND get() = Money.of(this, Currency.BND)
 /**Brunei dollar*/
-inline val Double.BND get() = Money((toDouble() * 100).toULong(), Currency.BND)
+inline val ULong.BND get() = Money.of(this, Currency.BND)
 /**Brunei dollar*/
-inline val UInt.BND get() = Money(toULong() * 100u, Currency.BND)
+inline val Int.BND get() = Money.of(this, Currency.BND)
 /**Brunei dollar*/
-inline val ULong.BND get() = Money(this * 100u, Currency.BND)
+inline val Long.BND get() = Money.of(this, Currency.BND)
 
 /**Bolivian boliviano*/
-inline val Int.BOB get() = Money(toULong() * 100u, Currency.BOB)
+inline val Double.BOB get() = Money.of(this, Currency.BOB)
 /**Bolivian boliviano*/
-inline val Long.BOB get() = Money(toULong() * 100u, Currency.BOB)
+inline val UInt.BOB get() = Money.of(this, Currency.BOB)
 /**Bolivian boliviano*/
-inline val Double.BOB get() = Money((toDouble() * 100).toULong(), Currency.BOB)
+inline val ULong.BOB get() = Money.of(this, Currency.BOB)
 /**Bolivian boliviano*/
-inline val UInt.BOB get() = Money(toULong() * 100u, Currency.BOB)
+inline val Int.BOB get() = Money.of(this, Currency.BOB)
 /**Bolivian boliviano*/
-inline val ULong.BOB get() = Money(this * 100u, Currency.BOB)
+inline val Long.BOB get() = Money.of(this, Currency.BOB)
 
 /**Brazilian real*/
-inline val Int.BRL get() = Money(toULong() * 100u, Currency.BRL)
+inline val Double.BRL get() = Money.of(this, Currency.BRL)
 /**Brazilian real*/
-inline val Long.BRL get() = Money(toULong() * 100u, Currency.BRL)
+inline val UInt.BRL get() = Money.of(this, Currency.BRL)
 /**Brazilian real*/
-inline val Double.BRL get() = Money((toDouble() * 100).toULong(), Currency.BRL)
+inline val ULong.BRL get() = Money.of(this, Currency.BRL)
 /**Brazilian real*/
-inline val UInt.BRL get() = Money(toULong() * 100u, Currency.BRL)
+inline val Int.BRL get() = Money.of(this, Currency.BRL)
 /**Brazilian real*/
-inline val ULong.BRL get() = Money(this * 100u, Currency.BRL)
+inline val Long.BRL get() = Money.of(this, Currency.BRL)
 
 /**Bahamian dollar*/
-inline val Int.BSD get() = Money(toULong() * 100u, Currency.BSD)
+inline val Double.BSD get() = Money.of(this, Currency.BSD)
 /**Bahamian dollar*/
-inline val Long.BSD get() = Money(toULong() * 100u, Currency.BSD)
+inline val UInt.BSD get() = Money.of(this, Currency.BSD)
 /**Bahamian dollar*/
-inline val Double.BSD get() = Money((toDouble() * 100).toULong(), Currency.BSD)
+inline val ULong.BSD get() = Money.of(this, Currency.BSD)
 /**Bahamian dollar*/
-inline val UInt.BSD get() = Money(toULong() * 100u, Currency.BSD)
+inline val Int.BSD get() = Money.of(this, Currency.BSD)
 /**Bahamian dollar*/
-inline val ULong.BSD get() = Money(this * 100u, Currency.BSD)
+inline val Long.BSD get() = Money.of(this, Currency.BSD)
 
 /**Bhutanese ngultrum*/
-inline val Int.BTN get() = Money(toULong() * 100u, Currency.BTN)
+inline val Double.BTN get() = Money.of(this, Currency.BTN)
 /**Bhutanese ngultrum*/
-inline val Long.BTN get() = Money(toULong() * 100u, Currency.BTN)
+inline val UInt.BTN get() = Money.of(this, Currency.BTN)
 /**Bhutanese ngultrum*/
-inline val Double.BTN get() = Money((toDouble() * 100).toULong(), Currency.BTN)
+inline val ULong.BTN get() = Money.of(this, Currency.BTN)
 /**Bhutanese ngultrum*/
-inline val UInt.BTN get() = Money(toULong() * 100u, Currency.BTN)
+inline val Int.BTN get() = Money.of(this, Currency.BTN)
 /**Bhutanese ngultrum*/
-inline val ULong.BTN get() = Money(this * 100u, Currency.BTN)
+inline val Long.BTN get() = Money.of(this, Currency.BTN)
 
 /**Botswana pula*/
-inline val Int.BWP get() = Money(toULong() * 100u, Currency.BWP)
+inline val Double.BWP get() = Money.of(this, Currency.BWP)
 /**Botswana pula*/
-inline val Long.BWP get() = Money(toULong() * 100u, Currency.BWP)
+inline val UInt.BWP get() = Money.of(this, Currency.BWP)
 /**Botswana pula*/
-inline val Double.BWP get() = Money((toDouble() * 100).toULong(), Currency.BWP)
+inline val ULong.BWP get() = Money.of(this, Currency.BWP)
 /**Botswana pula*/
-inline val UInt.BWP get() = Money(toULong() * 100u, Currency.BWP)
+inline val Int.BWP get() = Money.of(this, Currency.BWP)
 /**Botswana pula*/
-inline val ULong.BWP get() = Money(this * 100u, Currency.BWP)
+inline val Long.BWP get() = Money.of(this, Currency.BWP)
 
 /**Belarusian ruble*/
-inline val Int.BYR get() = Money(toULong() * 100u, Currency.BYR)
+inline val Double.BYR get() = Money.of(this, Currency.BYR)
 /**Belarusian ruble*/
-inline val Long.BYR get() = Money(toULong() * 100u, Currency.BYR)
+inline val UInt.BYR get() = Money.of(this, Currency.BYR)
 /**Belarusian ruble*/
-inline val Double.BYR get() = Money((toDouble() * 100).toULong(), Currency.BYR)
+inline val ULong.BYR get() = Money.of(this, Currency.BYR)
 /**Belarusian ruble*/
-inline val UInt.BYR get() = Money(toULong() * 100u, Currency.BYR)
+inline val Int.BYR get() = Money.of(this, Currency.BYR)
 /**Belarusian ruble*/
-inline val ULong.BYR get() = Money(this * 100u, Currency.BYR)
+inline val Long.BYR get() = Money.of(this, Currency.BYR)
 
 /**Belize dollar*/
-inline val Int.BZD get() = Money(toULong() * 100u, Currency.BZD)
+inline val Double.BZD get() = Money.of(this, Currency.BZD)
 /**Belize dollar*/
-inline val Long.BZD get() = Money(toULong() * 100u, Currency.BZD)
+inline val UInt.BZD get() = Money.of(this, Currency.BZD)
 /**Belize dollar*/
-inline val Double.BZD get() = Money((toDouble() * 100).toULong(), Currency.BZD)
+inline val ULong.BZD get() = Money.of(this, Currency.BZD)
 /**Belize dollar*/
-inline val UInt.BZD get() = Money(toULong() * 100u, Currency.BZD)
+inline val Int.BZD get() = Money.of(this, Currency.BZD)
 /**Belize dollar*/
-inline val ULong.BZD get() = Money(this * 100u, Currency.BZD)
+inline val Long.BZD get() = Money.of(this, Currency.BZD)
 
 /**Canadian dollar*/
-inline val Int.CAD get() = Money(toULong() * 100u, Currency.CAD)
+inline val Double.CAD get() = Money.of(this, Currency.CAD)
 /**Canadian dollar*/
-inline val Long.CAD get() = Money(toULong() * 100u, Currency.CAD)
+inline val UInt.CAD get() = Money.of(this, Currency.CAD)
 /**Canadian dollar*/
-inline val Double.CAD get() = Money((toDouble() * 100).toULong(), Currency.CAD)
+inline val ULong.CAD get() = Money.of(this, Currency.CAD)
 /**Canadian dollar*/
-inline val UInt.CAD get() = Money(toULong() * 100u, Currency.CAD)
+inline val Int.CAD get() = Money.of(this, Currency.CAD)
 /**Canadian dollar*/
-inline val ULong.CAD get() = Money(this * 100u, Currency.CAD)
+inline val Long.CAD get() = Money.of(this, Currency.CAD)
 
 /**Congolese franc*/
-inline val Int.CDF get() = Money(toULong() * 100u, Currency.CDF)
+inline val Double.CDF get() = Money.of(this, Currency.CDF)
 /**Congolese franc*/
-inline val Long.CDF get() = Money(toULong() * 100u, Currency.CDF)
+inline val UInt.CDF get() = Money.of(this, Currency.CDF)
 /**Congolese franc*/
-inline val Double.CDF get() = Money((toDouble() * 100).toULong(), Currency.CDF)
+inline val ULong.CDF get() = Money.of(this, Currency.CDF)
 /**Congolese franc*/
-inline val UInt.CDF get() = Money(toULong() * 100u, Currency.CDF)
+inline val Int.CDF get() = Money.of(this, Currency.CDF)
 /**Congolese franc*/
-inline val ULong.CDF get() = Money(this * 100u, Currency.CDF)
+inline val Long.CDF get() = Money.of(this, Currency.CDF)
 
 /**Swiss franc*/
-inline val Int.CHF get() = Money(toULong() * 100u, Currency.CHF)
+inline val Double.CHF get() = Money.of(this, Currency.CHF)
 /**Swiss franc*/
-inline val Long.CHF get() = Money(toULong() * 100u, Currency.CHF)
+inline val UInt.CHF get() = Money.of(this, Currency.CHF)
 /**Swiss franc*/
-inline val Double.CHF get() = Money((toDouble() * 100).toULong(), Currency.CHF)
+inline val ULong.CHF get() = Money.of(this, Currency.CHF)
 /**Swiss franc*/
-inline val UInt.CHF get() = Money(toULong() * 100u, Currency.CHF)
+inline val Int.CHF get() = Money.of(this, Currency.CHF)
 /**Swiss franc*/
-inline val ULong.CHF get() = Money(this * 100u, Currency.CHF)
+inline val Long.CHF get() = Money.of(this, Currency.CHF)
 
 /**Chilean peso*/
-inline val Int.CLP get() = Money(toULong() * 100u, Currency.CLP)
+inline val Double.CLP get() = Money.of(this, Currency.CLP)
 /**Chilean peso*/
-inline val Long.CLP get() = Money(toULong() * 100u, Currency.CLP)
+inline val UInt.CLP get() = Money.of(this, Currency.CLP)
 /**Chilean peso*/
-inline val Double.CLP get() = Money((toDouble() * 100).toULong(), Currency.CLP)
+inline val ULong.CLP get() = Money.of(this, Currency.CLP)
 /**Chilean peso*/
-inline val UInt.CLP get() = Money(toULong() * 100u, Currency.CLP)
+inline val Int.CLP get() = Money.of(this, Currency.CLP)
 /**Chilean peso*/
-inline val ULong.CLP get() = Money(this * 100u, Currency.CLP)
+inline val Long.CLP get() = Money.of(this, Currency.CLP)
 
 /**Chinese/Yuan renminbi*/
-inline val Int.CNY get() = Money(toULong() * 100u, Currency.CNY)
+inline val Double.CNY get() = Money.of(this, Currency.CNY)
 /**Chinese/Yuan renminbi*/
-inline val Long.CNY get() = Money(toULong() * 100u, Currency.CNY)
+inline val UInt.CNY get() = Money.of(this, Currency.CNY)
 /**Chinese/Yuan renminbi*/
-inline val Double.CNY get() = Money((toDouble() * 100).toULong(), Currency.CNY)
+inline val ULong.CNY get() = Money.of(this, Currency.CNY)
 /**Chinese/Yuan renminbi*/
-inline val UInt.CNY get() = Money(toULong() * 100u, Currency.CNY)
+inline val Int.CNY get() = Money.of(this, Currency.CNY)
 /**Chinese/Yuan renminbi*/
-inline val ULong.CNY get() = Money(this * 100u, Currency.CNY)
+inline val Long.CNY get() = Money.of(this, Currency.CNY)
 
 /**Colombian peso*/
-inline val Int.COP get() = Money(toULong() * 100u, Currency.COP)
+inline val Double.COP get() = Money.of(this, Currency.COP)
 /**Colombian peso*/
-inline val Long.COP get() = Money(toULong() * 100u, Currency.COP)
+inline val UInt.COP get() = Money.of(this, Currency.COP)
 /**Colombian peso*/
-inline val Double.COP get() = Money((toDouble() * 100).toULong(), Currency.COP)
+inline val ULong.COP get() = Money.of(this, Currency.COP)
 /**Colombian peso*/
-inline val UInt.COP get() = Money(toULong() * 100u, Currency.COP)
+inline val Int.COP get() = Money.of(this, Currency.COP)
 /**Colombian peso*/
-inline val ULong.COP get() = Money(this * 100u, Currency.COP)
+inline val Long.COP get() = Money.of(this, Currency.COP)
 
 /**Costa Rican colon*/
-inline val Int.CRC get() = Money(toULong() * 100u, Currency.CRC)
+inline val Double.CRC get() = Money.of(this, Currency.CRC)
 /**Costa Rican colon*/
-inline val Long.CRC get() = Money(toULong() * 100u, Currency.CRC)
+inline val UInt.CRC get() = Money.of(this, Currency.CRC)
 /**Costa Rican colon*/
-inline val Double.CRC get() = Money((toDouble() * 100).toULong(), Currency.CRC)
+inline val ULong.CRC get() = Money.of(this, Currency.CRC)
 /**Costa Rican colon*/
-inline val UInt.CRC get() = Money(toULong() * 100u, Currency.CRC)
+inline val Int.CRC get() = Money.of(this, Currency.CRC)
 /**Costa Rican colon*/
-inline val ULong.CRC get() = Money(this * 100u, Currency.CRC)
+inline val Long.CRC get() = Money.of(this, Currency.CRC)
 
 /**Cuban peso*/
-inline val Int.CUC get() = Money(toULong() * 100u, Currency.CUC)
+inline val Double.CUC get() = Money.of(this, Currency.CUC)
 /**Cuban peso*/
-inline val Long.CUC get() = Money(toULong() * 100u, Currency.CUC)
+inline val UInt.CUC get() = Money.of(this, Currency.CUC)
 /**Cuban peso*/
-inline val Double.CUC get() = Money((toDouble() * 100).toULong(), Currency.CUC)
+inline val ULong.CUC get() = Money.of(this, Currency.CUC)
 /**Cuban peso*/
-inline val UInt.CUC get() = Money(toULong() * 100u, Currency.CUC)
+inline val Int.CUC get() = Money.of(this, Currency.CUC)
 /**Cuban peso*/
-inline val ULong.CUC get() = Money(this * 100u, Currency.CUC)
+inline val Long.CUC get() = Money.of(this, Currency.CUC)
 
 /**Cape Verdean escudo*/
-inline val Int.CVE get() = Money(toULong() * 100u, Currency.CVE)
+inline val Double.CVE get() = Money.of(this, Currency.CVE)
 /**Cape Verdean escudo*/
-inline val Long.CVE get() = Money(toULong() * 100u, Currency.CVE)
+inline val UInt.CVE get() = Money.of(this, Currency.CVE)
 /**Cape Verdean escudo*/
-inline val Double.CVE get() = Money((toDouble() * 100).toULong(), Currency.CVE)
+inline val ULong.CVE get() = Money.of(this, Currency.CVE)
 /**Cape Verdean escudo*/
-inline val UInt.CVE get() = Money(toULong() * 100u, Currency.CVE)
+inline val Int.CVE get() = Money.of(this, Currency.CVE)
 /**Cape Verdean escudo*/
-inline val ULong.CVE get() = Money(this * 100u, Currency.CVE)
+inline val Long.CVE get() = Money.of(this, Currency.CVE)
 
 /**Czech koruna*/
-inline val Int.CZK get() = Money(toULong() * 100u, Currency.CZK)
+inline val Double.CZK get() = Money.of(this, Currency.CZK)
 /**Czech koruna*/
-inline val Long.CZK get() = Money(toULong() * 100u, Currency.CZK)
+inline val UInt.CZK get() = Money.of(this, Currency.CZK)
 /**Czech koruna*/
-inline val Double.CZK get() = Money((toDouble() * 100).toULong(), Currency.CZK)
+inline val ULong.CZK get() = Money.of(this, Currency.CZK)
 /**Czech koruna*/
-inline val UInt.CZK get() = Money(toULong() * 100u, Currency.CZK)
+inline val Int.CZK get() = Money.of(this, Currency.CZK)
 /**Czech koruna*/
-inline val ULong.CZK get() = Money(this * 100u, Currency.CZK)
+inline val Long.CZK get() = Money.of(this, Currency.CZK)
 
 /**Djiboutian franc*/
-inline val Int.DJF get() = Money(toULong() * 100u, Currency.DJF)
+inline val Double.DJF get() = Money.of(this, Currency.DJF)
 /**Djiboutian franc*/
-inline val Long.DJF get() = Money(toULong() * 100u, Currency.DJF)
+inline val UInt.DJF get() = Money.of(this, Currency.DJF)
 /**Djiboutian franc*/
-inline val Double.DJF get() = Money((toDouble() * 100).toULong(), Currency.DJF)
+inline val ULong.DJF get() = Money.of(this, Currency.DJF)
 /**Djiboutian franc*/
-inline val UInt.DJF get() = Money(toULong() * 100u, Currency.DJF)
+inline val Int.DJF get() = Money.of(this, Currency.DJF)
 /**Djiboutian franc*/
-inline val ULong.DJF get() = Money(this * 100u, Currency.DJF)
+inline val Long.DJF get() = Money.of(this, Currency.DJF)
 
 /**Danish krone*/
-inline val Int.DKK get() = Money(toULong() * 100u, Currency.DKK)
+inline val Double.DKK get() = Money.of(this, Currency.DKK)
 /**Danish krone*/
-inline val Long.DKK get() = Money(toULong() * 100u, Currency.DKK)
+inline val UInt.DKK get() = Money.of(this, Currency.DKK)
 /**Danish krone*/
-inline val Double.DKK get() = Money((toDouble() * 100).toULong(), Currency.DKK)
+inline val ULong.DKK get() = Money.of(this, Currency.DKK)
 /**Danish krone*/
-inline val UInt.DKK get() = Money(toULong() * 100u, Currency.DKK)
+inline val Int.DKK get() = Money.of(this, Currency.DKK)
 /**Danish krone*/
-inline val ULong.DKK get() = Money(this * 100u, Currency.DKK)
+inline val Long.DKK get() = Money.of(this, Currency.DKK)
 
 /**Dominican peso*/
-inline val Int.DOP get() = Money(toULong() * 100u, Currency.DOP)
+inline val Double.DOP get() = Money.of(this, Currency.DOP)
 /**Dominican peso*/
-inline val Long.DOP get() = Money(toULong() * 100u, Currency.DOP)
+inline val UInt.DOP get() = Money.of(this, Currency.DOP)
 /**Dominican peso*/
-inline val Double.DOP get() = Money((toDouble() * 100).toULong(), Currency.DOP)
+inline val ULong.DOP get() = Money.of(this, Currency.DOP)
 /**Dominican peso*/
-inline val UInt.DOP get() = Money(toULong() * 100u, Currency.DOP)
+inline val Int.DOP get() = Money.of(this, Currency.DOP)
 /**Dominican peso*/
-inline val ULong.DOP get() = Money(this * 100u, Currency.DOP)
+inline val Long.DOP get() = Money.of(this, Currency.DOP)
 
 /**Algerian dinar*/
-inline val Int.DZD get() = Money(toULong() * 100u, Currency.DZD)
+inline val Double.DZD get() = Money.of(this, Currency.DZD)
 /**Algerian dinar*/
-inline val Long.DZD get() = Money(toULong() * 100u, Currency.DZD)
+inline val UInt.DZD get() = Money.of(this, Currency.DZD)
 /**Algerian dinar*/
-inline val Double.DZD get() = Money((toDouble() * 100).toULong(), Currency.DZD)
+inline val ULong.DZD get() = Money.of(this, Currency.DZD)
 /**Algerian dinar*/
-inline val UInt.DZD get() = Money(toULong() * 100u, Currency.DZD)
+inline val Int.DZD get() = Money.of(this, Currency.DZD)
 /**Algerian dinar*/
-inline val ULong.DZD get() = Money(this * 100u, Currency.DZD)
+inline val Long.DZD get() = Money.of(this, Currency.DZD)
 
 /**Estonian kroon*/
-inline val Int.EEK get() = Money(toULong() * 100u, Currency.EEK)
+inline val Double.EEK get() = Money.of(this, Currency.EEK)
 /**Estonian kroon*/
-inline val Long.EEK get() = Money(toULong() * 100u, Currency.EEK)
+inline val UInt.EEK get() = Money.of(this, Currency.EEK)
 /**Estonian kroon*/
-inline val Double.EEK get() = Money((toDouble() * 100).toULong(), Currency.EEK)
+inline val ULong.EEK get() = Money.of(this, Currency.EEK)
 /**Estonian kroon*/
-inline val UInt.EEK get() = Money(toULong() * 100u, Currency.EEK)
+inline val Int.EEK get() = Money.of(this, Currency.EEK)
 /**Estonian kroon*/
-inline val ULong.EEK get() = Money(this * 100u, Currency.EEK)
+inline val Long.EEK get() = Money.of(this, Currency.EEK)
 
 /**Egyptian pound*/
-inline val Int.EGP get() = Money(toULong() * 100u, Currency.EGP)
+inline val Double.EGP get() = Money.of(this, Currency.EGP)
 /**Egyptian pound*/
-inline val Long.EGP get() = Money(toULong() * 100u, Currency.EGP)
+inline val UInt.EGP get() = Money.of(this, Currency.EGP)
 /**Egyptian pound*/
-inline val Double.EGP get() = Money((toDouble() * 100).toULong(), Currency.EGP)
+inline val ULong.EGP get() = Money.of(this, Currency.EGP)
 /**Egyptian pound*/
-inline val UInt.EGP get() = Money(toULong() * 100u, Currency.EGP)
+inline val Int.EGP get() = Money.of(this, Currency.EGP)
 /**Egyptian pound*/
-inline val ULong.EGP get() = Money(this * 100u, Currency.EGP)
+inline val Long.EGP get() = Money.of(this, Currency.EGP)
 
 /**Eritrean nakfa*/
-inline val Int.ERN get() = Money(toULong() * 100u, Currency.ERN)
+inline val Double.ERN get() = Money.of(this, Currency.ERN)
 /**Eritrean nakfa*/
-inline val Long.ERN get() = Money(toULong() * 100u, Currency.ERN)
+inline val UInt.ERN get() = Money.of(this, Currency.ERN)
 /**Eritrean nakfa*/
-inline val Double.ERN get() = Money((toDouble() * 100).toULong(), Currency.ERN)
+inline val ULong.ERN get() = Money.of(this, Currency.ERN)
 /**Eritrean nakfa*/
-inline val UInt.ERN get() = Money(toULong() * 100u, Currency.ERN)
+inline val Int.ERN get() = Money.of(this, Currency.ERN)
 /**Eritrean nakfa*/
-inline val ULong.ERN get() = Money(this * 100u, Currency.ERN)
+inline val Long.ERN get() = Money.of(this, Currency.ERN)
 
 /**Ethiopian birr*/
-inline val Int.ETB get() = Money(toULong() * 100u, Currency.ETB)
+inline val Double.ETB get() = Money.of(this, Currency.ETB)
 /**Ethiopian birr*/
-inline val Long.ETB get() = Money(toULong() * 100u, Currency.ETB)
+inline val UInt.ETB get() = Money.of(this, Currency.ETB)
 /**Ethiopian birr*/
-inline val Double.ETB get() = Money((toDouble() * 100).toULong(), Currency.ETB)
+inline val ULong.ETB get() = Money.of(this, Currency.ETB)
 /**Ethiopian birr*/
-inline val UInt.ETB get() = Money(toULong() * 100u, Currency.ETB)
+inline val Int.ETB get() = Money.of(this, Currency.ETB)
 /**Ethiopian birr*/
-inline val ULong.ETB get() = Money(this * 100u, Currency.ETB)
+inline val Long.ETB get() = Money.of(this, Currency.ETB)
 
 /**European Euro*/
-inline val Int.EUR get() = Money(toULong() * 100u, Currency.EUR)
+inline val Double.EUR get() = Money.of(this, Currency.EUR)
 /**European Euro*/
-inline val Long.EUR get() = Money(toULong() * 100u, Currency.EUR)
+inline val UInt.EUR get() = Money.of(this, Currency.EUR)
 /**European Euro*/
-inline val Double.EUR get() = Money((toDouble() * 100).toULong(), Currency.EUR)
+inline val ULong.EUR get() = Money.of(this, Currency.EUR)
 /**European Euro*/
-inline val UInt.EUR get() = Money(toULong() * 100u, Currency.EUR)
+inline val Int.EUR get() = Money.of(this, Currency.EUR)
 /**European Euro*/
-inline val ULong.EUR get() = Money(this * 100u, Currency.EUR)
+inline val Long.EUR get() = Money.of(this, Currency.EUR)
 
 /**Fijian dollar*/
-inline val Int.FJD get() = Money(toULong() * 100u, Currency.FJD)
+inline val Double.FJD get() = Money.of(this, Currency.FJD)
 /**Fijian dollar*/
-inline val Long.FJD get() = Money(toULong() * 100u, Currency.FJD)
+inline val UInt.FJD get() = Money.of(this, Currency.FJD)
 /**Fijian dollar*/
-inline val Double.FJD get() = Money((toDouble() * 100).toULong(), Currency.FJD)
+inline val ULong.FJD get() = Money.of(this, Currency.FJD)
 /**Fijian dollar*/
-inline val UInt.FJD get() = Money(toULong() * 100u, Currency.FJD)
+inline val Int.FJD get() = Money.of(this, Currency.FJD)
 /**Fijian dollar*/
-inline val ULong.FJD get() = Money(this * 100u, Currency.FJD)
+inline val Long.FJD get() = Money.of(this, Currency.FJD)
 
 /**Falkland Islands pound*/
-inline val Int.FKP get() = Money(toULong() * 100u, Currency.FKP)
+inline val Double.FKP get() = Money.of(this, Currency.FKP)
 /**Falkland Islands pound*/
-inline val Long.FKP get() = Money(toULong() * 100u, Currency.FKP)
+inline val UInt.FKP get() = Money.of(this, Currency.FKP)
 /**Falkland Islands pound*/
-inline val Double.FKP get() = Money((toDouble() * 100).toULong(), Currency.FKP)
+inline val ULong.FKP get() = Money.of(this, Currency.FKP)
 /**Falkland Islands pound*/
-inline val UInt.FKP get() = Money(toULong() * 100u, Currency.FKP)
+inline val Int.FKP get() = Money.of(this, Currency.FKP)
 /**Falkland Islands pound*/
-inline val ULong.FKP get() = Money(this * 100u, Currency.FKP)
+inline val Long.FKP get() = Money.of(this, Currency.FKP)
 
 /**British pound*/
-inline val Int.GBP get() = Money(toULong() * 100u, Currency.GBP)
+inline val Double.GBP get() = Money.of(this, Currency.GBP)
 /**British pound*/
-inline val Long.GBP get() = Money(toULong() * 100u, Currency.GBP)
+inline val UInt.GBP get() = Money.of(this, Currency.GBP)
 /**British pound*/
-inline val Double.GBP get() = Money((toDouble() * 100).toULong(), Currency.GBP)
+inline val ULong.GBP get() = Money.of(this, Currency.GBP)
 /**British pound*/
-inline val UInt.GBP get() = Money(toULong() * 100u, Currency.GBP)
+inline val Int.GBP get() = Money.of(this, Currency.GBP)
 /**British pound*/
-inline val ULong.GBP get() = Money(this * 100u, Currency.GBP)
+inline val Long.GBP get() = Money.of(this, Currency.GBP)
 
 /**Georgian lari*/
-inline val Int.GEL get() = Money(toULong() * 100u, Currency.GEL)
+inline val Double.GEL get() = Money.of(this, Currency.GEL)
 /**Georgian lari*/
-inline val Long.GEL get() = Money(toULong() * 100u, Currency.GEL)
+inline val UInt.GEL get() = Money.of(this, Currency.GEL)
 /**Georgian lari*/
-inline val Double.GEL get() = Money((toDouble() * 100).toULong(), Currency.GEL)
+inline val ULong.GEL get() = Money.of(this, Currency.GEL)
 /**Georgian lari*/
-inline val UInt.GEL get() = Money(toULong() * 100u, Currency.GEL)
+inline val Int.GEL get() = Money.of(this, Currency.GEL)
 /**Georgian lari*/
-inline val ULong.GEL get() = Money(this * 100u, Currency.GEL)
+inline val Long.GEL get() = Money.of(this, Currency.GEL)
 
 /**Ghanaian cedi*/
-inline val Int.GHS get() = Money(toULong() * 100u, Currency.GHS)
+inline val Double.GHS get() = Money.of(this, Currency.GHS)
 /**Ghanaian cedi*/
-inline val Long.GHS get() = Money(toULong() * 100u, Currency.GHS)
+inline val UInt.GHS get() = Money.of(this, Currency.GHS)
 /**Ghanaian cedi*/
-inline val Double.GHS get() = Money((toDouble() * 100).toULong(), Currency.GHS)
+inline val ULong.GHS get() = Money.of(this, Currency.GHS)
 /**Ghanaian cedi*/
-inline val UInt.GHS get() = Money(toULong() * 100u, Currency.GHS)
+inline val Int.GHS get() = Money.of(this, Currency.GHS)
 /**Ghanaian cedi*/
-inline val ULong.GHS get() = Money(this * 100u, Currency.GHS)
+inline val Long.GHS get() = Money.of(this, Currency.GHS)
 
 /**Gibraltar pound*/
-inline val Int.GIP get() = Money(toULong() * 100u, Currency.GIP)
+inline val Double.GIP get() = Money.of(this, Currency.GIP)
 /**Gibraltar pound*/
-inline val Long.GIP get() = Money(toULong() * 100u, Currency.GIP)
+inline val UInt.GIP get() = Money.of(this, Currency.GIP)
 /**Gibraltar pound*/
-inline val Double.GIP get() = Money((toDouble() * 100).toULong(), Currency.GIP)
+inline val ULong.GIP get() = Money.of(this, Currency.GIP)
 /**Gibraltar pound*/
-inline val UInt.GIP get() = Money(toULong() * 100u, Currency.GIP)
+inline val Int.GIP get() = Money.of(this, Currency.GIP)
 /**Gibraltar pound*/
-inline val ULong.GIP get() = Money(this * 100u, Currency.GIP)
+inline val Long.GIP get() = Money.of(this, Currency.GIP)
 
 /**Gambian dalasi*/
-inline val Int.GMD get() = Money(toULong() * 100u, Currency.GMD)
+inline val Double.GMD get() = Money.of(this, Currency.GMD)
 /**Gambian dalasi*/
-inline val Long.GMD get() = Money(toULong() * 100u, Currency.GMD)
+inline val UInt.GMD get() = Money.of(this, Currency.GMD)
 /**Gambian dalasi*/
-inline val Double.GMD get() = Money((toDouble() * 100).toULong(), Currency.GMD)
+inline val ULong.GMD get() = Money.of(this, Currency.GMD)
 /**Gambian dalasi*/
-inline val UInt.GMD get() = Money(toULong() * 100u, Currency.GMD)
+inline val Int.GMD get() = Money.of(this, Currency.GMD)
 /**Gambian dalasi*/
-inline val ULong.GMD get() = Money(this * 100u, Currency.GMD)
+inline val Long.GMD get() = Money.of(this, Currency.GMD)
 
 /**Guinean franc*/
-inline val Int.GNF get() = Money(toULong() * 100u, Currency.GNF)
+inline val Double.GNF get() = Money.of(this, Currency.GNF)
 /**Guinean franc*/
-inline val Long.GNF get() = Money(toULong() * 100u, Currency.GNF)
+inline val UInt.GNF get() = Money.of(this, Currency.GNF)
 /**Guinean franc*/
-inline val Double.GNF get() = Money((toDouble() * 100).toULong(), Currency.GNF)
+inline val ULong.GNF get() = Money.of(this, Currency.GNF)
 /**Guinean franc*/
-inline val UInt.GNF get() = Money(toULong() * 100u, Currency.GNF)
+inline val Int.GNF get() = Money.of(this, Currency.GNF)
 /**Guinean franc*/
-inline val ULong.GNF get() = Money(this * 100u, Currency.GNF)
+inline val Long.GNF get() = Money.of(this, Currency.GNF)
 
 /**Central African CFA franc*/
-inline val Int.GQE get() = Money(toULong() * 100u, Currency.GQE)
+inline val Double.GQE get() = Money.of(this, Currency.GQE)
 /**Central African CFA franc*/
-inline val Long.GQE get() = Money(toULong() * 100u, Currency.GQE)
+inline val UInt.GQE get() = Money.of(this, Currency.GQE)
 /**Central African CFA franc*/
-inline val Double.GQE get() = Money((toDouble() * 100).toULong(), Currency.GQE)
+inline val ULong.GQE get() = Money.of(this, Currency.GQE)
 /**Central African CFA franc*/
-inline val UInt.GQE get() = Money(toULong() * 100u, Currency.GQE)
+inline val Int.GQE get() = Money.of(this, Currency.GQE)
 /**Central African CFA franc*/
-inline val ULong.GQE get() = Money(this * 100u, Currency.GQE)
+inline val Long.GQE get() = Money.of(this, Currency.GQE)
 
 /**Guatemalan quetzal*/
-inline val Int.GTQ get() = Money(toULong() * 100u, Currency.GTQ)
+inline val Double.GTQ get() = Money.of(this, Currency.GTQ)
 /**Guatemalan quetzal*/
-inline val Long.GTQ get() = Money(toULong() * 100u, Currency.GTQ)
+inline val UInt.GTQ get() = Money.of(this, Currency.GTQ)
 /**Guatemalan quetzal*/
-inline val Double.GTQ get() = Money((toDouble() * 100).toULong(), Currency.GTQ)
+inline val ULong.GTQ get() = Money.of(this, Currency.GTQ)
 /**Guatemalan quetzal*/
-inline val UInt.GTQ get() = Money(toULong() * 100u, Currency.GTQ)
+inline val Int.GTQ get() = Money.of(this, Currency.GTQ)
 /**Guatemalan quetzal*/
-inline val ULong.GTQ get() = Money(this * 100u, Currency.GTQ)
+inline val Long.GTQ get() = Money.of(this, Currency.GTQ)
 
 /**Guyanese dollar*/
-inline val Int.GYD get() = Money(toULong() * 100u, Currency.GYD)
+inline val Double.GYD get() = Money.of(this, Currency.GYD)
 /**Guyanese dollar*/
-inline val Long.GYD get() = Money(toULong() * 100u, Currency.GYD)
+inline val UInt.GYD get() = Money.of(this, Currency.GYD)
 /**Guyanese dollar*/
-inline val Double.GYD get() = Money((toDouble() * 100).toULong(), Currency.GYD)
+inline val ULong.GYD get() = Money.of(this, Currency.GYD)
 /**Guyanese dollar*/
-inline val UInt.GYD get() = Money(toULong() * 100u, Currency.GYD)
+inline val Int.GYD get() = Money.of(this, Currency.GYD)
 /**Guyanese dollar*/
-inline val ULong.GYD get() = Money(this * 100u, Currency.GYD)
+inline val Long.GYD get() = Money.of(this, Currency.GYD)
 
 /**Hong Kong dollar*/
-inline val Int.HKD get() = Money(toULong() * 100u, Currency.HKD)
+inline val Double.HKD get() = Money.of(this, Currency.HKD)
 /**Hong Kong dollar*/
-inline val Long.HKD get() = Money(toULong() * 100u, Currency.HKD)
+inline val UInt.HKD get() = Money.of(this, Currency.HKD)
 /**Hong Kong dollar*/
-inline val Double.HKD get() = Money((toDouble() * 100).toULong(), Currency.HKD)
+inline val ULong.HKD get() = Money.of(this, Currency.HKD)
 /**Hong Kong dollar*/
-inline val UInt.HKD get() = Money(toULong() * 100u, Currency.HKD)
+inline val Int.HKD get() = Money.of(this, Currency.HKD)
 /**Hong Kong dollar*/
-inline val ULong.HKD get() = Money(this * 100u, Currency.HKD)
+inline val Long.HKD get() = Money.of(this, Currency.HKD)
 
 /**Honduran lempira*/
-inline val Int.HNL get() = Money(toULong() * 100u, Currency.HNL)
+inline val Double.HNL get() = Money.of(this, Currency.HNL)
 /**Honduran lempira*/
-inline val Long.HNL get() = Money(toULong() * 100u, Currency.HNL)
+inline val UInt.HNL get() = Money.of(this, Currency.HNL)
 /**Honduran lempira*/
-inline val Double.HNL get() = Money((toDouble() * 100).toULong(), Currency.HNL)
+inline val ULong.HNL get() = Money.of(this, Currency.HNL)
 /**Honduran lempira*/
-inline val UInt.HNL get() = Money(toULong() * 100u, Currency.HNL)
+inline val Int.HNL get() = Money.of(this, Currency.HNL)
 /**Honduran lempira*/
-inline val ULong.HNL get() = Money(this * 100u, Currency.HNL)
+inline val Long.HNL get() = Money.of(this, Currency.HNL)
 
 /**Croatian kuna*/
-inline val Int.HRK get() = Money(toULong() * 100u, Currency.HRK)
+inline val Double.HRK get() = Money.of(this, Currency.HRK)
 /**Croatian kuna*/
-inline val Long.HRK get() = Money(toULong() * 100u, Currency.HRK)
+inline val UInt.HRK get() = Money.of(this, Currency.HRK)
 /**Croatian kuna*/
-inline val Double.HRK get() = Money((toDouble() * 100).toULong(), Currency.HRK)
+inline val ULong.HRK get() = Money.of(this, Currency.HRK)
 /**Croatian kuna*/
-inline val UInt.HRK get() = Money(toULong() * 100u, Currency.HRK)
+inline val Int.HRK get() = Money.of(this, Currency.HRK)
 /**Croatian kuna*/
-inline val ULong.HRK get() = Money(this * 100u, Currency.HRK)
+inline val Long.HRK get() = Money.of(this, Currency.HRK)
 
 /**Haitian gourde*/
-inline val Int.HTG get() = Money(toULong() * 100u, Currency.HTG)
+inline val Double.HTG get() = Money.of(this, Currency.HTG)
 /**Haitian gourde*/
-inline val Long.HTG get() = Money(toULong() * 100u, Currency.HTG)
+inline val UInt.HTG get() = Money.of(this, Currency.HTG)
 /**Haitian gourde*/
-inline val Double.HTG get() = Money((toDouble() * 100).toULong(), Currency.HTG)
+inline val ULong.HTG get() = Money.of(this, Currency.HTG)
 /**Haitian gourde*/
-inline val UInt.HTG get() = Money(toULong() * 100u, Currency.HTG)
+inline val Int.HTG get() = Money.of(this, Currency.HTG)
 /**Haitian gourde*/
-inline val ULong.HTG get() = Money(this * 100u, Currency.HTG)
+inline val Long.HTG get() = Money.of(this, Currency.HTG)
 
 /**Hungarian forint*/
-inline val Int.HUF get() = Money(toULong() * 100u, Currency.HUF)
+inline val Double.HUF get() = Money.of(this, Currency.HUF)
 /**Hungarian forint*/
-inline val Long.HUF get() = Money(toULong() * 100u, Currency.HUF)
+inline val UInt.HUF get() = Money.of(this, Currency.HUF)
 /**Hungarian forint*/
-inline val Double.HUF get() = Money((toDouble() * 100).toULong(), Currency.HUF)
+inline val ULong.HUF get() = Money.of(this, Currency.HUF)
 /**Hungarian forint*/
-inline val UInt.HUF get() = Money(toULong() * 100u, Currency.HUF)
+inline val Int.HUF get() = Money.of(this, Currency.HUF)
 /**Hungarian forint*/
-inline val ULong.HUF get() = Money(this * 100u, Currency.HUF)
+inline val Long.HUF get() = Money.of(this, Currency.HUF)
 
 /**Indonesian rupiah*/
-inline val Int.IDR get() = Money(toULong() * 100u, Currency.IDR)
+inline val Double.IDR get() = Money.of(this, Currency.IDR)
 /**Indonesian rupiah*/
-inline val Long.IDR get() = Money(toULong() * 100u, Currency.IDR)
+inline val UInt.IDR get() = Money.of(this, Currency.IDR)
 /**Indonesian rupiah*/
-inline val Double.IDR get() = Money((toDouble() * 100).toULong(), Currency.IDR)
+inline val ULong.IDR get() = Money.of(this, Currency.IDR)
 /**Indonesian rupiah*/
-inline val UInt.IDR get() = Money(toULong() * 100u, Currency.IDR)
+inline val Int.IDR get() = Money.of(this, Currency.IDR)
 /**Indonesian rupiah*/
-inline val ULong.IDR get() = Money(this * 100u, Currency.IDR)
+inline val Long.IDR get() = Money.of(this, Currency.IDR)
 
 /**Israeli new sheqel*/
-inline val Int.ILS get() = Money(toULong() * 100u, Currency.ILS)
+inline val Double.ILS get() = Money.of(this, Currency.ILS)
 /**Israeli new sheqel*/
-inline val Long.ILS get() = Money(toULong() * 100u, Currency.ILS)
+inline val UInt.ILS get() = Money.of(this, Currency.ILS)
 /**Israeli new sheqel*/
-inline val Double.ILS get() = Money((toDouble() * 100).toULong(), Currency.ILS)
+inline val ULong.ILS get() = Money.of(this, Currency.ILS)
 /**Israeli new sheqel*/
-inline val UInt.ILS get() = Money(toULong() * 100u, Currency.ILS)
+inline val Int.ILS get() = Money.of(this, Currency.ILS)
 /**Israeli new sheqel*/
-inline val ULong.ILS get() = Money(this * 100u, Currency.ILS)
+inline val Long.ILS get() = Money.of(this, Currency.ILS)
 
 /**Indian rupee*/
-inline val Int.INR get() = Money(toULong() * 100u, Currency.INR)
+inline val Double.INR get() = Money.of(this, Currency.INR)
 /**Indian rupee*/
-inline val Long.INR get() = Money(toULong() * 100u, Currency.INR)
+inline val UInt.INR get() = Money.of(this, Currency.INR)
 /**Indian rupee*/
-inline val Double.INR get() = Money((toDouble() * 100).toULong(), Currency.INR)
+inline val ULong.INR get() = Money.of(this, Currency.INR)
 /**Indian rupee*/
-inline val UInt.INR get() = Money(toULong() * 100u, Currency.INR)
+inline val Int.INR get() = Money.of(this, Currency.INR)
 /**Indian rupee*/
-inline val ULong.INR get() = Money(this * 100u, Currency.INR)
+inline val Long.INR get() = Money.of(this, Currency.INR)
 
 /**Iraqi dinar*/
-inline val Int.IQD get() = Money(toULong() * 100u, Currency.IQD)
+inline val Double.IQD get() = Money.of(this, Currency.IQD)
 /**Iraqi dinar*/
-inline val Long.IQD get() = Money(toULong() * 100u, Currency.IQD)
+inline val UInt.IQD get() = Money.of(this, Currency.IQD)
 /**Iraqi dinar*/
-inline val Double.IQD get() = Money((toDouble() * 100).toULong(), Currency.IQD)
+inline val ULong.IQD get() = Money.of(this, Currency.IQD)
 /**Iraqi dinar*/
-inline val UInt.IQD get() = Money(toULong() * 100u, Currency.IQD)
+inline val Int.IQD get() = Money.of(this, Currency.IQD)
 /**Iraqi dinar*/
-inline val ULong.IQD get() = Money(this * 100u, Currency.IQD)
+inline val Long.IQD get() = Money.of(this, Currency.IQD)
 
 /**Iranian rial*/
-inline val Int.IRR get() = Money(toULong() * 100u, Currency.IRR)
+inline val Double.IRR get() = Money.of(this, Currency.IRR)
 /**Iranian rial*/
-inline val Long.IRR get() = Money(toULong() * 100u, Currency.IRR)
+inline val UInt.IRR get() = Money.of(this, Currency.IRR)
 /**Iranian rial*/
-inline val Double.IRR get() = Money((toDouble() * 100).toULong(), Currency.IRR)
+inline val ULong.IRR get() = Money.of(this, Currency.IRR)
 /**Iranian rial*/
-inline val UInt.IRR get() = Money(toULong() * 100u, Currency.IRR)
+inline val Int.IRR get() = Money.of(this, Currency.IRR)
 /**Iranian rial*/
-inline val ULong.IRR get() = Money(this * 100u, Currency.IRR)
+inline val Long.IRR get() = Money.of(this, Currency.IRR)
 
 /**Icelandic króna*/
-inline val Int.ISK get() = Money(toULong() * 100u, Currency.ISK)
+inline val Double.ISK get() = Money.of(this, Currency.ISK)
 /**Icelandic króna*/
-inline val Long.ISK get() = Money(toULong() * 100u, Currency.ISK)
+inline val UInt.ISK get() = Money.of(this, Currency.ISK)
 /**Icelandic króna*/
-inline val Double.ISK get() = Money((toDouble() * 100).toULong(), Currency.ISK)
+inline val ULong.ISK get() = Money.of(this, Currency.ISK)
 /**Icelandic króna*/
-inline val UInt.ISK get() = Money(toULong() * 100u, Currency.ISK)
+inline val Int.ISK get() = Money.of(this, Currency.ISK)
 /**Icelandic króna*/
-inline val ULong.ISK get() = Money(this * 100u, Currency.ISK)
+inline val Long.ISK get() = Money.of(this, Currency.ISK)
 
 /**Jamaican dollar*/
-inline val Int.JMD get() = Money(toULong() * 100u, Currency.JMD)
+inline val Double.JMD get() = Money.of(this, Currency.JMD)
 /**Jamaican dollar*/
-inline val Long.JMD get() = Money(toULong() * 100u, Currency.JMD)
+inline val UInt.JMD get() = Money.of(this, Currency.JMD)
 /**Jamaican dollar*/
-inline val Double.JMD get() = Money((toDouble() * 100).toULong(), Currency.JMD)
+inline val ULong.JMD get() = Money.of(this, Currency.JMD)
 /**Jamaican dollar*/
-inline val UInt.JMD get() = Money(toULong() * 100u, Currency.JMD)
+inline val Int.JMD get() = Money.of(this, Currency.JMD)
 /**Jamaican dollar*/
-inline val ULong.JMD get() = Money(this * 100u, Currency.JMD)
+inline val Long.JMD get() = Money.of(this, Currency.JMD)
 
 /**Jordanian dinar*/
-inline val Int.JOD get() = Money(toULong() * 100u, Currency.JOD)
+inline val Double.JOD get() = Money.of(this, Currency.JOD)
 /**Jordanian dinar*/
-inline val Long.JOD get() = Money(toULong() * 100u, Currency.JOD)
+inline val UInt.JOD get() = Money.of(this, Currency.JOD)
 /**Jordanian dinar*/
-inline val Double.JOD get() = Money((toDouble() * 100).toULong(), Currency.JOD)
+inline val ULong.JOD get() = Money.of(this, Currency.JOD)
 /**Jordanian dinar*/
-inline val UInt.JOD get() = Money(toULong() * 100u, Currency.JOD)
+inline val Int.JOD get() = Money.of(this, Currency.JOD)
 /**Jordanian dinar*/
-inline val ULong.JOD get() = Money(this * 100u, Currency.JOD)
+inline val Long.JOD get() = Money.of(this, Currency.JOD)
 
 /**Japanese yen*/
-inline val Int.JPY get() = Money(toULong() * 100u, Currency.JPY)
+inline val Double.JPY get() = Money.of(this, Currency.JPY)
 /**Japanese yen*/
-inline val Long.JPY get() = Money(toULong() * 100u, Currency.JPY)
+inline val UInt.JPY get() = Money.of(this, Currency.JPY)
 /**Japanese yen*/
-inline val Double.JPY get() = Money((toDouble() * 100).toULong(), Currency.JPY)
+inline val ULong.JPY get() = Money.of(this, Currency.JPY)
 /**Japanese yen*/
-inline val UInt.JPY get() = Money(toULong() * 100u, Currency.JPY)
+inline val Int.JPY get() = Money.of(this, Currency.JPY)
 /**Japanese yen*/
-inline val ULong.JPY get() = Money(this * 100u, Currency.JPY)
+inline val Long.JPY get() = Money.of(this, Currency.JPY)
 
 /**Kenyan shilling*/
-inline val Int.KES get() = Money(toULong() * 100u, Currency.KES)
+inline val Double.KES get() = Money.of(this, Currency.KES)
 /**Kenyan shilling*/
-inline val Long.KES get() = Money(toULong() * 100u, Currency.KES)
+inline val UInt.KES get() = Money.of(this, Currency.KES)
 /**Kenyan shilling*/
-inline val Double.KES get() = Money((toDouble() * 100).toULong(), Currency.KES)
+inline val ULong.KES get() = Money.of(this, Currency.KES)
 /**Kenyan shilling*/
-inline val UInt.KES get() = Money(toULong() * 100u, Currency.KES)
+inline val Int.KES get() = Money.of(this, Currency.KES)
 /**Kenyan shilling*/
-inline val ULong.KES get() = Money(this * 100u, Currency.KES)
+inline val Long.KES get() = Money.of(this, Currency.KES)
 
 /**Kyrgyzstani som*/
-inline val Int.KGS get() = Money(toULong() * 100u, Currency.KGS)
+inline val Double.KGS get() = Money.of(this, Currency.KGS)
 /**Kyrgyzstani som*/
-inline val Long.KGS get() = Money(toULong() * 100u, Currency.KGS)
+inline val UInt.KGS get() = Money.of(this, Currency.KGS)
 /**Kyrgyzstani som*/
-inline val Double.KGS get() = Money((toDouble() * 100).toULong(), Currency.KGS)
+inline val ULong.KGS get() = Money.of(this, Currency.KGS)
 /**Kyrgyzstani som*/
-inline val UInt.KGS get() = Money(toULong() * 100u, Currency.KGS)
+inline val Int.KGS get() = Money.of(this, Currency.KGS)
 /**Kyrgyzstani som*/
-inline val ULong.KGS get() = Money(this * 100u, Currency.KGS)
+inline val Long.KGS get() = Money.of(this, Currency.KGS)
 
 /**Cambodian riel*/
-inline val Int.KHR get() = Money(toULong() * 100u, Currency.KHR)
+inline val Double.KHR get() = Money.of(this, Currency.KHR)
 /**Cambodian riel*/
-inline val Long.KHR get() = Money(toULong() * 100u, Currency.KHR)
+inline val UInt.KHR get() = Money.of(this, Currency.KHR)
 /**Cambodian riel*/
-inline val Double.KHR get() = Money((toDouble() * 100).toULong(), Currency.KHR)
+inline val ULong.KHR get() = Money.of(this, Currency.KHR)
 /**Cambodian riel*/
-inline val UInt.KHR get() = Money(toULong() * 100u, Currency.KHR)
+inline val Int.KHR get() = Money.of(this, Currency.KHR)
 /**Cambodian riel*/
-inline val ULong.KHR get() = Money(this * 100u, Currency.KHR)
+inline val Long.KHR get() = Money.of(this, Currency.KHR)
 
 /**Comorian franc*/
-inline val Int.KMF get() = Money(toULong() * 100u, Currency.KMF)
+inline val Double.KMF get() = Money.of(this, Currency.KMF)
 /**Comorian franc*/
-inline val Long.KMF get() = Money(toULong() * 100u, Currency.KMF)
+inline val UInt.KMF get() = Money.of(this, Currency.KMF)
 /**Comorian franc*/
-inline val Double.KMF get() = Money((toDouble() * 100).toULong(), Currency.KMF)
+inline val ULong.KMF get() = Money.of(this, Currency.KMF)
 /**Comorian franc*/
-inline val UInt.KMF get() = Money(toULong() * 100u, Currency.KMF)
+inline val Int.KMF get() = Money.of(this, Currency.KMF)
 /**Comorian franc*/
-inline val ULong.KMF get() = Money(this * 100u, Currency.KMF)
+inline val Long.KMF get() = Money.of(this, Currency.KMF)
 
 /**North Korean won*/
-inline val Int.KPW get() = Money(toULong() * 100u, Currency.KPW)
+inline val Double.KPW get() = Money.of(this, Currency.KPW)
 /**North Korean won*/
-inline val Long.KPW get() = Money(toULong() * 100u, Currency.KPW)
+inline val UInt.KPW get() = Money.of(this, Currency.KPW)
 /**North Korean won*/
-inline val Double.KPW get() = Money((toDouble() * 100).toULong(), Currency.KPW)
+inline val ULong.KPW get() = Money.of(this, Currency.KPW)
 /**North Korean won*/
-inline val UInt.KPW get() = Money(toULong() * 100u, Currency.KPW)
+inline val Int.KPW get() = Money.of(this, Currency.KPW)
 /**North Korean won*/
-inline val ULong.KPW get() = Money(this * 100u, Currency.KPW)
+inline val Long.KPW get() = Money.of(this, Currency.KPW)
 
 /**South Korean won*/
-inline val Int.KRW get() = Money(toULong() * 100u, Currency.KRW)
+inline val Double.KRW get() = Money.of(this, Currency.KRW)
 /**South Korean won*/
-inline val Long.KRW get() = Money(toULong() * 100u, Currency.KRW)
+inline val UInt.KRW get() = Money.of(this, Currency.KRW)
 /**South Korean won*/
-inline val Double.KRW get() = Money((toDouble() * 100).toULong(), Currency.KRW)
+inline val ULong.KRW get() = Money.of(this, Currency.KRW)
 /**South Korean won*/
-inline val UInt.KRW get() = Money(toULong() * 100u, Currency.KRW)
+inline val Int.KRW get() = Money.of(this, Currency.KRW)
 /**South Korean won*/
-inline val ULong.KRW get() = Money(this * 100u, Currency.KRW)
+inline val Long.KRW get() = Money.of(this, Currency.KRW)
 
 /**Kuwaiti dinar*/
-inline val Int.KWD get() = Money(toULong() * 100u, Currency.KWD)
+inline val Double.KWD get() = Money.of(this, Currency.KWD)
 /**Kuwaiti dinar*/
-inline val Long.KWD get() = Money(toULong() * 100u, Currency.KWD)
+inline val UInt.KWD get() = Money.of(this, Currency.KWD)
 /**Kuwaiti dinar*/
-inline val Double.KWD get() = Money((toDouble() * 100).toULong(), Currency.KWD)
+inline val ULong.KWD get() = Money.of(this, Currency.KWD)
 /**Kuwaiti dinar*/
-inline val UInt.KWD get() = Money(toULong() * 100u, Currency.KWD)
+inline val Int.KWD get() = Money.of(this, Currency.KWD)
 /**Kuwaiti dinar*/
-inline val ULong.KWD get() = Money(this * 100u, Currency.KWD)
+inline val Long.KWD get() = Money.of(this, Currency.KWD)
 
 /**Cayman Islands dollar*/
-inline val Int.KYD get() = Money(toULong() * 100u, Currency.KYD)
+inline val Double.KYD get() = Money.of(this, Currency.KYD)
 /**Cayman Islands dollar*/
-inline val Long.KYD get() = Money(toULong() * 100u, Currency.KYD)
+inline val UInt.KYD get() = Money.of(this, Currency.KYD)
 /**Cayman Islands dollar*/
-inline val Double.KYD get() = Money((toDouble() * 100).toULong(), Currency.KYD)
+inline val ULong.KYD get() = Money.of(this, Currency.KYD)
 /**Cayman Islands dollar*/
-inline val UInt.KYD get() = Money(toULong() * 100u, Currency.KYD)
+inline val Int.KYD get() = Money.of(this, Currency.KYD)
 /**Cayman Islands dollar*/
-inline val ULong.KYD get() = Money(this * 100u, Currency.KYD)
+inline val Long.KYD get() = Money.of(this, Currency.KYD)
 
 /**Kazakhstani tenge*/
-inline val Int.KZT get() = Money(toULong() * 100u, Currency.KZT)
+inline val Double.KZT get() = Money.of(this, Currency.KZT)
 /**Kazakhstani tenge*/
-inline val Long.KZT get() = Money(toULong() * 100u, Currency.KZT)
+inline val UInt.KZT get() = Money.of(this, Currency.KZT)
 /**Kazakhstani tenge*/
-inline val Double.KZT get() = Money((toDouble() * 100).toULong(), Currency.KZT)
+inline val ULong.KZT get() = Money.of(this, Currency.KZT)
 /**Kazakhstani tenge*/
-inline val UInt.KZT get() = Money(toULong() * 100u, Currency.KZT)
+inline val Int.KZT get() = Money.of(this, Currency.KZT)
 /**Kazakhstani tenge*/
-inline val ULong.KZT get() = Money(this * 100u, Currency.KZT)
+inline val Long.KZT get() = Money.of(this, Currency.KZT)
 
 /**Lao kip*/
-inline val Int.LAK get() = Money(toULong() * 100u, Currency.LAK)
+inline val Double.LAK get() = Money.of(this, Currency.LAK)
 /**Lao kip*/
-inline val Long.LAK get() = Money(toULong() * 100u, Currency.LAK)
+inline val UInt.LAK get() = Money.of(this, Currency.LAK)
 /**Lao kip*/
-inline val Double.LAK get() = Money((toDouble() * 100).toULong(), Currency.LAK)
+inline val ULong.LAK get() = Money.of(this, Currency.LAK)
 /**Lao kip*/
-inline val UInt.LAK get() = Money(toULong() * 100u, Currency.LAK)
+inline val Int.LAK get() = Money.of(this, Currency.LAK)
 /**Lao kip*/
-inline val ULong.LAK get() = Money(this * 100u, Currency.LAK)
+inline val Long.LAK get() = Money.of(this, Currency.LAK)
 
 /**Lebanese lira*/
-inline val Int.LBP get() = Money(toULong() * 100u, Currency.LBP)
+inline val Double.LBP get() = Money.of(this, Currency.LBP)
 /**Lebanese lira*/
-inline val Long.LBP get() = Money(toULong() * 100u, Currency.LBP)
+inline val UInt.LBP get() = Money.of(this, Currency.LBP)
 /**Lebanese lira*/
-inline val Double.LBP get() = Money((toDouble() * 100).toULong(), Currency.LBP)
+inline val ULong.LBP get() = Money.of(this, Currency.LBP)
 /**Lebanese lira*/
-inline val UInt.LBP get() = Money(toULong() * 100u, Currency.LBP)
+inline val Int.LBP get() = Money.of(this, Currency.LBP)
 /**Lebanese lira*/
-inline val ULong.LBP get() = Money(this * 100u, Currency.LBP)
+inline val Long.LBP get() = Money.of(this, Currency.LBP)
 
 /**Sri Lankan rupee*/
-inline val Int.LKR get() = Money(toULong() * 100u, Currency.LKR)
+inline val Double.LKR get() = Money.of(this, Currency.LKR)
 /**Sri Lankan rupee*/
-inline val Long.LKR get() = Money(toULong() * 100u, Currency.LKR)
+inline val UInt.LKR get() = Money.of(this, Currency.LKR)
 /**Sri Lankan rupee*/
-inline val Double.LKR get() = Money((toDouble() * 100).toULong(), Currency.LKR)
+inline val ULong.LKR get() = Money.of(this, Currency.LKR)
 /**Sri Lankan rupee*/
-inline val UInt.LKR get() = Money(toULong() * 100u, Currency.LKR)
+inline val Int.LKR get() = Money.of(this, Currency.LKR)
 /**Sri Lankan rupee*/
-inline val ULong.LKR get() = Money(this * 100u, Currency.LKR)
+inline val Long.LKR get() = Money.of(this, Currency.LKR)
 
 /**Liberian dollar*/
-inline val Int.LRD get() = Money(toULong() * 100u, Currency.LRD)
+inline val Double.LRD get() = Money.of(this, Currency.LRD)
 /**Liberian dollar*/
-inline val Long.LRD get() = Money(toULong() * 100u, Currency.LRD)
+inline val UInt.LRD get() = Money.of(this, Currency.LRD)
 /**Liberian dollar*/
-inline val Double.LRD get() = Money((toDouble() * 100).toULong(), Currency.LRD)
+inline val ULong.LRD get() = Money.of(this, Currency.LRD)
 /**Liberian dollar*/
-inline val UInt.LRD get() = Money(toULong() * 100u, Currency.LRD)
+inline val Int.LRD get() = Money.of(this, Currency.LRD)
 /**Liberian dollar*/
-inline val ULong.LRD get() = Money(this * 100u, Currency.LRD)
+inline val Long.LRD get() = Money.of(this, Currency.LRD)
 
 /**Lesotho loti*/
-inline val Int.LSL get() = Money(toULong() * 100u, Currency.LSL)
+inline val Double.LSL get() = Money.of(this, Currency.LSL)
 /**Lesotho loti*/
-inline val Long.LSL get() = Money(toULong() * 100u, Currency.LSL)
+inline val UInt.LSL get() = Money.of(this, Currency.LSL)
 /**Lesotho loti*/
-inline val Double.LSL get() = Money((toDouble() * 100).toULong(), Currency.LSL)
+inline val ULong.LSL get() = Money.of(this, Currency.LSL)
 /**Lesotho loti*/
-inline val UInt.LSL get() = Money(toULong() * 100u, Currency.LSL)
+inline val Int.LSL get() = Money.of(this, Currency.LSL)
 /**Lesotho loti*/
-inline val ULong.LSL get() = Money(this * 100u, Currency.LSL)
+inline val Long.LSL get() = Money.of(this, Currency.LSL)
 
 /**Lithuanian litas*/
-inline val Int.LTL get() = Money(toULong() * 100u, Currency.LTL)
+inline val Double.LTL get() = Money.of(this, Currency.LTL)
 /**Lithuanian litas*/
-inline val Long.LTL get() = Money(toULong() * 100u, Currency.LTL)
+inline val UInt.LTL get() = Money.of(this, Currency.LTL)
 /**Lithuanian litas*/
-inline val Double.LTL get() = Money((toDouble() * 100).toULong(), Currency.LTL)
+inline val ULong.LTL get() = Money.of(this, Currency.LTL)
 /**Lithuanian litas*/
-inline val UInt.LTL get() = Money(toULong() * 100u, Currency.LTL)
+inline val Int.LTL get() = Money.of(this, Currency.LTL)
 /**Lithuanian litas*/
-inline val ULong.LTL get() = Money(this * 100u, Currency.LTL)
+inline val Long.LTL get() = Money.of(this, Currency.LTL)
 
 /**Latvian lats*/
-inline val Int.LVL get() = Money(toULong() * 100u, Currency.LVL)
+inline val Double.LVL get() = Money.of(this, Currency.LVL)
 /**Latvian lats*/
-inline val Long.LVL get() = Money(toULong() * 100u, Currency.LVL)
+inline val UInt.LVL get() = Money.of(this, Currency.LVL)
 /**Latvian lats*/
-inline val Double.LVL get() = Money((toDouble() * 100).toULong(), Currency.LVL)
+inline val ULong.LVL get() = Money.of(this, Currency.LVL)
 /**Latvian lats*/
-inline val UInt.LVL get() = Money(toULong() * 100u, Currency.LVL)
+inline val Int.LVL get() = Money.of(this, Currency.LVL)
 /**Latvian lats*/
-inline val ULong.LVL get() = Money(this * 100u, Currency.LVL)
+inline val Long.LVL get() = Money.of(this, Currency.LVL)
 
 /**Libyan dinar*/
-inline val Int.LYD get() = Money(toULong() * 100u, Currency.LYD)
+inline val Double.LYD get() = Money.of(this, Currency.LYD)
 /**Libyan dinar*/
-inline val Long.LYD get() = Money(toULong() * 100u, Currency.LYD)
+inline val UInt.LYD get() = Money.of(this, Currency.LYD)
 /**Libyan dinar*/
-inline val Double.LYD get() = Money((toDouble() * 100).toULong(), Currency.LYD)
+inline val ULong.LYD get() = Money.of(this, Currency.LYD)
 /**Libyan dinar*/
-inline val UInt.LYD get() = Money(toULong() * 100u, Currency.LYD)
+inline val Int.LYD get() = Money.of(this, Currency.LYD)
 /**Libyan dinar*/
-inline val ULong.LYD get() = Money(this * 100u, Currency.LYD)
+inline val Long.LYD get() = Money.of(this, Currency.LYD)
 
 /**Moroccan dirham*/
-inline val Int.MAD get() = Money(toULong() * 100u, Currency.MAD)
+inline val Double.MAD get() = Money.of(this, Currency.MAD)
 /**Moroccan dirham*/
-inline val Long.MAD get() = Money(toULong() * 100u, Currency.MAD)
+inline val UInt.MAD get() = Money.of(this, Currency.MAD)
 /**Moroccan dirham*/
-inline val Double.MAD get() = Money((toDouble() * 100).toULong(), Currency.MAD)
+inline val ULong.MAD get() = Money.of(this, Currency.MAD)
 /**Moroccan dirham*/
-inline val UInt.MAD get() = Money(toULong() * 100u, Currency.MAD)
+inline val Int.MAD get() = Money.of(this, Currency.MAD)
 /**Moroccan dirham*/
-inline val ULong.MAD get() = Money(this * 100u, Currency.MAD)
+inline val Long.MAD get() = Money.of(this, Currency.MAD)
 
 /**Moldovan leu*/
-inline val Int.MDL get() = Money(toULong() * 100u, Currency.MDL)
+inline val Double.MDL get() = Money.of(this, Currency.MDL)
 /**Moldovan leu*/
-inline val Long.MDL get() = Money(toULong() * 100u, Currency.MDL)
+inline val UInt.MDL get() = Money.of(this, Currency.MDL)
 /**Moldovan leu*/
-inline val Double.MDL get() = Money((toDouble() * 100).toULong(), Currency.MDL)
+inline val ULong.MDL get() = Money.of(this, Currency.MDL)
 /**Moldovan leu*/
-inline val UInt.MDL get() = Money(toULong() * 100u, Currency.MDL)
+inline val Int.MDL get() = Money.of(this, Currency.MDL)
 /**Moldovan leu*/
-inline val ULong.MDL get() = Money(this * 100u, Currency.MDL)
+inline val Long.MDL get() = Money.of(this, Currency.MDL)
 
 /**Malagasy ariary*/
-inline val Int.MGA get() = Money(toULong() * 100u, Currency.MGA)
+inline val Double.MGA get() = Money.of(this, Currency.MGA)
 /**Malagasy ariary*/
-inline val Long.MGA get() = Money(toULong() * 100u, Currency.MGA)
+inline val UInt.MGA get() = Money.of(this, Currency.MGA)
 /**Malagasy ariary*/
-inline val Double.MGA get() = Money((toDouble() * 100).toULong(), Currency.MGA)
+inline val ULong.MGA get() = Money.of(this, Currency.MGA)
 /**Malagasy ariary*/
-inline val UInt.MGA get() = Money(toULong() * 100u, Currency.MGA)
+inline val Int.MGA get() = Money.of(this, Currency.MGA)
 /**Malagasy ariary*/
-inline val ULong.MGA get() = Money(this * 100u, Currency.MGA)
+inline val Long.MGA get() = Money.of(this, Currency.MGA)
 
 /**Macedonian denar*/
-inline val Int.MKD get() = Money(toULong() * 100u, Currency.MKD)
+inline val Double.MKD get() = Money.of(this, Currency.MKD)
 /**Macedonian denar*/
-inline val Long.MKD get() = Money(toULong() * 100u, Currency.MKD)
+inline val UInt.MKD get() = Money.of(this, Currency.MKD)
 /**Macedonian denar*/
-inline val Double.MKD get() = Money((toDouble() * 100).toULong(), Currency.MKD)
+inline val ULong.MKD get() = Money.of(this, Currency.MKD)
 /**Macedonian denar*/
-inline val UInt.MKD get() = Money(toULong() * 100u, Currency.MKD)
+inline val Int.MKD get() = Money.of(this, Currency.MKD)
 /**Macedonian denar*/
-inline val ULong.MKD get() = Money(this * 100u, Currency.MKD)
+inline val Long.MKD get() = Money.of(this, Currency.MKD)
 
 /**Myanma kyat*/
-inline val Int.MMK get() = Money(toULong() * 100u, Currency.MMK)
+inline val Double.MMK get() = Money.of(this, Currency.MMK)
 /**Myanma kyat*/
-inline val Long.MMK get() = Money(toULong() * 100u, Currency.MMK)
+inline val UInt.MMK get() = Money.of(this, Currency.MMK)
 /**Myanma kyat*/
-inline val Double.MMK get() = Money((toDouble() * 100).toULong(), Currency.MMK)
+inline val ULong.MMK get() = Money.of(this, Currency.MMK)
 /**Myanma kyat*/
-inline val UInt.MMK get() = Money(toULong() * 100u, Currency.MMK)
+inline val Int.MMK get() = Money.of(this, Currency.MMK)
 /**Myanma kyat*/
-inline val ULong.MMK get() = Money(this * 100u, Currency.MMK)
+inline val Long.MMK get() = Money.of(this, Currency.MMK)
 
 /**Mongolian tugrik*/
-inline val Int.MNT get() = Money(toULong() * 100u, Currency.MNT)
+inline val Double.MNT get() = Money.of(this, Currency.MNT)
 /**Mongolian tugrik*/
-inline val Long.MNT get() = Money(toULong() * 100u, Currency.MNT)
+inline val UInt.MNT get() = Money.of(this, Currency.MNT)
 /**Mongolian tugrik*/
-inline val Double.MNT get() = Money((toDouble() * 100).toULong(), Currency.MNT)
+inline val ULong.MNT get() = Money.of(this, Currency.MNT)
 /**Mongolian tugrik*/
-inline val UInt.MNT get() = Money(toULong() * 100u, Currency.MNT)
+inline val Int.MNT get() = Money.of(this, Currency.MNT)
 /**Mongolian tugrik*/
-inline val ULong.MNT get() = Money(this * 100u, Currency.MNT)
+inline val Long.MNT get() = Money.of(this, Currency.MNT)
 
 /**Macanese pataca*/
-inline val Int.MOP get() = Money(toULong() * 100u, Currency.MOP)
+inline val Double.MOP get() = Money.of(this, Currency.MOP)
 /**Macanese pataca*/
-inline val Long.MOP get() = Money(toULong() * 100u, Currency.MOP)
+inline val UInt.MOP get() = Money.of(this, Currency.MOP)
 /**Macanese pataca*/
-inline val Double.MOP get() = Money((toDouble() * 100).toULong(), Currency.MOP)
+inline val ULong.MOP get() = Money.of(this, Currency.MOP)
 /**Macanese pataca*/
-inline val UInt.MOP get() = Money(toULong() * 100u, Currency.MOP)
+inline val Int.MOP get() = Money.of(this, Currency.MOP)
 /**Macanese pataca*/
-inline val ULong.MOP get() = Money(this * 100u, Currency.MOP)
+inline val Long.MOP get() = Money.of(this, Currency.MOP)
 
 /**Mauritanian ouguiya*/
-inline val Int.MRO get() = Money(toULong() * 100u, Currency.MRO)
+inline val Double.MRO get() = Money.of(this, Currency.MRO)
 /**Mauritanian ouguiya*/
-inline val Long.MRO get() = Money(toULong() * 100u, Currency.MRO)
+inline val UInt.MRO get() = Money.of(this, Currency.MRO)
 /**Mauritanian ouguiya*/
-inline val Double.MRO get() = Money((toDouble() * 100).toULong(), Currency.MRO)
+inline val ULong.MRO get() = Money.of(this, Currency.MRO)
 /**Mauritanian ouguiya*/
-inline val UInt.MRO get() = Money(toULong() * 100u, Currency.MRO)
+inline val Int.MRO get() = Money.of(this, Currency.MRO)
 /**Mauritanian ouguiya*/
-inline val ULong.MRO get() = Money(this * 100u, Currency.MRO)
+inline val Long.MRO get() = Money.of(this, Currency.MRO)
 
 /**Mauritian rupee*/
-inline val Int.MUR get() = Money(toULong() * 100u, Currency.MUR)
+inline val Double.MUR get() = Money.of(this, Currency.MUR)
 /**Mauritian rupee*/
-inline val Long.MUR get() = Money(toULong() * 100u, Currency.MUR)
+inline val UInt.MUR get() = Money.of(this, Currency.MUR)
 /**Mauritian rupee*/
-inline val Double.MUR get() = Money((toDouble() * 100).toULong(), Currency.MUR)
+inline val ULong.MUR get() = Money.of(this, Currency.MUR)
 /**Mauritian rupee*/
-inline val UInt.MUR get() = Money(toULong() * 100u, Currency.MUR)
+inline val Int.MUR get() = Money.of(this, Currency.MUR)
 /**Mauritian rupee*/
-inline val ULong.MUR get() = Money(this * 100u, Currency.MUR)
+inline val Long.MUR get() = Money.of(this, Currency.MUR)
 
 /**Maldivian rufiyaa*/
-inline val Int.MVR get() = Money(toULong() * 100u, Currency.MVR)
+inline val Double.MVR get() = Money.of(this, Currency.MVR)
 /**Maldivian rufiyaa*/
-inline val Long.MVR get() = Money(toULong() * 100u, Currency.MVR)
+inline val UInt.MVR get() = Money.of(this, Currency.MVR)
 /**Maldivian rufiyaa*/
-inline val Double.MVR get() = Money((toDouble() * 100).toULong(), Currency.MVR)
+inline val ULong.MVR get() = Money.of(this, Currency.MVR)
 /**Maldivian rufiyaa*/
-inline val UInt.MVR get() = Money(toULong() * 100u, Currency.MVR)
+inline val Int.MVR get() = Money.of(this, Currency.MVR)
 /**Maldivian rufiyaa*/
-inline val ULong.MVR get() = Money(this * 100u, Currency.MVR)
+inline val Long.MVR get() = Money.of(this, Currency.MVR)
 
 /**Malawian kwacha*/
-inline val Int.MWK get() = Money(toULong() * 100u, Currency.MWK)
+inline val Double.MWK get() = Money.of(this, Currency.MWK)
 /**Malawian kwacha*/
-inline val Long.MWK get() = Money(toULong() * 100u, Currency.MWK)
+inline val UInt.MWK get() = Money.of(this, Currency.MWK)
 /**Malawian kwacha*/
-inline val Double.MWK get() = Money((toDouble() * 100).toULong(), Currency.MWK)
+inline val ULong.MWK get() = Money.of(this, Currency.MWK)
 /**Malawian kwacha*/
-inline val UInt.MWK get() = Money(toULong() * 100u, Currency.MWK)
+inline val Int.MWK get() = Money.of(this, Currency.MWK)
 /**Malawian kwacha*/
-inline val ULong.MWK get() = Money(this * 100u, Currency.MWK)
+inline val Long.MWK get() = Money.of(this, Currency.MWK)
 
 /**Mexican peso*/
-inline val Int.MXN get() = Money(toULong() * 100u, Currency.MXN)
+inline val Double.MXN get() = Money.of(this, Currency.MXN)
 /**Mexican peso*/
-inline val Long.MXN get() = Money(toULong() * 100u, Currency.MXN)
+inline val UInt.MXN get() = Money.of(this, Currency.MXN)
 /**Mexican peso*/
-inline val Double.MXN get() = Money((toDouble() * 100).toULong(), Currency.MXN)
+inline val ULong.MXN get() = Money.of(this, Currency.MXN)
 /**Mexican peso*/
-inline val UInt.MXN get() = Money(toULong() * 100u, Currency.MXN)
+inline val Int.MXN get() = Money.of(this, Currency.MXN)
 /**Mexican peso*/
-inline val ULong.MXN get() = Money(this * 100u, Currency.MXN)
+inline val Long.MXN get() = Money.of(this, Currency.MXN)
 
 /**Malaysian ringgit*/
-inline val Int.MYR get() = Money(toULong() * 100u, Currency.MYR)
+inline val Double.MYR get() = Money.of(this, Currency.MYR)
 /**Malaysian ringgit*/
-inline val Long.MYR get() = Money(toULong() * 100u, Currency.MYR)
+inline val UInt.MYR get() = Money.of(this, Currency.MYR)
 /**Malaysian ringgit*/
-inline val Double.MYR get() = Money((toDouble() * 100).toULong(), Currency.MYR)
+inline val ULong.MYR get() = Money.of(this, Currency.MYR)
 /**Malaysian ringgit*/
-inline val UInt.MYR get() = Money(toULong() * 100u, Currency.MYR)
+inline val Int.MYR get() = Money.of(this, Currency.MYR)
 /**Malaysian ringgit*/
-inline val ULong.MYR get() = Money(this * 100u, Currency.MYR)
+inline val Long.MYR get() = Money.of(this, Currency.MYR)
 
 /**Mozambican metical*/
-inline val Int.MZM get() = Money(toULong() * 100u, Currency.MZM)
+inline val Double.MZM get() = Money.of(this, Currency.MZM)
 /**Mozambican metical*/
-inline val Long.MZM get() = Money(toULong() * 100u, Currency.MZM)
+inline val UInt.MZM get() = Money.of(this, Currency.MZM)
 /**Mozambican metical*/
-inline val Double.MZM get() = Money((toDouble() * 100).toULong(), Currency.MZM)
+inline val ULong.MZM get() = Money.of(this, Currency.MZM)
 /**Mozambican metical*/
-inline val UInt.MZM get() = Money(toULong() * 100u, Currency.MZM)
+inline val Int.MZM get() = Money.of(this, Currency.MZM)
 /**Mozambican metical*/
-inline val ULong.MZM get() = Money(this * 100u, Currency.MZM)
+inline val Long.MZM get() = Money.of(this, Currency.MZM)
 
 /**Namibian dollar*/
-inline val Int.NAD get() = Money(toULong() * 100u, Currency.NAD)
+inline val Double.NAD get() = Money.of(this, Currency.NAD)
 /**Namibian dollar*/
-inline val Long.NAD get() = Money(toULong() * 100u, Currency.NAD)
+inline val UInt.NAD get() = Money.of(this, Currency.NAD)
 /**Namibian dollar*/
-inline val Double.NAD get() = Money((toDouble() * 100).toULong(), Currency.NAD)
+inline val ULong.NAD get() = Money.of(this, Currency.NAD)
 /**Namibian dollar*/
-inline val UInt.NAD get() = Money(toULong() * 100u, Currency.NAD)
+inline val Int.NAD get() = Money.of(this, Currency.NAD)
 /**Namibian dollar*/
-inline val ULong.NAD get() = Money(this * 100u, Currency.NAD)
+inline val Long.NAD get() = Money.of(this, Currency.NAD)
 
 /**Nigerian naira*/
-inline val Int.NGN get() = Money(toULong() * 100u, Currency.NGN)
+inline val Double.NGN get() = Money.of(this, Currency.NGN)
 /**Nigerian naira*/
-inline val Long.NGN get() = Money(toULong() * 100u, Currency.NGN)
+inline val UInt.NGN get() = Money.of(this, Currency.NGN)
 /**Nigerian naira*/
-inline val Double.NGN get() = Money((toDouble() * 100).toULong(), Currency.NGN)
+inline val ULong.NGN get() = Money.of(this, Currency.NGN)
 /**Nigerian naira*/
-inline val UInt.NGN get() = Money(toULong() * 100u, Currency.NGN)
+inline val Int.NGN get() = Money.of(this, Currency.NGN)
 /**Nigerian naira*/
-inline val ULong.NGN get() = Money(this * 100u, Currency.NGN)
+inline val Long.NGN get() = Money.of(this, Currency.NGN)
 
 /**Nicaraguan córdoba*/
-inline val Int.NIO get() = Money(toULong() * 100u, Currency.NIO)
+inline val Double.NIO get() = Money.of(this, Currency.NIO)
 /**Nicaraguan córdoba*/
-inline val Long.NIO get() = Money(toULong() * 100u, Currency.NIO)
+inline val UInt.NIO get() = Money.of(this, Currency.NIO)
 /**Nicaraguan córdoba*/
-inline val Double.NIO get() = Money((toDouble() * 100).toULong(), Currency.NIO)
+inline val ULong.NIO get() = Money.of(this, Currency.NIO)
 /**Nicaraguan córdoba*/
-inline val UInt.NIO get() = Money(toULong() * 100u, Currency.NIO)
+inline val Int.NIO get() = Money.of(this, Currency.NIO)
 /**Nicaraguan córdoba*/
-inline val ULong.NIO get() = Money(this * 100u, Currency.NIO)
+inline val Long.NIO get() = Money.of(this, Currency.NIO)
 
 /**Norwegian krone*/
-inline val Int.NOK get() = Money(toULong() * 100u, Currency.NOK)
+inline val Double.NOK get() = Money.of(this, Currency.NOK)
 /**Norwegian krone*/
-inline val Long.NOK get() = Money(toULong() * 100u, Currency.NOK)
+inline val UInt.NOK get() = Money.of(this, Currency.NOK)
 /**Norwegian krone*/
-inline val Double.NOK get() = Money((toDouble() * 100).toULong(), Currency.NOK)
+inline val ULong.NOK get() = Money.of(this, Currency.NOK)
 /**Norwegian krone*/
-inline val UInt.NOK get() = Money(toULong() * 100u, Currency.NOK)
+inline val Int.NOK get() = Money.of(this, Currency.NOK)
 /**Norwegian krone*/
-inline val ULong.NOK get() = Money(this * 100u, Currency.NOK)
+inline val Long.NOK get() = Money.of(this, Currency.NOK)
 
 /**Nepalese rupee*/
-inline val Int.NPR get() = Money(toULong() * 100u, Currency.NPR)
+inline val Double.NPR get() = Money.of(this, Currency.NPR)
 /**Nepalese rupee*/
-inline val Long.NPR get() = Money(toULong() * 100u, Currency.NPR)
+inline val UInt.NPR get() = Money.of(this, Currency.NPR)
 /**Nepalese rupee*/
-inline val Double.NPR get() = Money((toDouble() * 100).toULong(), Currency.NPR)
+inline val ULong.NPR get() = Money.of(this, Currency.NPR)
 /**Nepalese rupee*/
-inline val UInt.NPR get() = Money(toULong() * 100u, Currency.NPR)
+inline val Int.NPR get() = Money.of(this, Currency.NPR)
 /**Nepalese rupee*/
-inline val ULong.NPR get() = Money(this * 100u, Currency.NPR)
+inline val Long.NPR get() = Money.of(this, Currency.NPR)
 
 /**New Zealand dollar*/
-inline val Int.NZD get() = Money(toULong() * 100u, Currency.NZD)
+inline val Double.NZD get() = Money.of(this, Currency.NZD)
 /**New Zealand dollar*/
-inline val Long.NZD get() = Money(toULong() * 100u, Currency.NZD)
+inline val UInt.NZD get() = Money.of(this, Currency.NZD)
 /**New Zealand dollar*/
-inline val Double.NZD get() = Money((toDouble() * 100).toULong(), Currency.NZD)
+inline val ULong.NZD get() = Money.of(this, Currency.NZD)
 /**New Zealand dollar*/
-inline val UInt.NZD get() = Money(toULong() * 100u, Currency.NZD)
+inline val Int.NZD get() = Money.of(this, Currency.NZD)
 /**New Zealand dollar*/
-inline val ULong.NZD get() = Money(this * 100u, Currency.NZD)
+inline val Long.NZD get() = Money.of(this, Currency.NZD)
 
 /**Omani rial*/
-inline val Int.OMR get() = Money(toULong() * 100u, Currency.OMR)
+inline val Double.OMR get() = Money.of(this, Currency.OMR)
 /**Omani rial*/
-inline val Long.OMR get() = Money(toULong() * 100u, Currency.OMR)
+inline val UInt.OMR get() = Money.of(this, Currency.OMR)
 /**Omani rial*/
-inline val Double.OMR get() = Money((toDouble() * 100).toULong(), Currency.OMR)
+inline val ULong.OMR get() = Money.of(this, Currency.OMR)
 /**Omani rial*/
-inline val UInt.OMR get() = Money(toULong() * 100u, Currency.OMR)
+inline val Int.OMR get() = Money.of(this, Currency.OMR)
 /**Omani rial*/
-inline val ULong.OMR get() = Money(this * 100u, Currency.OMR)
+inline val Long.OMR get() = Money.of(this, Currency.OMR)
 
 /**Panamanian balboa*/
-inline val Int.PAB get() = Money(toULong() * 100u, Currency.PAB)
+inline val Double.PAB get() = Money.of(this, Currency.PAB)
 /**Panamanian balboa*/
-inline val Long.PAB get() = Money(toULong() * 100u, Currency.PAB)
+inline val UInt.PAB get() = Money.of(this, Currency.PAB)
 /**Panamanian balboa*/
-inline val Double.PAB get() = Money((toDouble() * 100).toULong(), Currency.PAB)
+inline val ULong.PAB get() = Money.of(this, Currency.PAB)
 /**Panamanian balboa*/
-inline val UInt.PAB get() = Money(toULong() * 100u, Currency.PAB)
+inline val Int.PAB get() = Money.of(this, Currency.PAB)
 /**Panamanian balboa*/
-inline val ULong.PAB get() = Money(this * 100u, Currency.PAB)
+inline val Long.PAB get() = Money.of(this, Currency.PAB)
 
 /**Peruvian nuevo sol*/
-inline val Int.PEN get() = Money(toULong() * 100u, Currency.PEN)
+inline val Double.PEN get() = Money.of(this, Currency.PEN)
 /**Peruvian nuevo sol*/
-inline val Long.PEN get() = Money(toULong() * 100u, Currency.PEN)
+inline val UInt.PEN get() = Money.of(this, Currency.PEN)
 /**Peruvian nuevo sol*/
-inline val Double.PEN get() = Money((toDouble() * 100).toULong(), Currency.PEN)
+inline val ULong.PEN get() = Money.of(this, Currency.PEN)
 /**Peruvian nuevo sol*/
-inline val UInt.PEN get() = Money(toULong() * 100u, Currency.PEN)
+inline val Int.PEN get() = Money.of(this, Currency.PEN)
 /**Peruvian nuevo sol*/
-inline val ULong.PEN get() = Money(this * 100u, Currency.PEN)
+inline val Long.PEN get() = Money.of(this, Currency.PEN)
 
 /**Papua New Guinean kina*/
-inline val Int.PGK get() = Money(toULong() * 100u, Currency.PGK)
+inline val Double.PGK get() = Money.of(this, Currency.PGK)
 /**Papua New Guinean kina*/
-inline val Long.PGK get() = Money(toULong() * 100u, Currency.PGK)
+inline val UInt.PGK get() = Money.of(this, Currency.PGK)
 /**Papua New Guinean kina*/
-inline val Double.PGK get() = Money((toDouble() * 100).toULong(), Currency.PGK)
+inline val ULong.PGK get() = Money.of(this, Currency.PGK)
 /**Papua New Guinean kina*/
-inline val UInt.PGK get() = Money(toULong() * 100u, Currency.PGK)
+inline val Int.PGK get() = Money.of(this, Currency.PGK)
 /**Papua New Guinean kina*/
-inline val ULong.PGK get() = Money(this * 100u, Currency.PGK)
+inline val Long.PGK get() = Money.of(this, Currency.PGK)
 
 /**Philippine peso*/
-inline val Int.PHP get() = Money(toULong() * 100u, Currency.PHP)
+inline val Double.PHP get() = Money.of(this, Currency.PHP)
 /**Philippine peso*/
-inline val Long.PHP get() = Money(toULong() * 100u, Currency.PHP)
+inline val UInt.PHP get() = Money.of(this, Currency.PHP)
 /**Philippine peso*/
-inline val Double.PHP get() = Money((toDouble() * 100).toULong(), Currency.PHP)
+inline val ULong.PHP get() = Money.of(this, Currency.PHP)
 /**Philippine peso*/
-inline val UInt.PHP get() = Money(toULong() * 100u, Currency.PHP)
+inline val Int.PHP get() = Money.of(this, Currency.PHP)
 /**Philippine peso*/
-inline val ULong.PHP get() = Money(this * 100u, Currency.PHP)
+inline val Long.PHP get() = Money.of(this, Currency.PHP)
 
 /**Pakistani rupee*/
-inline val Int.PKR get() = Money(toULong() * 100u, Currency.PKR)
+inline val Double.PKR get() = Money.of(this, Currency.PKR)
 /**Pakistani rupee*/
-inline val Long.PKR get() = Money(toULong() * 100u, Currency.PKR)
+inline val UInt.PKR get() = Money.of(this, Currency.PKR)
 /**Pakistani rupee*/
-inline val Double.PKR get() = Money((toDouble() * 100).toULong(), Currency.PKR)
+inline val ULong.PKR get() = Money.of(this, Currency.PKR)
 /**Pakistani rupee*/
-inline val UInt.PKR get() = Money(toULong() * 100u, Currency.PKR)
+inline val Int.PKR get() = Money.of(this, Currency.PKR)
 /**Pakistani rupee*/
-inline val ULong.PKR get() = Money(this * 100u, Currency.PKR)
+inline val Long.PKR get() = Money.of(this, Currency.PKR)
 
 /**Polish zloty*/
-inline val Int.PLN get() = Money(toULong() * 100u, Currency.PLN)
+inline val Double.PLN get() = Money.of(this, Currency.PLN)
 /**Polish zloty*/
-inline val Long.PLN get() = Money(toULong() * 100u, Currency.PLN)
+inline val UInt.PLN get() = Money.of(this, Currency.PLN)
 /**Polish zloty*/
-inline val Double.PLN get() = Money((toDouble() * 100).toULong(), Currency.PLN)
+inline val ULong.PLN get() = Money.of(this, Currency.PLN)
 /**Polish zloty*/
-inline val UInt.PLN get() = Money(toULong() * 100u, Currency.PLN)
+inline val Int.PLN get() = Money.of(this, Currency.PLN)
 /**Polish zloty*/
-inline val ULong.PLN get() = Money(this * 100u, Currency.PLN)
+inline val Long.PLN get() = Money.of(this, Currency.PLN)
 
 /**Paraguayan guarani*/
-inline val Int.PYG get() = Money(toULong() * 100u, Currency.PYG)
+inline val Double.PYG get() = Money.of(this, Currency.PYG)
 /**Paraguayan guarani*/
-inline val Long.PYG get() = Money(toULong() * 100u, Currency.PYG)
+inline val UInt.PYG get() = Money.of(this, Currency.PYG)
 /**Paraguayan guarani*/
-inline val Double.PYG get() = Money((toDouble() * 100).toULong(), Currency.PYG)
+inline val ULong.PYG get() = Money.of(this, Currency.PYG)
 /**Paraguayan guarani*/
-inline val UInt.PYG get() = Money(toULong() * 100u, Currency.PYG)
+inline val Int.PYG get() = Money.of(this, Currency.PYG)
 /**Paraguayan guarani*/
-inline val ULong.PYG get() = Money(this * 100u, Currency.PYG)
+inline val Long.PYG get() = Money.of(this, Currency.PYG)
 
 /**Qatari riyal*/
-inline val Int.QAR get() = Money(toULong() * 100u, Currency.QAR)
+inline val Double.QAR get() = Money.of(this, Currency.QAR)
 /**Qatari riyal*/
-inline val Long.QAR get() = Money(toULong() * 100u, Currency.QAR)
+inline val UInt.QAR get() = Money.of(this, Currency.QAR)
 /**Qatari riyal*/
-inline val Double.QAR get() = Money((toDouble() * 100).toULong(), Currency.QAR)
+inline val ULong.QAR get() = Money.of(this, Currency.QAR)
 /**Qatari riyal*/
-inline val UInt.QAR get() = Money(toULong() * 100u, Currency.QAR)
+inline val Int.QAR get() = Money.of(this, Currency.QAR)
 /**Qatari riyal*/
-inline val ULong.QAR get() = Money(this * 100u, Currency.QAR)
+inline val Long.QAR get() = Money.of(this, Currency.QAR)
 
 /**Romanian leu*/
-inline val Int.RON get() = Money(toULong() * 100u, Currency.RON)
+inline val Double.RON get() = Money.of(this, Currency.RON)
 /**Romanian leu*/
-inline val Long.RON get() = Money(toULong() * 100u, Currency.RON)
+inline val UInt.RON get() = Money.of(this, Currency.RON)
 /**Romanian leu*/
-inline val Double.RON get() = Money((toDouble() * 100).toULong(), Currency.RON)
+inline val ULong.RON get() = Money.of(this, Currency.RON)
 /**Romanian leu*/
-inline val UInt.RON get() = Money(toULong() * 100u, Currency.RON)
+inline val Int.RON get() = Money.of(this, Currency.RON)
 /**Romanian leu*/
-inline val ULong.RON get() = Money(this * 100u, Currency.RON)
+inline val Long.RON get() = Money.of(this, Currency.RON)
 
 /**Serbian dinar*/
-inline val Int.RSD get() = Money(toULong() * 100u, Currency.RSD)
+inline val Double.RSD get() = Money.of(this, Currency.RSD)
 /**Serbian dinar*/
-inline val Long.RSD get() = Money(toULong() * 100u, Currency.RSD)
+inline val UInt.RSD get() = Money.of(this, Currency.RSD)
 /**Serbian dinar*/
-inline val Double.RSD get() = Money((toDouble() * 100).toULong(), Currency.RSD)
+inline val ULong.RSD get() = Money.of(this, Currency.RSD)
 /**Serbian dinar*/
-inline val UInt.RSD get() = Money(toULong() * 100u, Currency.RSD)
+inline val Int.RSD get() = Money.of(this, Currency.RSD)
 /**Serbian dinar*/
-inline val ULong.RSD get() = Money(this * 100u, Currency.RSD)
+inline val Long.RSD get() = Money.of(this, Currency.RSD)
 
 /**Russian ruble*/
-inline val Int.RUB get() = Money(toULong() * 100u, Currency.RUB)
+inline val Double.RUB get() = Money.of(this, Currency.RUB)
 /**Russian ruble*/
-inline val Long.RUB get() = Money(toULong() * 100u, Currency.RUB)
+inline val UInt.RUB get() = Money.of(this, Currency.RUB)
 /**Russian ruble*/
-inline val Double.RUB get() = Money((toDouble() * 100).toULong(), Currency.RUB)
+inline val ULong.RUB get() = Money.of(this, Currency.RUB)
 /**Russian ruble*/
-inline val UInt.RUB get() = Money(toULong() * 100u, Currency.RUB)
+inline val Int.RUB get() = Money.of(this, Currency.RUB)
 /**Russian ruble*/
-inline val ULong.RUB get() = Money(this * 100u, Currency.RUB)
+inline val Long.RUB get() = Money.of(this, Currency.RUB)
 
 /**Saudi riyal*/
-inline val Int.SAR get() = Money(toULong() * 100u, Currency.SAR)
+inline val Double.SAR get() = Money.of(this, Currency.SAR)
 /**Saudi riyal*/
-inline val Long.SAR get() = Money(toULong() * 100u, Currency.SAR)
+inline val UInt.SAR get() = Money.of(this, Currency.SAR)
 /**Saudi riyal*/
-inline val Double.SAR get() = Money((toDouble() * 100).toULong(), Currency.SAR)
+inline val ULong.SAR get() = Money.of(this, Currency.SAR)
 /**Saudi riyal*/
-inline val UInt.SAR get() = Money(toULong() * 100u, Currency.SAR)
+inline val Int.SAR get() = Money.of(this, Currency.SAR)
 /**Saudi riyal*/
-inline val ULong.SAR get() = Money(this * 100u, Currency.SAR)
+inline val Long.SAR get() = Money.of(this, Currency.SAR)
 
 /**Solomon Islands dollar*/
-inline val Int.SBD get() = Money(toULong() * 100u, Currency.SBD)
+inline val Double.SBD get() = Money.of(this, Currency.SBD)
 /**Solomon Islands dollar*/
-inline val Long.SBD get() = Money(toULong() * 100u, Currency.SBD)
+inline val UInt.SBD get() = Money.of(this, Currency.SBD)
 /**Solomon Islands dollar*/
-inline val Double.SBD get() = Money((toDouble() * 100).toULong(), Currency.SBD)
+inline val ULong.SBD get() = Money.of(this, Currency.SBD)
 /**Solomon Islands dollar*/
-inline val UInt.SBD get() = Money(toULong() * 100u, Currency.SBD)
+inline val Int.SBD get() = Money.of(this, Currency.SBD)
 /**Solomon Islands dollar*/
-inline val ULong.SBD get() = Money(this * 100u, Currency.SBD)
+inline val Long.SBD get() = Money.of(this, Currency.SBD)
 
 /**Seychellois rupee*/
-inline val Int.SCR get() = Money(toULong() * 100u, Currency.SCR)
+inline val Double.SCR get() = Money.of(this, Currency.SCR)
 /**Seychellois rupee*/
-inline val Long.SCR get() = Money(toULong() * 100u, Currency.SCR)
+inline val UInt.SCR get() = Money.of(this, Currency.SCR)
 /**Seychellois rupee*/
-inline val Double.SCR get() = Money((toDouble() * 100).toULong(), Currency.SCR)
+inline val ULong.SCR get() = Money.of(this, Currency.SCR)
 /**Seychellois rupee*/
-inline val UInt.SCR get() = Money(toULong() * 100u, Currency.SCR)
+inline val Int.SCR get() = Money.of(this, Currency.SCR)
 /**Seychellois rupee*/
-inline val ULong.SCR get() = Money(this * 100u, Currency.SCR)
+inline val Long.SCR get() = Money.of(this, Currency.SCR)
 
 /**Sudanese pound*/
-inline val Int.SDG get() = Money(toULong() * 100u, Currency.SDG)
+inline val Double.SDG get() = Money.of(this, Currency.SDG)
 /**Sudanese pound*/
-inline val Long.SDG get() = Money(toULong() * 100u, Currency.SDG)
+inline val UInt.SDG get() = Money.of(this, Currency.SDG)
 /**Sudanese pound*/
-inline val Double.SDG get() = Money((toDouble() * 100).toULong(), Currency.SDG)
+inline val ULong.SDG get() = Money.of(this, Currency.SDG)
 /**Sudanese pound*/
-inline val UInt.SDG get() = Money(toULong() * 100u, Currency.SDG)
+inline val Int.SDG get() = Money.of(this, Currency.SDG)
 /**Sudanese pound*/
-inline val ULong.SDG get() = Money(this * 100u, Currency.SDG)
+inline val Long.SDG get() = Money.of(this, Currency.SDG)
 
 /**Swedish krona*/
-inline val Int.SEK get() = Money(toULong() * 100u, Currency.SEK)
+inline val Double.SEK get() = Money.of(this, Currency.SEK)
 /**Swedish krona*/
-inline val Long.SEK get() = Money(toULong() * 100u, Currency.SEK)
+inline val UInt.SEK get() = Money.of(this, Currency.SEK)
 /**Swedish krona*/
-inline val Double.SEK get() = Money((toDouble() * 100).toULong(), Currency.SEK)
+inline val ULong.SEK get() = Money.of(this, Currency.SEK)
 /**Swedish krona*/
-inline val UInt.SEK get() = Money(toULong() * 100u, Currency.SEK)
+inline val Int.SEK get() = Money.of(this, Currency.SEK)
 /**Swedish krona*/
-inline val ULong.SEK get() = Money(this * 100u, Currency.SEK)
+inline val Long.SEK get() = Money.of(this, Currency.SEK)
 
 /**Singapore dollar*/
-inline val Int.SGD get() = Money(toULong() * 100u, Currency.SGD)
+inline val Double.SGD get() = Money.of(this, Currency.SGD)
 /**Singapore dollar*/
-inline val Long.SGD get() = Money(toULong() * 100u, Currency.SGD)
+inline val UInt.SGD get() = Money.of(this, Currency.SGD)
 /**Singapore dollar*/
-inline val Double.SGD get() = Money((toDouble() * 100).toULong(), Currency.SGD)
+inline val ULong.SGD get() = Money.of(this, Currency.SGD)
 /**Singapore dollar*/
-inline val UInt.SGD get() = Money(toULong() * 100u, Currency.SGD)
+inline val Int.SGD get() = Money.of(this, Currency.SGD)
 /**Singapore dollar*/
-inline val ULong.SGD get() = Money(this * 100u, Currency.SGD)
+inline val Long.SGD get() = Money.of(this, Currency.SGD)
 
 /**Saint Helena pound*/
-inline val Int.SHP get() = Money(toULong() * 100u, Currency.SHP)
+inline val Double.SHP get() = Money.of(this, Currency.SHP)
 /**Saint Helena pound*/
-inline val Long.SHP get() = Money(toULong() * 100u, Currency.SHP)
+inline val UInt.SHP get() = Money.of(this, Currency.SHP)
 /**Saint Helena pound*/
-inline val Double.SHP get() = Money((toDouble() * 100).toULong(), Currency.SHP)
+inline val ULong.SHP get() = Money.of(this, Currency.SHP)
 /**Saint Helena pound*/
-inline val UInt.SHP get() = Money(toULong() * 100u, Currency.SHP)
+inline val Int.SHP get() = Money.of(this, Currency.SHP)
 /**Saint Helena pound*/
-inline val ULong.SHP get() = Money(this * 100u, Currency.SHP)
+inline val Long.SHP get() = Money.of(this, Currency.SHP)
 
 /**Sierra Leonean leone*/
-inline val Int.SLL get() = Money(toULong() * 100u, Currency.SLL)
+inline val Double.SLL get() = Money.of(this, Currency.SLL)
 /**Sierra Leonean leone*/
-inline val Long.SLL get() = Money(toULong() * 100u, Currency.SLL)
+inline val UInt.SLL get() = Money.of(this, Currency.SLL)
 /**Sierra Leonean leone*/
-inline val Double.SLL get() = Money((toDouble() * 100).toULong(), Currency.SLL)
+inline val ULong.SLL get() = Money.of(this, Currency.SLL)
 /**Sierra Leonean leone*/
-inline val UInt.SLL get() = Money(toULong() * 100u, Currency.SLL)
+inline val Int.SLL get() = Money.of(this, Currency.SLL)
 /**Sierra Leonean leone*/
-inline val ULong.SLL get() = Money(this * 100u, Currency.SLL)
+inline val Long.SLL get() = Money.of(this, Currency.SLL)
 
 /**Somali shilling*/
-inline val Int.SOS get() = Money(toULong() * 100u, Currency.SOS)
+inline val Double.SOS get() = Money.of(this, Currency.SOS)
 /**Somali shilling*/
-inline val Long.SOS get() = Money(toULong() * 100u, Currency.SOS)
+inline val UInt.SOS get() = Money.of(this, Currency.SOS)
 /**Somali shilling*/
-inline val Double.SOS get() = Money((toDouble() * 100).toULong(), Currency.SOS)
+inline val ULong.SOS get() = Money.of(this, Currency.SOS)
 /**Somali shilling*/
-inline val UInt.SOS get() = Money(toULong() * 100u, Currency.SOS)
+inline val Int.SOS get() = Money.of(this, Currency.SOS)
 /**Somali shilling*/
-inline val ULong.SOS get() = Money(this * 100u, Currency.SOS)
+inline val Long.SOS get() = Money.of(this, Currency.SOS)
 
 /**Surinamese dollar*/
-inline val Int.SRD get() = Money(toULong() * 100u, Currency.SRD)
+inline val Double.SRD get() = Money.of(this, Currency.SRD)
 /**Surinamese dollar*/
-inline val Long.SRD get() = Money(toULong() * 100u, Currency.SRD)
+inline val UInt.SRD get() = Money.of(this, Currency.SRD)
 /**Surinamese dollar*/
-inline val Double.SRD get() = Money((toDouble() * 100).toULong(), Currency.SRD)
+inline val ULong.SRD get() = Money.of(this, Currency.SRD)
 /**Surinamese dollar*/
-inline val UInt.SRD get() = Money(toULong() * 100u, Currency.SRD)
+inline val Int.SRD get() = Money.of(this, Currency.SRD)
 /**Surinamese dollar*/
-inline val ULong.SRD get() = Money(this * 100u, Currency.SRD)
+inline val Long.SRD get() = Money.of(this, Currency.SRD)
 
 /**Syrian pound*/
-inline val Int.SYP get() = Money(toULong() * 100u, Currency.SYP)
+inline val Double.SYP get() = Money.of(this, Currency.SYP)
 /**Syrian pound*/
-inline val Long.SYP get() = Money(toULong() * 100u, Currency.SYP)
+inline val UInt.SYP get() = Money.of(this, Currency.SYP)
 /**Syrian pound*/
-inline val Double.SYP get() = Money((toDouble() * 100).toULong(), Currency.SYP)
+inline val ULong.SYP get() = Money.of(this, Currency.SYP)
 /**Syrian pound*/
-inline val UInt.SYP get() = Money(toULong() * 100u, Currency.SYP)
+inline val Int.SYP get() = Money.of(this, Currency.SYP)
 /**Syrian pound*/
-inline val ULong.SYP get() = Money(this * 100u, Currency.SYP)
+inline val Long.SYP get() = Money.of(this, Currency.SYP)
 
 /**Swazi lilangeni*/
-inline val Int.SZL get() = Money(toULong() * 100u, Currency.SZL)
+inline val Double.SZL get() = Money.of(this, Currency.SZL)
 /**Swazi lilangeni*/
-inline val Long.SZL get() = Money(toULong() * 100u, Currency.SZL)
+inline val UInt.SZL get() = Money.of(this, Currency.SZL)
 /**Swazi lilangeni*/
-inline val Double.SZL get() = Money((toDouble() * 100).toULong(), Currency.SZL)
+inline val ULong.SZL get() = Money.of(this, Currency.SZL)
 /**Swazi lilangeni*/
-inline val UInt.SZL get() = Money(toULong() * 100u, Currency.SZL)
+inline val Int.SZL get() = Money.of(this, Currency.SZL)
 /**Swazi lilangeni*/
-inline val ULong.SZL get() = Money(this * 100u, Currency.SZL)
+inline val Long.SZL get() = Money.of(this, Currency.SZL)
 
 /**Thai baht*/
-inline val Int.THB get() = Money(toULong() * 100u, Currency.THB)
+inline val Double.THB get() = Money.of(this, Currency.THB)
 /**Thai baht*/
-inline val Long.THB get() = Money(toULong() * 100u, Currency.THB)
+inline val UInt.THB get() = Money.of(this, Currency.THB)
 /**Thai baht*/
-inline val Double.THB get() = Money((toDouble() * 100).toULong(), Currency.THB)
+inline val ULong.THB get() = Money.of(this, Currency.THB)
 /**Thai baht*/
-inline val UInt.THB get() = Money(toULong() * 100u, Currency.THB)
+inline val Int.THB get() = Money.of(this, Currency.THB)
 /**Thai baht*/
-inline val ULong.THB get() = Money(this * 100u, Currency.THB)
+inline val Long.THB get() = Money.of(this, Currency.THB)
 
 /**Tajikistani somoni*/
-inline val Int.TJS get() = Money(toULong() * 100u, Currency.TJS)
+inline val Double.TJS get() = Money.of(this, Currency.TJS)
 /**Tajikistani somoni*/
-inline val Long.TJS get() = Money(toULong() * 100u, Currency.TJS)
+inline val UInt.TJS get() = Money.of(this, Currency.TJS)
 /**Tajikistani somoni*/
-inline val Double.TJS get() = Money((toDouble() * 100).toULong(), Currency.TJS)
+inline val ULong.TJS get() = Money.of(this, Currency.TJS)
 /**Tajikistani somoni*/
-inline val UInt.TJS get() = Money(toULong() * 100u, Currency.TJS)
+inline val Int.TJS get() = Money.of(this, Currency.TJS)
 /**Tajikistani somoni*/
-inline val ULong.TJS get() = Money(this * 100u, Currency.TJS)
+inline val Long.TJS get() = Money.of(this, Currency.TJS)
 
 /**Turkmen manat*/
-inline val Int.TMT get() = Money(toULong() * 100u, Currency.TMT)
+inline val Double.TMT get() = Money.of(this, Currency.TMT)
 /**Turkmen manat*/
-inline val Long.TMT get() = Money(toULong() * 100u, Currency.TMT)
+inline val UInt.TMT get() = Money.of(this, Currency.TMT)
 /**Turkmen manat*/
-inline val Double.TMT get() = Money((toDouble() * 100).toULong(), Currency.TMT)
+inline val ULong.TMT get() = Money.of(this, Currency.TMT)
 /**Turkmen manat*/
-inline val UInt.TMT get() = Money(toULong() * 100u, Currency.TMT)
+inline val Int.TMT get() = Money.of(this, Currency.TMT)
 /**Turkmen manat*/
-inline val ULong.TMT get() = Money(this * 100u, Currency.TMT)
+inline val Long.TMT get() = Money.of(this, Currency.TMT)
 
 /**Tunisian dinar*/
-inline val Int.TND get() = Money(toULong() * 100u, Currency.TND)
+inline val Double.TND get() = Money.of(this, Currency.TND)
 /**Tunisian dinar*/
-inline val Long.TND get() = Money(toULong() * 100u, Currency.TND)
+inline val UInt.TND get() = Money.of(this, Currency.TND)
 /**Tunisian dinar*/
-inline val Double.TND get() = Money((toDouble() * 100).toULong(), Currency.TND)
+inline val ULong.TND get() = Money.of(this, Currency.TND)
 /**Tunisian dinar*/
-inline val UInt.TND get() = Money(toULong() * 100u, Currency.TND)
+inline val Int.TND get() = Money.of(this, Currency.TND)
 /**Tunisian dinar*/
-inline val ULong.TND get() = Money(this * 100u, Currency.TND)
+inline val Long.TND get() = Money.of(this, Currency.TND)
 
 /**Turkish new lira*/
-inline val Int.TRY get() = Money(toULong() * 100u, Currency.TRY)
+inline val Double.TRY get() = Money.of(this, Currency.TRY)
 /**Turkish new lira*/
-inline val Long.TRY get() = Money(toULong() * 100u, Currency.TRY)
+inline val UInt.TRY get() = Money.of(this, Currency.TRY)
 /**Turkish new lira*/
-inline val Double.TRY get() = Money((toDouble() * 100).toULong(), Currency.TRY)
+inline val ULong.TRY get() = Money.of(this, Currency.TRY)
 /**Turkish new lira*/
-inline val UInt.TRY get() = Money(toULong() * 100u, Currency.TRY)
+inline val Int.TRY get() = Money.of(this, Currency.TRY)
 /**Turkish new lira*/
-inline val ULong.TRY get() = Money(this * 100u, Currency.TRY)
+inline val Long.TRY get() = Money.of(this, Currency.TRY)
 
 /**Trinidad and Tobago dollar*/
-inline val Int.TTD get() = Money(toULong() * 100u, Currency.TTD)
+inline val Double.TTD get() = Money.of(this, Currency.TTD)
 /**Trinidad and Tobago dollar*/
-inline val Long.TTD get() = Money(toULong() * 100u, Currency.TTD)
+inline val UInt.TTD get() = Money.of(this, Currency.TTD)
 /**Trinidad and Tobago dollar*/
-inline val Double.TTD get() = Money((toDouble() * 100).toULong(), Currency.TTD)
+inline val ULong.TTD get() = Money.of(this, Currency.TTD)
 /**Trinidad and Tobago dollar*/
-inline val UInt.TTD get() = Money(toULong() * 100u, Currency.TTD)
+inline val Int.TTD get() = Money.of(this, Currency.TTD)
 /**Trinidad and Tobago dollar*/
-inline val ULong.TTD get() = Money(this * 100u, Currency.TTD)
+inline val Long.TTD get() = Money.of(this, Currency.TTD)
 
 /**New Taiwan dollar*/
-inline val Int.TWD get() = Money(toULong() * 100u, Currency.TWD)
+inline val Double.TWD get() = Money.of(this, Currency.TWD)
 /**New Taiwan dollar*/
-inline val Long.TWD get() = Money(toULong() * 100u, Currency.TWD)
+inline val UInt.TWD get() = Money.of(this, Currency.TWD)
 /**New Taiwan dollar*/
-inline val Double.TWD get() = Money((toDouble() * 100).toULong(), Currency.TWD)
+inline val ULong.TWD get() = Money.of(this, Currency.TWD)
 /**New Taiwan dollar*/
-inline val UInt.TWD get() = Money(toULong() * 100u, Currency.TWD)
+inline val Int.TWD get() = Money.of(this, Currency.TWD)
 /**New Taiwan dollar*/
-inline val ULong.TWD get() = Money(this * 100u, Currency.TWD)
+inline val Long.TWD get() = Money.of(this, Currency.TWD)
 
 /**Tanzanian shilling*/
-inline val Int.TZS get() = Money(toULong() * 100u, Currency.TZS)
+inline val Double.TZS get() = Money.of(this, Currency.TZS)
 /**Tanzanian shilling*/
-inline val Long.TZS get() = Money(toULong() * 100u, Currency.TZS)
+inline val UInt.TZS get() = Money.of(this, Currency.TZS)
 /**Tanzanian shilling*/
-inline val Double.TZS get() = Money((toDouble() * 100).toULong(), Currency.TZS)
+inline val ULong.TZS get() = Money.of(this, Currency.TZS)
 /**Tanzanian shilling*/
-inline val UInt.TZS get() = Money(toULong() * 100u, Currency.TZS)
+inline val Int.TZS get() = Money.of(this, Currency.TZS)
 /**Tanzanian shilling*/
-inline val ULong.TZS get() = Money(this * 100u, Currency.TZS)
+inline val Long.TZS get() = Money.of(this, Currency.TZS)
 
 /**Ukrainian hryvnia*/
-inline val Int.UAH get() = Money(toULong() * 100u, Currency.UAH)
+inline val Double.UAH get() = Money.of(this, Currency.UAH)
 /**Ukrainian hryvnia*/
-inline val Long.UAH get() = Money(toULong() * 100u, Currency.UAH)
+inline val UInt.UAH get() = Money.of(this, Currency.UAH)
 /**Ukrainian hryvnia*/
-inline val Double.UAH get() = Money((toDouble() * 100).toULong(), Currency.UAH)
+inline val ULong.UAH get() = Money.of(this, Currency.UAH)
 /**Ukrainian hryvnia*/
-inline val UInt.UAH get() = Money(toULong() * 100u, Currency.UAH)
+inline val Int.UAH get() = Money.of(this, Currency.UAH)
 /**Ukrainian hryvnia*/
-inline val ULong.UAH get() = Money(this * 100u, Currency.UAH)
+inline val Long.UAH get() = Money.of(this, Currency.UAH)
 
 /**Ugandan shilling*/
-inline val Int.UGX get() = Money(toULong() * 100u, Currency.UGX)
+inline val Double.UGX get() = Money.of(this, Currency.UGX)
 /**Ugandan shilling*/
-inline val Long.UGX get() = Money(toULong() * 100u, Currency.UGX)
+inline val UInt.UGX get() = Money.of(this, Currency.UGX)
 /**Ugandan shilling*/
-inline val Double.UGX get() = Money((toDouble() * 100).toULong(), Currency.UGX)
+inline val ULong.UGX get() = Money.of(this, Currency.UGX)
 /**Ugandan shilling*/
-inline val UInt.UGX get() = Money(toULong() * 100u, Currency.UGX)
+inline val Int.UGX get() = Money.of(this, Currency.UGX)
 /**Ugandan shilling*/
-inline val ULong.UGX get() = Money(this * 100u, Currency.UGX)
+inline val Long.UGX get() = Money.of(this, Currency.UGX)
 
 /**United States dollar*/
-inline val Int.USD get() = Money(toULong() * 100u, Currency.USD)
+inline val Double.USD get() = Money.of(this, Currency.USD)
 /**United States dollar*/
-inline val Long.USD get() = Money(toULong() * 100u, Currency.USD)
+inline val UInt.USD get() = Money.of(this, Currency.USD)
 /**United States dollar*/
-inline val Double.USD get() = Money((toDouble() * 100).toULong(), Currency.USD)
+inline val ULong.USD get() = Money.of(this, Currency.USD)
 /**United States dollar*/
-inline val UInt.USD get() = Money(toULong() * 100u, Currency.USD)
+inline val Int.USD get() = Money.of(this, Currency.USD)
 /**United States dollar*/
-inline val ULong.USD get() = Money(this * 100u, Currency.USD)
+inline val Long.USD get() = Money.of(this, Currency.USD)
 
 /**Uruguayan peso*/
-inline val Int.UYU get() = Money(toULong() * 100u, Currency.UYU)
+inline val Double.UYU get() = Money.of(this, Currency.UYU)
 /**Uruguayan peso*/
-inline val Long.UYU get() = Money(toULong() * 100u, Currency.UYU)
+inline val UInt.UYU get() = Money.of(this, Currency.UYU)
 /**Uruguayan peso*/
-inline val Double.UYU get() = Money((toDouble() * 100).toULong(), Currency.UYU)
+inline val ULong.UYU get() = Money.of(this, Currency.UYU)
 /**Uruguayan peso*/
-inline val UInt.UYU get() = Money(toULong() * 100u, Currency.UYU)
+inline val Int.UYU get() = Money.of(this, Currency.UYU)
 /**Uruguayan peso*/
-inline val ULong.UYU get() = Money(this * 100u, Currency.UYU)
+inline val Long.UYU get() = Money.of(this, Currency.UYU)
 
 /**Uzbekistani som*/
-inline val Int.UZS get() = Money(toULong() * 100u, Currency.UZS)
+inline val Double.UZS get() = Money.of(this, Currency.UZS)
 /**Uzbekistani som*/
-inline val Long.UZS get() = Money(toULong() * 100u, Currency.UZS)
+inline val UInt.UZS get() = Money.of(this, Currency.UZS)
 /**Uzbekistani som*/
-inline val Double.UZS get() = Money((toDouble() * 100).toULong(), Currency.UZS)
+inline val ULong.UZS get() = Money.of(this, Currency.UZS)
 /**Uzbekistani som*/
-inline val UInt.UZS get() = Money(toULong() * 100u, Currency.UZS)
+inline val Int.UZS get() = Money.of(this, Currency.UZS)
 /**Uzbekistani som*/
-inline val ULong.UZS get() = Money(this * 100u, Currency.UZS)
+inline val Long.UZS get() = Money.of(this, Currency.UZS)
 
 /**Venezuelan bolivar*/
-inline val Int.VEB get() = Money(toULong() * 100u, Currency.VEB)
+inline val Double.VEB get() = Money.of(this, Currency.VEB)
 /**Venezuelan bolivar*/
-inline val Long.VEB get() = Money(toULong() * 100u, Currency.VEB)
+inline val UInt.VEB get() = Money.of(this, Currency.VEB)
 /**Venezuelan bolivar*/
-inline val Double.VEB get() = Money((toDouble() * 100).toULong(), Currency.VEB)
+inline val ULong.VEB get() = Money.of(this, Currency.VEB)
 /**Venezuelan bolivar*/
-inline val UInt.VEB get() = Money(toULong() * 100u, Currency.VEB)
+inline val Int.VEB get() = Money.of(this, Currency.VEB)
 /**Venezuelan bolivar*/
-inline val ULong.VEB get() = Money(this * 100u, Currency.VEB)
+inline val Long.VEB get() = Money.of(this, Currency.VEB)
 
 /**Vietnamese dong*/
-inline val Int.VND get() = Money(toULong() * 100u, Currency.VND)
+inline val Double.VND get() = Money.of(this, Currency.VND)
 /**Vietnamese dong*/
-inline val Long.VND get() = Money(toULong() * 100u, Currency.VND)
+inline val UInt.VND get() = Money.of(this, Currency.VND)
 /**Vietnamese dong*/
-inline val Double.VND get() = Money((toDouble() * 100).toULong(), Currency.VND)
+inline val ULong.VND get() = Money.of(this, Currency.VND)
 /**Vietnamese dong*/
-inline val UInt.VND get() = Money(toULong() * 100u, Currency.VND)
+inline val Int.VND get() = Money.of(this, Currency.VND)
 /**Vietnamese dong*/
-inline val ULong.VND get() = Money(this * 100u, Currency.VND)
+inline val Long.VND get() = Money.of(this, Currency.VND)
 
 /**Vanuatu vatu*/
-inline val Int.VUV get() = Money(toULong() * 100u, Currency.VUV)
+inline val Double.VUV get() = Money.of(this, Currency.VUV)
 /**Vanuatu vatu*/
-inline val Long.VUV get() = Money(toULong() * 100u, Currency.VUV)
+inline val UInt.VUV get() = Money.of(this, Currency.VUV)
 /**Vanuatu vatu*/
-inline val Double.VUV get() = Money((toDouble() * 100).toULong(), Currency.VUV)
+inline val ULong.VUV get() = Money.of(this, Currency.VUV)
 /**Vanuatu vatu*/
-inline val UInt.VUV get() = Money(toULong() * 100u, Currency.VUV)
+inline val Int.VUV get() = Money.of(this, Currency.VUV)
 /**Vanuatu vatu*/
-inline val ULong.VUV get() = Money(this * 100u, Currency.VUV)
+inline val Long.VUV get() = Money.of(this, Currency.VUV)
 
 /**Samoan tala*/
-inline val Int.WST get() = Money(toULong() * 100u, Currency.WST)
+inline val Double.WST get() = Money.of(this, Currency.WST)
 /**Samoan tala*/
-inline val Long.WST get() = Money(toULong() * 100u, Currency.WST)
+inline val UInt.WST get() = Money.of(this, Currency.WST)
 /**Samoan tala*/
-inline val Double.WST get() = Money((toDouble() * 100).toULong(), Currency.WST)
+inline val ULong.WST get() = Money.of(this, Currency.WST)
 /**Samoan tala*/
-inline val UInt.WST get() = Money(toULong() * 100u, Currency.WST)
+inline val Int.WST get() = Money.of(this, Currency.WST)
 /**Samoan tala*/
-inline val ULong.WST get() = Money(this * 100u, Currency.WST)
+inline val Long.WST get() = Money.of(this, Currency.WST)
 
 /**Central African CFA franc*/
-inline val Int.XAF get() = Money(toULong() * 100u, Currency.XAF)
+inline val Double.XAF get() = Money.of(this, Currency.XAF)
 /**Central African CFA franc*/
-inline val Long.XAF get() = Money(toULong() * 100u, Currency.XAF)
+inline val UInt.XAF get() = Money.of(this, Currency.XAF)
 /**Central African CFA franc*/
-inline val Double.XAF get() = Money((toDouble() * 100).toULong(), Currency.XAF)
+inline val ULong.XAF get() = Money.of(this, Currency.XAF)
 /**Central African CFA franc*/
-inline val UInt.XAF get() = Money(toULong() * 100u, Currency.XAF)
+inline val Int.XAF get() = Money.of(this, Currency.XAF)
 /**Central African CFA franc*/
-inline val ULong.XAF get() = Money(this * 100u, Currency.XAF)
+inline val Long.XAF get() = Money.of(this, Currency.XAF)
 
 /**East Caribbean dollar*/
-inline val Int.XCD get() = Money(toULong() * 100u, Currency.XCD)
+inline val Double.XCD get() = Money.of(this, Currency.XCD)
 /**East Caribbean dollar*/
-inline val Long.XCD get() = Money(toULong() * 100u, Currency.XCD)
+inline val UInt.XCD get() = Money.of(this, Currency.XCD)
 /**East Caribbean dollar*/
-inline val Double.XCD get() = Money((toDouble() * 100).toULong(), Currency.XCD)
+inline val ULong.XCD get() = Money.of(this, Currency.XCD)
 /**East Caribbean dollar*/
-inline val UInt.XCD get() = Money(toULong() * 100u, Currency.XCD)
+inline val Int.XCD get() = Money.of(this, Currency.XCD)
 /**East Caribbean dollar*/
-inline val ULong.XCD get() = Money(this * 100u, Currency.XCD)
+inline val Long.XCD get() = Money.of(this, Currency.XCD)
 
 /**Special Drawing Rights*/
-inline val Int.XDR get() = Money(toULong() * 100u, Currency.XDR)
+inline val Double.XDR get() = Money.of(this, Currency.XDR)
 /**Special Drawing Rights*/
-inline val Long.XDR get() = Money(toULong() * 100u, Currency.XDR)
+inline val UInt.XDR get() = Money.of(this, Currency.XDR)
 /**Special Drawing Rights*/
-inline val Double.XDR get() = Money((toDouble() * 100).toULong(), Currency.XDR)
+inline val ULong.XDR get() = Money.of(this, Currency.XDR)
 /**Special Drawing Rights*/
-inline val UInt.XDR get() = Money(toULong() * 100u, Currency.XDR)
+inline val Int.XDR get() = Money.of(this, Currency.XDR)
 /**Special Drawing Rights*/
-inline val ULong.XDR get() = Money(this * 100u, Currency.XDR)
+inline val Long.XDR get() = Money.of(this, Currency.XDR)
 
 /**West African CFA franc*/
-inline val Int.XOF get() = Money(toULong() * 100u, Currency.XOF)
+inline val Double.XOF get() = Money.of(this, Currency.XOF)
 /**West African CFA franc*/
-inline val Long.XOF get() = Money(toULong() * 100u, Currency.XOF)
+inline val UInt.XOF get() = Money.of(this, Currency.XOF)
 /**West African CFA franc*/
-inline val Double.XOF get() = Money((toDouble() * 100).toULong(), Currency.XOF)
+inline val ULong.XOF get() = Money.of(this, Currency.XOF)
 /**West African CFA franc*/
-inline val UInt.XOF get() = Money(toULong() * 100u, Currency.XOF)
+inline val Int.XOF get() = Money.of(this, Currency.XOF)
 /**West African CFA franc*/
-inline val ULong.XOF get() = Money(this * 100u, Currency.XOF)
+inline val Long.XOF get() = Money.of(this, Currency.XOF)
 
 /**CFP franc*/
-inline val Int.XPF get() = Money(toULong() * 100u, Currency.XPF)
+inline val Double.XPF get() = Money.of(this, Currency.XPF)
 /**CFP franc*/
-inline val Long.XPF get() = Money(toULong() * 100u, Currency.XPF)
+inline val UInt.XPF get() = Money.of(this, Currency.XPF)
 /**CFP franc*/
-inline val Double.XPF get() = Money((toDouble() * 100).toULong(), Currency.XPF)
+inline val ULong.XPF get() = Money.of(this, Currency.XPF)
 /**CFP franc*/
-inline val UInt.XPF get() = Money(toULong() * 100u, Currency.XPF)
+inline val Int.XPF get() = Money.of(this, Currency.XPF)
 /**CFP franc*/
-inline val ULong.XPF get() = Money(this * 100u, Currency.XPF)
+inline val Long.XPF get() = Money.of(this, Currency.XPF)
 
 /**Yemeni rial*/
-inline val Int.YER get() = Money(toULong() * 100u, Currency.YER)
+inline val Double.YER get() = Money.of(this, Currency.YER)
 /**Yemeni rial*/
-inline val Long.YER get() = Money(toULong() * 100u, Currency.YER)
+inline val UInt.YER get() = Money.of(this, Currency.YER)
 /**Yemeni rial*/
-inline val Double.YER get() = Money((toDouble() * 100).toULong(), Currency.YER)
+inline val ULong.YER get() = Money.of(this, Currency.YER)
 /**Yemeni rial*/
-inline val UInt.YER get() = Money(toULong() * 100u, Currency.YER)
+inline val Int.YER get() = Money.of(this, Currency.YER)
 /**Yemeni rial*/
-inline val ULong.YER get() = Money(this * 100u, Currency.YER)
+inline val Long.YER get() = Money.of(this, Currency.YER)
 
 /**South African rand*/
-inline val Int.ZAR get() = Money(toULong() * 100u, Currency.ZAR)
+inline val Double.ZAR get() = Money.of(this, Currency.ZAR)
 /**South African rand*/
-inline val Long.ZAR get() = Money(toULong() * 100u, Currency.ZAR)
+inline val UInt.ZAR get() = Money.of(this, Currency.ZAR)
 /**South African rand*/
-inline val Double.ZAR get() = Money((toDouble() * 100).toULong(), Currency.ZAR)
+inline val ULong.ZAR get() = Money.of(this, Currency.ZAR)
 /**South African rand*/
-inline val UInt.ZAR get() = Money(toULong() * 100u, Currency.ZAR)
+inline val Int.ZAR get() = Money.of(this, Currency.ZAR)
 /**South African rand*/
-inline val ULong.ZAR get() = Money(this * 100u, Currency.ZAR)
+inline val Long.ZAR get() = Money.of(this, Currency.ZAR)
 
 /**Zambian kwacha*/
-inline val Int.ZMK get() = Money(toULong() * 100u, Currency.ZMK)
+inline val Double.ZMK get() = Money.of(this, Currency.ZMK)
 /**Zambian kwacha*/
-inline val Long.ZMK get() = Money(toULong() * 100u, Currency.ZMK)
+inline val UInt.ZMK get() = Money.of(this, Currency.ZMK)
 /**Zambian kwacha*/
-inline val Double.ZMK get() = Money((toDouble() * 100).toULong(), Currency.ZMK)
+inline val ULong.ZMK get() = Money.of(this, Currency.ZMK)
 /**Zambian kwacha*/
-inline val UInt.ZMK get() = Money(toULong() * 100u, Currency.ZMK)
+inline val Int.ZMK get() = Money.of(this, Currency.ZMK)
 /**Zambian kwacha*/
-inline val ULong.ZMK get() = Money(this * 100u, Currency.ZMK)
+inline val Long.ZMK get() = Money.of(this, Currency.ZMK)
 
 /**Zimbabwean dollar*/
-inline val Int.ZWR get() = Money(toULong() * 100u, Currency.ZWR)
+inline val Double.ZWR get() = Money.of(this, Currency.ZWR)
 /**Zimbabwean dollar*/
-inline val Long.ZWR get() = Money(toULong() * 100u, Currency.ZWR)
+inline val UInt.ZWR get() = Money.of(this, Currency.ZWR)
 /**Zimbabwean dollar*/
-inline val Double.ZWR get() = Money((toDouble() * 100).toULong(), Currency.ZWR)
+inline val ULong.ZWR get() = Money.of(this, Currency.ZWR)
 /**Zimbabwean dollar*/
-inline val UInt.ZWR get() = Money(toULong() * 100u, Currency.ZWR)
+inline val Int.ZWR get() = Money.of(this, Currency.ZWR)
 /**Zimbabwean dollar*/
-inline val ULong.ZWR get() = Money(this * 100u, Currency.ZWR)
+inline val Long.ZWR get() = Money.of(this, Currency.ZWR)
 

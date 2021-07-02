@@ -20,13 +20,14 @@ class MoneyTest {
         val json = """{"amount":50000,"currency":"TZS"}"""
         val money = Json.decodeFromString(Money.serializer(), json)
         assertEquals(money, 500.TZS)
-        assertEquals(money.readableString, "TZS 500.0")
+        println(500.TZS.readableString)
+        assertEquals("TZS 500.0", money.readableString)
     }
 
     @Test
     fun should_print_usd_correctly() {
-        assertEquals(3.00.USD.readableString, "USD 3.0")
-        assertEquals(3.15.USD.readableString, "USD 3.15")
-        assertEquals(4.49.UGX.readableString, "UGX 4.49")
+        assertEquals("USD 3.0", 3.00.USD.readableString)
+        assertEquals("USD 3.15", 3.15.USD.readableString)
+        assertEquals("UGX 4.49", 4.49.UGX.readableString)
     }
 }
