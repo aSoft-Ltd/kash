@@ -2,6 +2,7 @@ import groovy.json.JsonSlurper
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.Input
 import org.gradle.api.tasks.InputFile
+import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
 
@@ -11,60 +12,93 @@ open class CodeGenerator : DefaultTask() {
     var packageName: String = "kash"
 
     @InputFile
-    var input: File = project.file("src/commonMain/resources/currencies.json")
+    var currenciesInput: File = project.file("src/commonMain/resources/currencies.json")
+
+    @InputFile
+    var localSymbolsInput: File = project.file("src/commonMain/resources/symbols.json")
 
     @Input
     var className: String = "Currency"
 
-    private val outputDir get() = project.file("src/commonMain/kotlin/${packageName.replace(".", "/")}")
+    @OutputDirectory
+    var outputDir = project.file("src/commonMain/kotlin")
+
+    private val outputDirWithPackage get() = File(outputDir, packageName.replace(".", "/"))
+
+    private fun parseJson(json: String): Map<String, String> {
+        val slurper = JsonSlurper()
+        return slurper.parseText(json) as Map<String, String>
+    }
 
     private fun generateCurrencies(): List<Map<String, String>> {
-        outputDir.mkdirs()
-        val output = File(outputDir, "$className.kt")
-        println("Output path: ${output.absolutePath}")
-        if (!input.exists()) throw Exception("input file ${input.absolutePath} does not exist")
+        outputDirWithPackage.mkdirs()
+        val output = File(outputDirWithPackage, "$className.kt")
+        if (!currenciesInput.exists()) throw Exception("input file ${currenciesInput.absolutePath} does not exist")
         if (!output.exists()) output.createNewFile()
 
-        val lines = input.readLines()
-        val slurper = JsonSlurper()
-        val currencies = lines.subList(1, lines.size - 1).map { json ->
-            val map = slurper.parseText(json) as Map<String, String>
+        val currencyLines = currenciesInput.readLines()
+        val symbols = parseJson(localSymbolsInput.readText())
+
+        val currencies = currencyLines.subList(1, currencyLines.size - 1).map { json ->
+            val map = parseJson(json)
             mutableMapOf(*map.entries.map { it.toPair() }.toTypedArray()).apply {
                 put("lowestDenomination", "100")
+                put("localSymbol", symbols[map["cc"]] ?: "X")
             }
         }
+
         output.writeText(
             """
-            @file:Suppress("unused")
+            /*
+             * This is a generated document
+             * author of the generator: https://github.com/andylamax
+             */
+            @file:JsExport
+            @file:Suppress("unused","WRONG_EXPORTED_DECLARATION")
             
             package $packageName
             
             import kotlin.jvm.JvmSynthetic
+            import kotlin.jvm.JvmStatic
+            import kotlin.js.JsExport
+            import kotlin.js.JsName
+            import kotlinx.serialization.Serializable
             
-            enum class $className(val symbol: String, val details: String,val lowestDenomination: UShort) {${"\n"}
+            @Serializable(with = CurrencySerializer::class)
+            sealed class $className(val name: String, val globalSymbol: String, val localSymbol: String, val details: String,val lowestDenomination: Short) {
+                override fun toString() = name
+                companion object {
+                    @JvmStatic
+                    val values by lazy { 
+                        ${currencies.joinToString(separator = ", ", prefix = "arrayOf(", postfix = ")") { it["cc"].toString() }}
+                    }
+                    @JvmStatic
+                    fun valueOf(currency: String) = values.first { it.name == currency }
+                }            
         """.trimIndent()
         )
+
 
         output.appendText("\n")
         for (entry in currencies) {
             val name = entry["name"]
             output.appendText("\t/**$name*/\n")
-            output.appendText("""${"\t"}${entry["cc"]}("${symbol(entry["symbol"]!!)}","$name",${entry["lowestDenomination"]}u)""")
-            output.appendText(if (currencies.last() == entry) ";" else ",")
+            output.appendText("""${"\t"}object ${entry["cc"]} : $className("${entry["cc"]}","${symbol(entry["symbol"]!!)}","${symbol(entry["localSymbol"]!!)}","$name",${entry["lowestDenomination"]})""")
+//            output.appendText(if (currencies.last() == entry) ";" else ",")
             output.appendText("\n\n")
         }
-        output.appendText(listOf("UInt", "ULong", "Double").joinToString("\n") { type ->
-            val multiplier = "lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
+        output.appendText(listOf(/* "UInt", "ULong", */"Double").joinToString("\n") { type ->
             """
-            |    fun of(amount: $type) = Money((amount * $multiplier).toULong(), this)
+            |    @JsName("of${type}Value")
+            |    fun of(amount: $type) = Money((amount.toDouble() * lowestDenomination).toULong(), this)
             """.trimMargin()
         })
         output.appendText("\n")
         output.appendText(listOf("Int", "Long").joinToString("\n") { type ->
-            val multiplier = "lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
             """
             |    @JvmSynthetic
-            |    fun of(amount: $type) = Money((amount * $multiplier).toULong(), this)
+            |    @JsName("of${type}Value")
+            |    fun of(amount: $type) = Money((amount.toULong() * lowestDenomination.toULong()), this)
             """.trimMargin()
         })
         output.appendText("\n}")
@@ -72,68 +106,15 @@ open class CodeGenerator : DefaultTask() {
         return currencies
     }
 
-    fun generateMoney() {
-        val output = File(outputDir, "Money.kt")
+    private fun generateMoneyBuilder(currencyNames: List<Map<String, String>>) {
+        val output = File(outputDirWithPackage, "MoneyBuilders.kt")
         if (!output.exists()) output.createNewFile()
         output.writeText(
             """
-            @file:UseSerializers(LongAsStringSerializer::class)
-            
-            package $packageName
-            
-            import kotlinx.serialization.Serializable
-            import kotlinx.serialization.UseSerializers
-            import kotlinx.serialization.builtins.LongAsStringSerializer
-            import kotlin.jvm.JvmStatic
-            import kotlin.jvm.JvmSynthetic
-            import kotlin.math.floor
-
-            @Serializable
-            data class Money internal constructor(
-                /** In the lowest denomination */
-                val amount: ULong,
-                val currency: $className
-            ) {
-               
-                companion object {
-            ${
-                listOf("UInt", "ULong", "Double").joinToString("\n") { type ->
-                    val multiplier = "currency.lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
-                    """
-                    @JvmStatic
-                    fun of(amount: $type, currency: $className) = Money((amount * $multiplier).toULong(), currency)
-                   """
-                }
-            }
-            
-             ${
-                listOf("Int", "Long").joinToString("\n") { type ->
-                    val multiplier = "currency.lowestDenomination${if (type.startsWith("U")) "" else ".toShort()"}"
-                    """
-                    @JvmStatic
-                    @JvmSynthetic
-                    fun of(amount: $type, currency: $className) = Money((amount * $multiplier).toULong(), currency)
-                   """
-                }
-            }
-                }
-                val readableValue get() = amount.toDouble() / currency.lowestDenomination.toDouble()
-                
-                   val readableString
-        get() = (currency.name + " " + if (readableValue - floor(readableValue) == 0.0) "${"$"}readableValue.0" else readableValue).replace(
-            ".0.0",
-            ".0"
-        )
-            }
-        """.trimIndent()
-        )
-    }
-
-    fun generateMoneyBuilder(currencyNames: List<Map<String, String>>) {
-        val output = File(outputDir, "MoneyBuilders.kt")
-        if (!output.exists()) output.createNewFile()
-        output.writeText(
-            """
+            /*
+             * This is a generated document
+             * author of the generator: https://github.com/andylamax
+            */
             @file:JvmName("MoneyBuilders")
             @file:Suppress("unused")
             
@@ -144,7 +125,7 @@ open class CodeGenerator : DefaultTask() {
         )
         for (curr in currencyNames) {
             val name = curr["cc"]
-            for (type in listOf("Double", "UInt", "ULong")) {
+            for (type in listOf("Double" /*"UInt", "ULong"*/)) {
                 output.appendText(
                     """
                     /**${curr["name"]}*/
@@ -156,11 +137,15 @@ open class CodeGenerator : DefaultTask() {
         }
     }
 
-    fun generateKashUtils(currencyNames: List<Map<String, String>>) {
-        val output = File(outputDir, "KashUtils.kt")
+    private fun generateKashUtils(currencyNames: List<Map<String, String>>) {
+        val output = File(outputDirWithPackage, "KashUtils.kt")
         if (!output.exists()) output.createNewFile()
         output.writeText(
             """
+            /*
+             * This is a generated document
+             * author of the generator: https://github.com/andylamax
+            */
             @file:Suppress("unused")
             
             package $packageName${"\n\n"}
@@ -168,7 +153,7 @@ open class CodeGenerator : DefaultTask() {
         )
         for (curr in currencyNames) {
             val name = curr["cc"]
-            for (type in listOf("Double", "UInt", "ULong", "Int", "Long")) {
+            for (type in listOf("Double", /* "UInt", "ULong", */ "Int", "Long")) {
                 output.appendText(
                     """
                     /**${curr["name"]}*/
@@ -183,7 +168,6 @@ open class CodeGenerator : DefaultTask() {
     @TaskAction
     fun execute() {
         val currencies = generateCurrencies()
-        generateMoney()
         generateKashUtils(currencies)
         generateMoneyBuilder(currencies)
     }

@@ -117,6 +117,7 @@
   {"cc":"RON","symbol":"L","name":"Romanian leu"},
   {"cc":"RSD","symbol":"din.","name":"Serbian dinar"},
   {"cc":"RUB","symbol":"R","name":"Russian ruble"},
+  {"cc":"RWF","symbol":"FRW","name":"Rwandan Francs"},
   {"cc":"SAR","symbol":"SR","name":"Saudi riyal"},
   {"cc":"SBD","symbol":"SI$","name":"Solomon Islands dollar"},
   {"cc":"SCR","symbol":"SR","name":"Seychellois rupee"},
