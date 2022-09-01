@@ -1,5 +1,6 @@
 @file:JsExport
 @file:UseSerializers(LongAsStringSerializer::class)
+@file:Suppress("NON_EXPORTABLE_TYPE")
 
 package kash
 
@@ -24,8 +25,7 @@ import kotlin.jvm.JvmSynthetic
 @Serializable
 data class Money(
     /** In the lowest denomination */
-    @SerialName("amount") val centsAsLong: ULong,
-    @Serializable(with = CurrencySerializer::class)
+    @SerialName("cents") val centsAsLong: ULong,
     val currency: Currency
 ) {
 
@@ -41,19 +41,19 @@ data class Money(
 
     companion object {
         @JvmStatic
-        @JsName("fromDouble")
+        @JsName("ofAmount")
         fun of(amount: Double, currency: Currency) = Money((amount * currency.lowestDenomination).toULong(), currency)
 
 
         @JvmStatic
         @JvmSynthetic
-        @JsName("fromInt")
+        @JsName("_ignore_ofAmount")
         fun of(amount: Int, currency: Currency) = Money((amount.toDouble() * currency.lowestDenomination).toULong(), currency)
 
 
         @JvmStatic
         @JvmSynthetic
-        @JsName("fromLong")
+        @JsName("_ignore_ofAmountLong")
         fun of(amount: Long, currency: Currency) = Money((amount.toDouble() * currency.lowestDenomination).toULong(), currency)
     }
 

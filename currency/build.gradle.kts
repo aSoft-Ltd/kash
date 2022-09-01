@@ -5,7 +5,7 @@ plugins {
     signing
 }
 
-val generate by tasks.creating(CodeGenerator::class) {
+val generate by tasks.creating(CurrencyGenerator::class) {
     outputDir = file("build/generated/currencies/kotlin")
 }
 
@@ -43,5 +43,5 @@ kotlin {
 
 aSoftOSSLibrary(
     version = asoft.versions.root.get(),
-    description = "A kotlin multiplatform library to deal with money and currencies"
+    description = "A kotlin multiplatform library to deal with currencies"
 )

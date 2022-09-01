@@ -15,7 +15,7 @@ class MoneyTest {
 
     @Test
     fun should_deserialize_correctly() {
-        val json = """{"amount":50000,"currency":"TZS"}"""
+        val json = """{"cents":50000,"currency":"TZS"}"""
         val money = Json.decodeFromString<Money>(json)
         expect(money).toBe(500.TZS)
         expect("TZS 500").toBe(money.toFormattedString())

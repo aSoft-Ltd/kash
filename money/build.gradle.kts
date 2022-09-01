@@ -5,8 +5,8 @@ plugins {
     signing
 }
 
-val generate by tasks.creating(CodeGenerator::class) {
-    outputDir = file("build/generated/currencies/kotlin")
+val generate by tasks.creating(MoneyBuildersGenerator::class) {
+    outputDir = file("build/generated/builders/kotlin")
 }
 
 kotlin {
@@ -28,8 +28,7 @@ kotlin {
         val commonMain by getting {
             kotlin.srcDir(generate.outputDir)
             dependencies {
-                api(kotlinx.serialization.core)
-                api(projects.formatterCore)
+                api(projects.kashCurrency)
             }
         }
         val commonTest by getting {
@@ -43,5 +42,5 @@ kotlin {
 
 aSoftOSSLibrary(
     version = asoft.versions.root.get(),
-    description = "A kotlin multiplatform library to deal with money and currencies"
+    description = "A kotlin multiplatform library to deal with money"
 )
