@@ -34,7 +34,7 @@ kotlin {
         }
         val commonTest by getting {
             dependencies {
-                implementation(asoft.expect.core)
+                implementation(projects.expectCore)
                 implementation(kotlinx.serialization.json)
             }
         }
