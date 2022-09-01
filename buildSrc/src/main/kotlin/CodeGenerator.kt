@@ -12,10 +12,10 @@ open class CodeGenerator : DefaultTask() {
     var packageName: String = "kash"
 
     @InputFile
-    var currenciesInput: File = project.file("src/commonMain/resources/currencies.json")
+    var currenciesInput: File = project.rootProject.file("json/currencies.json")
 
     @InputFile
-    var localSymbolsInput: File = project.file("src/commonMain/resources/symbols.json")
+    var localSymbolsInput: File = project.rootProject.file("json/symbols.json")
 
     @Input
     var className: String = "Currency"
@@ -54,7 +54,7 @@ open class CodeGenerator : DefaultTask() {
              * author of the generator: https://github.com/andylamax
              */
             @file:JsExport
-            @file:Suppress("unused","WRONG_EXPORTED_DECLARATION")
+            @file:Suppress("unused","WRONG_EXPORTED_DECLARATION", "SERIALIZER_TYPE_INCOMPATIBLE")
             
             package $packageName
             
@@ -69,11 +69,11 @@ open class CodeGenerator : DefaultTask() {
                 override fun toString() = name
                 companion object {
                     @JvmStatic
-                    val values by lazy { 
+                    val values : Array<$className> by lazy { 
                         ${currencies.joinToString(separator = ", ", prefix = "arrayOf(", postfix = ")") { it["cc"].toString() }}
                     }
                     @JvmStatic
-                    fun valueOf(currency: String) = values.first { it.name == currency }
+                    fun valueOf(currency: String) : $className = values.first { it.name == currency }
                 }            
         """.trimIndent()
         )
@@ -82,25 +82,26 @@ open class CodeGenerator : DefaultTask() {
         output.appendText("\n")
         for (entry in currencies) {
             val name = entry["name"]
+            output.appendText("\t@Serializable(with = CurrencySerializer::class)\n")
             output.appendText("\t/**$name*/\n")
             output.appendText("""${"\t"}object ${entry["cc"]} : $className("${entry["cc"]}","${symbol(entry["symbol"]!!)}","${symbol(entry["localSymbol"]!!)}","$name",${entry["lowestDenomination"]})""")
 //            output.appendText(if (currencies.last() == entry) ";" else ",")
             output.appendText("\n\n")
         }
-        output.appendText(listOf(/* "UInt", "ULong", */"Double").joinToString("\n") { type ->
-            """
-            |    @JsName("of${type}Value")
-            |    fun of(amount: $type) = Money((amount.toDouble() * lowestDenomination).toULong(), this)
-            """.trimMargin()
-        })
-        output.appendText("\n")
-        output.appendText(listOf("Int", "Long").joinToString("\n") { type ->
-            """
-            |    @JvmSynthetic
-            |    @JsName("of${type}Value")
-            |    fun of(amount: $type) = Money((amount.toULong() * lowestDenomination.toULong()), this)
-            """.trimMargin()
-        })
+//        output.appendText(listOf(/* "UInt", "ULong", */"Double").joinToString("\n") { type ->
+//            """
+//            |    @JsName("of${type}Value")
+//            |    fun of(amount: $type) = Money((amount.toDouble() * lowestDenomination).toULong(), this)
+//            """.trimMargin()
+//        })
+//        output.appendText("\n")
+//        output.appendText(listOf("Int", "Long").joinToString("\n") { type ->
+//            """
+//            |    @JvmSynthetic
+//            |    @JsName("of${type}Value")
+//            |    fun of(amount: $type) = Money((amount.toULong() * lowestDenomination.toULong()), this)
+//            """.trimMargin()
+//        })
         output.appendText("\n}")
 
         return currencies
@@ -168,8 +169,8 @@ open class CodeGenerator : DefaultTask() {
     @TaskAction
     fun execute() {
         val currencies = generateCurrencies()
-        generateKashUtils(currencies)
-        generateMoneyBuilder(currencies)
+//        generateKashUtils(currencies)
+//        generateMoneyBuilder(currencies)
     }
 
     private fun symbol(input: String): String {

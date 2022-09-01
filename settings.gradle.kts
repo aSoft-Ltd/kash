@@ -39,4 +39,4 @@ includeSubs("functions", "../functions", "core")
 includeSubs("expect", "../expect", "core")
 includeSubs("formatter", "../formatter", "core")
 
-includeSubs("kash", ".", "core")
+includeSubs("kash", ".", "currency", "money")
