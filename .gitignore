@@ -11,7 +11,7 @@ classes
 **/*.iml
 *.hprof
 **/*.hprof
-kurrency-core/src/commonMain/kotlin
+
 # Compiled class file
 *.class
 
