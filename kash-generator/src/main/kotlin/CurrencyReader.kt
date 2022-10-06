@@ -1,7 +1,7 @@
 import groovy.json.JsonSlurper
 import java.io.File
 
-class CurrencyReader(val currenciesInput: File, val localSymbolsInput: File) {
+class CurrencyReader {
 
     private fun parseJson(json: String): Map<String, String> {
         val slurper = JsonSlurper()
@@ -9,10 +9,8 @@ class CurrencyReader(val currenciesInput: File, val localSymbolsInput: File) {
     }
 
     fun getCurrencies(): List<Map<String, String>> {
-        if (!currenciesInput.exists()) throw Exception("input file ${currenciesInput.absolutePath} does not exist")
-
-        val currencyLines = currenciesInput.readLines()
-        val symbols = parseJson(localSymbolsInput.readText())
+        val currencyLines = ResourcesReader.readCurrencies().readLines()
+        val symbols = parseJson(ResourcesReader.readSymbols().readText())
 
         val currencies = currencyLines.subList(1, currencyLines.size - 1).map { json ->
             val map = parseJson(json)

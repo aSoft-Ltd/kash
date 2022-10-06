@@ -11,12 +11,6 @@ open class MoneyBuildersGenerator : DefaultTask() {
     @Input
     var packageName: String = "kash"
 
-    @InputFile
-    var currenciesInput: File = project.rootProject.file("json/currencies.json")
-
-    @InputFile
-    var localSymbolsInput: File = project.rootProject.file("json/symbols.json")
-
     @Input
     var className: String = "Currency"
 
@@ -92,7 +86,7 @@ open class MoneyBuildersGenerator : DefaultTask() {
     @TaskAction
     fun execute() {
         outputDirWithPackage.mkdirs()
-        val cr = CurrencyReader(currenciesInput, localSymbolsInput)
+        val cr = CurrencyReader()
         val currencies = cr.getCurrencies()
         generateKashUtils(currencies)
         generateMoneyBuilder(currencies)

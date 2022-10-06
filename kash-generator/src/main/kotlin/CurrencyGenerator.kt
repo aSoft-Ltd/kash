@@ -11,12 +11,6 @@ open class CurrencyGenerator : DefaultTask() {
     @Input
     var packageName: String = "kash"
 
-    @InputFile
-    var currenciesInput: File = project.rootProject.file("json/currencies.json")
-
-    @InputFile
-    var localSymbolsInput: File = project.rootProject.file("json/symbols.json")
-
     @Input
     var className: String = "Currency"
 
@@ -33,7 +27,7 @@ open class CurrencyGenerator : DefaultTask() {
     private fun generateCurrencies() {
         val output = File(outputDirWithPackage, "$className.kt")
         if (!output.exists()) output.createNewFile()
-        val cr = CurrencyReader(currenciesInput, localSymbolsInput)
+        val cr = CurrencyReader()
         val currencies = cr.getCurrencies()
 
         output.writeText(
