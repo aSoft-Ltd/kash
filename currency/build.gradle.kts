@@ -21,7 +21,7 @@ kotlin {
 
     targets.configureEach {
         compilations.all {
-            compileKotlinTask.dependsOn("generate")
+            compileKotlinTask.dependsOn(generate)
         }
     }
 
