@@ -105,4 +105,6 @@ data class Money(
 
     @JsName("toFormattedStringWith")
     fun toFormattedString(options: MoneyFormatterRawOptions): String = MoneyFormatter(options.toFormatterOptions()).format(this)
+
+    override fun toString() = toFormattedString(abbreviate = false)
 }
