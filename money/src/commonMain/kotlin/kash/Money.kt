@@ -27,7 +27,7 @@ data class Money(
     /** In the lowest denomination */
     @SerialName("cents") val centsAsLong: ULong,
     val currency: Currency
-) {
+) : Comparable<Money> {
 
     val centsAsInt by lazy { centsAsLong.toInt() }
 
@@ -79,6 +79,8 @@ data class Money(
 
     @JsName("ratio")
     operator fun div(other: Money) = MoneyRatio((centsAsLong.toDouble() / other.centsAsLong.toDouble()), currency, other.currency)
+
+    override fun compareTo(other: Money): Int = (this - other).amountAsInt
 
     fun toFormattedString(): String = toFormattedString(MoneyFormatterOptions())
 
