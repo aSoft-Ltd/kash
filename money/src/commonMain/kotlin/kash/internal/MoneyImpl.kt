@@ -5,6 +5,8 @@
 package kash.internal
 
 import formatter.Formatter
+import formatter.NumberFormatterRawOptions
+import formatter.toFormatterOptions
 import kash.Currency
 import kash.Money
 import kash.MoneyFormatter
@@ -15,6 +17,7 @@ import kash.MoneyFormatterRawOptions
 import kash.MoneyRatio
 import kash.exceptions.CurrencyMatchException
 import kash.toFormatterOptions
+import kash.toMoneyFormatterOptions
 import kotlinx.serialization.UseSerializers
 import kotlinx.serialization.builtins.LongAsStringSerializer
 import kotlin.js.JsExport
@@ -76,7 +79,7 @@ internal class MoneyImpl(centsAsLong: ULong, currency: Currency) : AbstractMonet
         thousandsSeparator
     ).format(this)
 
-    override fun toFormattedString(options: MoneyFormatterRawOptions): String = MoneyFormatter(options.toFormatterOptions()).format(this)
+    override fun toFormattedString(options: NumberFormatterRawOptions): String = MoneyFormatter(options.toFormatterOptions().toMoneyFormatterOptions()).format(this)
 
     override fun equals(other: Any?): Boolean = other is Money && other.centsAsLong == centsAsLong
 

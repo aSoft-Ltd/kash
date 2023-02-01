@@ -4,8 +4,10 @@
 package kash
 
 import formatter.Formatter
+import formatter.NumberFormatterRawOptions
 import kotlinx.serialization.SerialName
 import kotlin.js.JsExport
+import kotlin.js.JsName
 
 interface MonetaryValue {
     /** In the lowest denomination */
@@ -27,4 +29,7 @@ interface MonetaryValue {
     fun formatValue(formatter: Formatter<MonetaryValue>): String
 
     fun with(currency: Currency): Money
+
+    @JsName("toFormattedStringWith")
+    fun toFormattedString(options: NumberFormatterRawOptions): String
 }

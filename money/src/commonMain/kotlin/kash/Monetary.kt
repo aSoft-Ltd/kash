@@ -38,7 +38,4 @@ interface Monetary : MonetaryValue, Arithmetic<Monetary> {
         decimalSeparator: String = NumberFormatterOptions.DEFAULT_DECIMAL_SEPARATOR,
         thousandsSeparator: String = NumberFormatterOptions.DEFAULT_THOUSAND_SEPERATOR
     ): String
-
-    @JsName("toFormattedStringWith")
-    fun toFormattedString(options: NumberFormatterRawOptions): String
 }
