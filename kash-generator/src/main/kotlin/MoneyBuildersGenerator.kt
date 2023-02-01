@@ -6,18 +6,7 @@ import org.gradle.api.tasks.OutputDirectory
 import org.gradle.api.tasks.TaskAction
 import java.io.File
 
-open class MoneyBuildersGenerator : DefaultTask() {
-
-    @Input
-    var packageName: String = "kash"
-
-    @Input
-    var className: String = "Currency"
-
-    @OutputDirectory
-    var outputDir = project.file("src/commonMain/kotlin")
-
-    private val outputDirWithPackage get() = File(outputDir, packageName.replace(".", "/"))
+abstract class MoneyBuildersGenerator : AbstractGenerator() {
 
     private fun parseJson(json: String): Map<String, String> {
         val slurper = JsonSlurper()
@@ -36,7 +25,7 @@ open class MoneyBuildersGenerator : DefaultTask() {
             @file:JvmName("MoneyBuilders")
             @file:Suppress("unused")
             
-            package $packageName${"\n"}
+            package $pkg${"\n"}
             
             import kotlin.jvm.JvmName${"\n\n"}
         """.trimIndent()
@@ -47,7 +36,7 @@ open class MoneyBuildersGenerator : DefaultTask() {
                 output.appendText(
                     """
                     /**${curr["name"]}*/
-                    inline fun $name(amount: $type) = Money.of(amount, $className.$name)${"\n"}
+                    inline fun $name(amount: $type) = Money(amount, $clazz.$name)${"\n"}
                 """.trimIndent()
                 )
             }
@@ -66,7 +55,7 @@ open class MoneyBuildersGenerator : DefaultTask() {
             */
             @file:Suppress("unused")
             
-            package $packageName${"\n\n"}
+            package $pkg${"\n\n"}
         """.trimIndent()
         )
         for (curr in currencyNames) {
@@ -75,7 +64,7 @@ open class MoneyBuildersGenerator : DefaultTask() {
                 output.appendText(
                     """
                     /**${curr["name"]}*/
-                    inline val $type.$name get() = Money.of(this, $className.$name)${"\n"}
+                    inline val $type.$name get() = Money(this, $clazz.$name)${"\n"}
                 """.trimIndent()
                 )
             }

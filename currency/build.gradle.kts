@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.tasks.factory.dependsOn
+
 plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
@@ -6,8 +8,9 @@ plugins {
     signing
 }
 
-val generate by tasks.creating(CurrencyGenerator::class) {
-    outputDir = file("build/generated/currencies/kotlin")
+val dir = layout.buildDirectory.dir("generated/currencies/kotlin")
+val generate by tasks.registering(CurrencyGenerator::class) {
+    outputDir.set(dir)
 }
 
 kotlin {
@@ -21,13 +24,13 @@ kotlin {
 
     targets.configureEach {
         compilations.all {
-            compileKotlinTask.dependsOn(generate)
+            compileTaskProvider.dependsOn(generate)
         }
     }
 
     sourceSets {
         val commonMain by getting {
-            kotlin.srcDir(generate.outputDir)
+            kotlin.srcDir(dir)
             dependencies {
                 api(kotlinx.serialization.core)
                 api(projects.formatterCore)

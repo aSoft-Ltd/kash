@@ -1,5 +1,6 @@
 import expect.expect
 import kash.*
+import kash.serializers.MoneySerializer
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
@@ -10,13 +11,13 @@ class MoneyTest {
     fun should_equal() {
         val m = 45.TZS
         println(m)
-        println(Json.encodeToString(Money.serializer(), m))
+        println(Json.encodeToString(MoneySerializer, m))
     }
 
     @Test
     fun should_deserialize_correctly() {
         val json = """{"cents":50000,"currency":"TZS"}"""
-        val money = Json.decodeFromString<Money>(json)
+        val money = Json.decodeFromString(MoneySerializer, json)
         expect(money).toBe(500.TZS)
         expect("TZS 500").toBe(money.toFormattedString())
     }

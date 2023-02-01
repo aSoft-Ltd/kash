@@ -2,7 +2,6 @@
 
 package kash
 
-import formatter.NumberFormatterOptions
 import formatter.NumberFormatterRawOptions
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ABBREVIATE
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_ABBREVIATED

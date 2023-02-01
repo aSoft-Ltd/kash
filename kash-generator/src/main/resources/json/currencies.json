@@ -155,5 +155,6 @@
   {"cc":"YER","symbol":"YER","name":"Yemeni rial"},
   {"cc":"ZAR","symbol":"R","name":"South African rand"},
   {"cc":"ZMK","symbol":"ZK","name":"Zambian kwacha"},
-  {"cc":"ZWR","symbol":"Z$","name":"Zimbabwean dollar"}
+  {"cc":"ZWR","symbol":"Z$","name":"Zimbabwean dollar"},
+  {"cc":"UXX","symbol":"X","name":"Unknown pesa"}
 ]
