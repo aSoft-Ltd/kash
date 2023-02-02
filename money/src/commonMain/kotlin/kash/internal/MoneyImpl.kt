@@ -23,8 +23,7 @@ import kotlinx.serialization.builtins.LongAsStringSerializer
 import kotlin.js.JsExport
 
 @PublishedApi
-internal class MoneyImpl(centsAsLong: ULong, currency: Currency) : AbstractMonetaryValue(centsAsLong, currency), Money {
-    override val currency: Currency = currency
+internal class MoneyImpl(override val centsAsLong: ULong, override val currency: Currency) : AbstractMonetaryValue(centsAsLong, currency), Money {
 
     private fun currencyCheckFor(op: String, other: Money) {
         if (other.currency != currency) {

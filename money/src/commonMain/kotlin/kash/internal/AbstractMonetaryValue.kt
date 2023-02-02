@@ -5,7 +5,7 @@ import kash.Currency
 import kash.MonetaryValue
 
 internal abstract class AbstractMonetaryValue(
-    final override val centsAsLong: ULong,
+    centsAsLong: ULong,
     currency: Currency
 ) : MonetaryValue {
     override val centsAsInt = centsAsLong.toInt()

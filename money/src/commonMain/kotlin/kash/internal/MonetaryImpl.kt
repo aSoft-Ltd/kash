@@ -7,21 +7,9 @@ import formatter.NumberFormatterRawOptions
 import formatter.toFormatterOptions
 import kash.Currency
 import kash.Monetary
-import kash.Money
-import kash.MoneyFormatter
-import kash.MoneyFormatterOptions
-import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_ABBREVIATED
-import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_UNABBREVIATED
-import kash.MoneyFormatterRawOptions
-import kash.MoneyRatio
-import kash.exceptions.CurrencyMatchException
-import kash.toFormatterOptions
-import kotlinx.serialization.UseSerializers
-import kotlinx.serialization.builtins.LongAsStringSerializer
-import kotlin.js.JsExport
 
 @PublishedApi
-internal class MonetaryImpl(centsAsLong: ULong) : AbstractMonetaryValue(centsAsLong, Currency.UXX), Monetary {
+internal class MonetaryImpl(override val centsAsLong: ULong) : AbstractMonetaryValue(centsAsLong, Currency.UXX), Monetary {
 
     override operator fun plus(other: Monetary) = MonetaryImpl(centsAsLong + other.centsAsLong)
 
