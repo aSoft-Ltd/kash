@@ -37,5 +37,4 @@ data class MoneyFormatterOptions(
         @JvmField
         val DEFAULT_THOUSAND_SEPERATOR = ","
     }
-
 }

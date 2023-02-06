@@ -3,9 +3,7 @@
 
 package kash
 
-import formatter.Formatter
 import formatter.NumberFormatterOptions
-import formatter.NumberFormatterRawOptions
 import kash.serializers.MonetarySerializer
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
@@ -25,8 +23,6 @@ interface Monetary : MonetaryValue, Arithmetic<Monetary> {
 
     @JsName("timesNumber")
     operator fun minus(other: Double): Monetary
-
-    fun format(formatter: Formatter<Monetary>): String = formatter.format(this)
 
     @JsName("_ignore_toFormattedString")
     fun toFormattedString(

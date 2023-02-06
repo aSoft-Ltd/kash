@@ -1,15 +1,21 @@
 package kash
 
 import formatter.NumberFormatterOptions
+import kash.MoneyFormatterOptions.Companion.DEFAULT_ABBREVIATE
+import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMAL_SEPARATOR
+import kash.MoneyFormatterOptions.Companion.DEFAULT_ENFORCE_DECIMALS
+import kash.MoneyFormatterOptions.Companion.DEFAULT_POSTFIX
+import kash.MoneyFormatterOptions.Companion.DEFAULT_PREFIX
+import kash.MoneyFormatterOptions.Companion.DEFAULT_THOUSAND_SEPERATOR
 
 fun MoneyFormatter(
-    abbreviate: Boolean = NumberFormatterOptions.DEFAULT_ABBREVIATE,
-    prefix: String = NumberFormatterOptions.DEFAULT_PREFIX,
-    postfix: String = NumberFormatterOptions.DEFAULT_POSTFIX,
+    abbreviate: Boolean = DEFAULT_ABBREVIATE,
+    prefix: String = DEFAULT_PREFIX,
+    postfix: String = DEFAULT_POSTFIX,
     decimals: Int? = null,
-    enforceDecimals: Boolean = NumberFormatterOptions.DEFAULT_ENFORCE_DECIMALS,
-    decimalSeparator: String = NumberFormatterOptions.DEFAULT_DECIMAL_SEPARATOR,
-    thousandsSeparator: String = NumberFormatterOptions.DEFAULT_THOUSAND_SEPERATOR
+    enforceDecimals: Boolean = DEFAULT_ENFORCE_DECIMALS,
+    decimalSeparator: String = DEFAULT_DECIMAL_SEPARATOR,
+    thousandsSeparator: String = DEFAULT_THOUSAND_SEPERATOR
 ) = MoneyFormatter(
     MoneyFormatterOptions(
         abbreviate,

@@ -3,7 +3,7 @@
 
 package kash
 
-import formatter.Formatter
+import formatter.NumberFormatter
 import formatter.NumberFormatterRawOptions
 import kotlinx.serialization.SerialName
 import kotlin.js.JsExport
@@ -26,9 +26,9 @@ interface MonetaryValue {
 
     fun toFormattedString(): String
 
-    fun formatValue(formatter: Formatter<MonetaryValue>): String
-
     fun with(currency: Currency): Money
+
+    fun format(formatter: NumberFormatter): String
 
     @JsName("toFormattedStringWith")
     fun toFormattedString(options: NumberFormatterRawOptions): String

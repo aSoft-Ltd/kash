@@ -4,19 +4,18 @@
 
 package kash.internal
 
-import formatter.Formatter
+import formatter.NumberFormatter
 import formatter.NumberFormatterRawOptions
 import formatter.toFormatterOptions
 import kash.Currency
+import kash.Monetary
 import kash.Money
 import kash.MoneyFormatter
 import kash.MoneyFormatterOptions
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_ABBREVIATED
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_UNABBREVIATED
-import kash.MoneyFormatterRawOptions
 import kash.MoneyRatio
 import kash.exceptions.CurrencyMatchException
-import kash.toFormatterOptions
 import kash.toMoneyFormatterOptions
 import kotlinx.serialization.UseSerializers
 import kotlinx.serialization.builtins.LongAsStringSerializer
@@ -56,7 +55,7 @@ internal class MoneyImpl(override val centsAsLong: ULong, override val currency:
         return (this - other).centsAsInt
     }
 
-    override fun format(formatter: Formatter<Money>): String = formatter.format(this)
+    override fun format(formatter: MoneyFormatter): String = formatter.format(this)
 
     override fun toFormattedString(): String = toFormattedString(MoneyFormatterOptions())
 
@@ -85,4 +84,8 @@ internal class MoneyImpl(override val centsAsLong: ULong, override val currency:
     override fun hashCode(): Int = 31 + Currency.values.indexOf(currency) + centsAsInt
 
     override fun toString() = toFormattedString(abbreviate = false)
+
+    override fun format(formatter: NumberFormatter): String = format(MoneyFormatter(formatter))
+
+    override fun toMonetary(): Monetary = MonetaryImpl(centsAsLong)
 }

@@ -1,6 +1,6 @@
 package kash.internal
 
-import formatter.Formatter
+import formatter.NumberFormatter
 import kash.Currency
 import kash.MonetaryValue
 
@@ -17,8 +17,6 @@ internal abstract class AbstractMonetaryValue(
     override val amountAsInt = (centsAsLong.toInt() / currency.lowestDenomination)
 
     override val amountAsDouble = (centsAsLong.toDouble() / currency.lowestDenomination)
-
-    override fun formatValue(formatter: Formatter<MonetaryValue>) = formatter.format(this)
 
     override fun with(currency: Currency) = MoneyImpl(centsAsLong, currency)
 }

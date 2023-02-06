@@ -3,25 +3,30 @@
 
 package kash
 
-import formatter.Formatter
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ABBREVIATE
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMAL_SEPARATOR
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ENFORCE_DECIMALS
 import kash.MoneyFormatterOptions.Companion.DEFAULT_POSTFIX
 import kash.MoneyFormatterOptions.Companion.DEFAULT_PREFIX
 import kash.MoneyFormatterOptions.Companion.DEFAULT_THOUSAND_SEPERATOR
+import kash.serializers.MoneySerializer
+import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 import kotlin.js.JsName
 
+@Serializable(with = MoneySerializer::class)
 interface Money : MonetaryValue, Arithmetic<Money> {
     val currency: Currency
+
+    fun toMonetary(): Monetary
 
     @JsName("ratio")
     operator fun div(other: Money): MoneyRatio
 
     override fun compareTo(other: Money): Int
 
-    fun format(formatter: Formatter<Money>): String
+    @JsName("formatWithMoneyFormatter")
+    fun format(formatter: MoneyFormatter): String
 
     @JsName("_ignore_toFormattedString")
     fun toFormattedString(

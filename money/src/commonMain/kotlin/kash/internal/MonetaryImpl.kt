@@ -1,6 +1,5 @@
 package kash.internal
 
-import formatter.Formatter
 import formatter.NumberFormatter
 import formatter.NumberFormatterOptions
 import formatter.NumberFormatterRawOptions
@@ -33,8 +32,6 @@ internal class MonetaryImpl(override val centsAsLong: ULong) : AbstractMonetaryV
 
     override fun compareTo(other: Monetary): Int = (this - other).centsAsInt
 
-    override fun format(formatter: Formatter<Monetary>): String = formatter.format(this)
-
     override fun toFormattedString(): String = toFormattedString(NumberFormatterOptions())
 
     override fun toFormattedString(
@@ -46,6 +43,8 @@ internal class MonetaryImpl(override val centsAsLong: ULong) : AbstractMonetaryV
         decimalSeparator: String,
         thousandsSeparator: String
     ) = NumberFormatter(abbreviate, prefix, postfix, decimals, enforceDecimals, decimalSeparator, thousandsSeparator).format(amountAsDouble)
+
+    override fun format(formatter: NumberFormatter): String = formatter.format(amountAsDouble)
 
     override fun toFormattedString(options: NumberFormatterRawOptions): String = NumberFormatter(options.toFormatterOptions()).format(amountAsDouble)
 
