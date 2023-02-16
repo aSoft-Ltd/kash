@@ -25,7 +25,7 @@ inline fun Money(amount: Double, currency: Currency): Money = MonetaryImpl(
 
 @JsName("monetaryOf")
 @JvmName("of")
-inline fun Monetary(amount: Double): Monetary = MonetaryImpl(
+inline fun Monetary(amount: Double): Monetary = if (amount == 0.0) Zero else MonetaryImpl(
     centsAsLong = (amount * MONETARY_LOWEST_DENOMINATION).toULong(),
     currency = Currency.UXX
 )
@@ -42,7 +42,7 @@ inline fun Money(amount: Int, currency: Currency): Money = MonetaryImpl(
 )
 
 @JvmName("of")
-inline fun Monetary(amount: Int): Monetary = MonetaryImpl(
+inline fun Monetary(amount: Int): Monetary = if (amount == 0) Zero else MonetaryImpl(
     centsAsLong = (amount.toDouble() * MONETARY_LOWEST_DENOMINATION).toULong(),
     currency = Currency.UXX
 )
@@ -54,7 +54,7 @@ inline fun Money(amount: Long, currency: Currency): Money = MonetaryImpl(
 )
 
 @JvmName("of")
-inline fun Monetary(amount: Long): Monetary = MonetaryImpl(
+inline fun Monetary(amount: Long): Monetary = if (amount == 0L) Zero else MonetaryImpl(
     centsAsLong = (amount.toDouble() * MONETARY_LOWEST_DENOMINATION).toULong(),
     currency = Currency.UXX
 )
