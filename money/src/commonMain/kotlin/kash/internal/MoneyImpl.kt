@@ -1,28 +1,21 @@
-@file:JsExport
-@file:UseSerializers(LongAsStringSerializer::class)
-@file:Suppress("NON_EXPORTABLE_TYPE")
+@file:JsExport @file:UseSerializers(LongAsStringSerializer::class) @file:Suppress("NON_EXPORTABLE_TYPE")
 
 package kash.internal
 
 import formatter.NumberFormatter
 import formatter.NumberFormatterRawOptions
 import formatter.toFormatterOptions
-import kash.Currency
-import kash.Monetary
-import kash.Money
-import kash.MoneyFormatter
-import kash.MoneyFormatterOptions
+import kash.*
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_ABBREVIATED
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_UNABBREVIATED
-import kash.MoneyRatio
 import kash.exceptions.CurrencyMatchException
-import kash.toMoneyFormatterOptions
 import kotlinx.serialization.UseSerializers
 import kotlinx.serialization.builtins.LongAsStringSerializer
 import kotlin.js.JsExport
 
 @PublishedApi
-internal class MoneyImpl(override val centsAsLong: ULong, override val currency: Currency) : AbstractMonetaryValue(centsAsLong, currency), Money {
+internal class MoneyImpl(override val centsAsLong: ULong, override val currency: Currency) :
+    AbstractMonetaryValue(centsAsLong, currency), Money {
 
     private fun currencyCheckFor(op: String, other: Money) {
         if (other.currency != currency) {
@@ -30,14 +23,24 @@ internal class MoneyImpl(override val centsAsLong: ULong, override val currency:
         }
     }
 
-    override operator fun plus(other: Money): MoneyImpl {
-        currencyCheckFor("addition", other)
-        return MoneyImpl(centsAsLong + other.centsAsLong, currency)
+    override operator fun plus(other: Money): Money = when {
+        centsAsLong == 0uL && other.centsAsLong == 0uL -> Zero
+        centsAsLong == 0uL && other.centsAsLong != 0uL -> MoneyImpl(other.centsAsLong, other.currency)
+        centsAsLong != 0uL && other.centsAsLong == 0uL -> this
+        else -> {
+            currencyCheckFor("addition", other)
+            MoneyImpl(centsAsLong + other.centsAsLong, currency)
+        }
     }
 
-    override operator fun minus(other: Money): MoneyImpl {
-        currencyCheckFor("subtraction", other)
-        return MoneyImpl(centsAsLong - other.centsAsLong, currency)
+    override operator fun minus(other: Money) = when {
+        centsAsLong == 0uL && other.centsAsLong == 0uL -> Zero
+        centsAsLong == 0uL && other.centsAsLong != 0uL -> MoneyImpl(other.centsAsLong, other.currency)
+        centsAsLong != 0uL && other.centsAsLong == 0uL -> this
+        else -> {
+            currencyCheckFor("subtraction", other)
+            MoneyImpl(centsAsLong + other.centsAsLong, currency)
+        }
     }
 
     override operator fun times(quantity: Double) = MoneyImpl((centsAsDouble * quantity).toULong(), currency)
@@ -48,11 +51,17 @@ internal class MoneyImpl(override val centsAsLong: ULong, override val currency:
 
     override operator fun div(quantity: Number) = div(quantity.toDouble())
 
-    override operator fun div(other: Money) = MoneyRatio((centsAsDouble / other.centsAsDouble), currency, other.currency)
+    override operator fun div(other: Money) =
+        MoneyRatio((centsAsDouble / other.centsAsDouble), currency, other.currency)
 
-    override fun compareTo(other: Money): Int {
-        currencyCheckFor("comparison", other)
-        return (this - other).centsAsInt
+    override fun compareTo(other: Money): Int = when {
+        centsAsLong == 0uL && other.centsAsLong == 0uL -> 0
+        centsAsLong == 0uL && other.centsAsLong != 0uL -> -centsAsInt
+        centsAsLong != 0uL && other.centsAsLong == 0uL -> centsAsInt
+        else -> {
+            currencyCheckFor("comparison", other)
+            centsAsInt - other.centsAsInt
+        }
     }
 
     override fun format(formatter: MoneyFormatter): String = formatter.format(this)
@@ -77,7 +86,8 @@ internal class MoneyImpl(override val centsAsLong: ULong, override val currency:
         thousandsSeparator
     ).format(this)
 
-    override fun toFormattedString(options: NumberFormatterRawOptions): String = MoneyFormatter(options.toFormatterOptions().toMoneyFormatterOptions()).format(this)
+    override fun toFormattedString(options: NumberFormatterRawOptions): String =
+        MoneyFormatter(options.toFormatterOptions().toMoneyFormatterOptions()).format(this)
 
     override fun equals(other: Any?): Boolean = other is Money && other.centsAsLong == centsAsLong
 
