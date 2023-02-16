@@ -3,35 +3,23 @@
 
 package kash
 
-import formatter.NumberFormatterOptions
 import kash.serializers.MonetarySerializer
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 import kotlin.js.JsName
 
 @Serializable(with = MonetarySerializer::class)
-interface Monetary : MonetaryValue, Arithmetic<Monetary> {
+interface Monetary : Money {
 
     @JsName("_ignore_plusNumber")
-    operator fun plus(other: Number): Monetary
+    operator fun plus(other: Number): Money
 
     @JsName("plusNumber")
-    operator fun plus(other: Double): Monetary
+    operator fun plus(other: Double): Money
 
     @JsName("_ignore_minusNumber")
-    operator fun minus(other: Number): Monetary
+    operator fun minus(other: Number): Money
 
     @JsName("timesNumber")
-    operator fun minus(other: Double): Monetary
-
-    @JsName("_ignore_toFormattedString")
-    fun toFormattedString(
-        abbreviate: Boolean = NumberFormatterOptions.DEFAULT_ABBREVIATE,
-        prefix: String = NumberFormatterOptions.DEFAULT_PREFIX,
-        postfix: String = NumberFormatterOptions.DEFAULT_POSTFIX,
-        decimals: Int = NumberFormatterOptions.DEFAULT_DECIMALS_ABBREVIATED,
-        enforceDecimals: Boolean = NumberFormatterOptions.DEFAULT_ENFORCE_DECIMALS,
-        decimalSeparator: String = NumberFormatterOptions.DEFAULT_DECIMAL_SEPARATOR,
-        thousandsSeparator: String = NumberFormatterOptions.DEFAULT_THOUSAND_SEPERATOR
-    ): String
+    operator fun minus(other: Double): Money
 }

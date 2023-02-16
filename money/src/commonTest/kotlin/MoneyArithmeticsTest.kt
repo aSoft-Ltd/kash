@@ -20,4 +20,10 @@ class MoneyArithmeticsTest {
         val cash = listOf(1000.TZS, 2000.TZS, 3000.TZS)
         expect(cash.sum()).toBe(6000.TZS)
     }
+
+    @Test
+    fun should_be_able_to_get_total_of_zeros() {
+        val cash = List(3) { Zero }
+        expect(cash.sum()).toBe(Zero)
+    }
 }
