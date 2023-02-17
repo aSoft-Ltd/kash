@@ -18,7 +18,7 @@ import kotlin.js.JsExport
 import kotlin.js.JsName
 
 @Serializable(with = MoneySerializer::class)
-interface Money : Comparable<Money> {
+interface Money : Pretty, Comparable<Money> {
     //cents
     /** In the lowest denomination */
     @SerialName("cents")
@@ -41,28 +41,6 @@ interface Money : Comparable<Money> {
     fun with(currency: Currency): Money
 
     fun toMonetary(): Monetary
-
-    // formatters
-    fun toFormattedString(): String
-
-    fun format(formatter: NumberFormatter): String
-
-    @JsName("toFormattedStringWith")
-    fun toFormattedString(options: NumberFormatterRawOptions): String
-
-    @JsName("formatWithMoneyFormatter")
-    fun format(formatter: MoneyFormatter): String
-
-    @JsName("_ignore_toFormattedString")
-    fun toFormattedString(
-        abbreviate: Boolean = DEFAULT_ABBREVIATE,
-        prefix: String = DEFAULT_PREFIX,
-        postfix: String = DEFAULT_POSTFIX,
-        decimals: Int? = null,
-        enforceDecimals: Boolean = DEFAULT_ENFORCE_DECIMALS,
-        decimalSeparator: String = DEFAULT_DECIMAL_SEPARATOR,
-        thousandsSeparator: String = DEFAULT_THOUSAND_SEPERATOR
-    ): String
 
     // arithmetics
     operator fun plus(other: Money): Money
