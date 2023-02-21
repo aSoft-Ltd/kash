@@ -57,7 +57,7 @@ internal data class MonetaryImpl(
         centsAsLong != 0uL && other.centsAsLong == 0uL -> this
         else -> {
             currencyCheckFor("subtraction", other)
-            MonetaryImpl(centsAsLong + other.centsAsLong, currency)
+            MonetaryImpl(centsAsLong - other.centsAsLong, currency)
         }
     }
 
