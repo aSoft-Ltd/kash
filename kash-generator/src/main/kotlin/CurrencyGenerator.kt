@@ -43,10 +43,10 @@ abstract class CurrencyGenerator : AbstractGenerator() {
                     fun valueOf(currency: String) : $clazz = values.first { it.name == currency }
                     
                     @JvmStatic
-                    fun valueOfOrNull(currency: String) : $clazz? = values.firstOrNull { it.name == currency }
+                    fun valueOfOrNull(currency: String?) : $clazz? = values.firstOrNull { it.name == currency }
                     
                     @JvmStatic
-                    fun valueOfOrDefault(currency: String, default: $clazz) : $clazz = values.firstOrNull { it.name == currency } ?: default
+                    fun valueOfOrDefault(currency: String?, default: $clazz) : $clazz = values.firstOrNull { it.name == currency } ?: default
                 }            
         """.trimIndent()
         )
