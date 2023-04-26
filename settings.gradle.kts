@@ -39,4 +39,4 @@ includeBuild("./currency-generator")
 includeSubs("kommander", "../kommander", "core")
 includeSubs("liquid", "../liquid", "number")
 
-includeSubs("kash", ".", "currency")
+includeSubs("kash", ".", "currency", "money")

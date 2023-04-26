@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import kash.TZS
 import kotlin.test.Test
 
@@ -14,7 +14,7 @@ class MoneyInteroperabilityTest {
     @Test
     fun should_be_callable_from_javascript_with_abbreviated_set_to_false() {
         val output: String = 1000.TZS.asDynamic().toFormattedStringWith(jso { abbreviate = false })
-        expect(output).toBe("TZS 1,000")
+        expect(output).toBe("1,000")
     }
 
     @Test

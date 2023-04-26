@@ -4,7 +4,7 @@ plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
     id("tz.co.asoft.library")
-    id("kash-generator")
+    id("currency-generator")
 }
 
 description = "A kotlin multiplatform library to deal with currencies"
