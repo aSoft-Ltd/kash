@@ -9,7 +9,7 @@ pluginManagement {
 
     dependencyResolutionManagement {
         versionCatalogs {
-            file("gradle/versions").listFiles().map {
+            file("../versions/gradle/versions").listFiles().map {
                 it.nameWithoutExtension to it.absolutePath
             }.forEach { (name, path) ->
                 create(name) { from(files(path)) }
@@ -30,14 +30,13 @@ fun includeSubs(base: String, path: String = base, vararg subs: String) {
     }
 }
 
-val tmp = 1
+rootProject.name = "kash"
 
-rootProject.name = "asoft"
-
-includeBuild("./kash-generator")
+includeBuild("../able")
+includeBuild("./currency-generator")
 // dependencies
-includeSubs("functions", "../functions", "core")
-includeSubs("expect", "../expect", "core")
-includeSubs("formatter", "../formatter", "core")
 
-includeSubs("kash", ".", "currency", "money")
+includeSubs("kommander", "../kommander", "core")
+includeSubs("liquid", "../liquid", "number")
+
+includeSubs("kash", ".", "currency")

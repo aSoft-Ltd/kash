@@ -5,8 +5,9 @@ plugins {
     kotlin("plugin.serialization")
     id("tz.co.asoft.library")
     id("kash-generator")
-    signing
 }
+
+description = "A kotlin multiplatform library to deal with currencies"
 
 val dir = layout.buildDirectory.dir("generated/currencies/kotlin")
 val generate by tasks.registering(CurrencyGenerator::class) {
@@ -14,13 +15,13 @@ val generate by tasks.registering(CurrencyGenerator::class) {
 }
 
 kotlin {
-    jvm {
-        library();
-        withJava();
-    }
-    js(IR) { library() }
-
-    linuxTargets(true)
+    jvm { library() }
+    if (Targeting.JS) js(IR) { library() }
+//    if (Targeting.WASM) wasm { library() }
+    if (Targeting.OSX) osxTargets() else listOf()
+//    if (Targeting.NDK) ndkTargets() else listOf()
+    if (Targeting.LINUX) linuxTargets() else listOf()
+    if (Targeting.MINGW) mingwTargets() else listOf()
 
     targets.configureEach {
         compilations.all {
@@ -33,19 +34,14 @@ kotlin {
             kotlin.srcDir(dir)
             dependencies {
                 api(kotlinx.serialization.core)
-                api(projects.formatterCore)
+                api(projects.liquidNumber)
             }
         }
         val commonTest by getting {
             dependencies {
-                implementation(projects.expectCore)
+                implementation(projects.kommanderCore)
                 implementation(kotlinx.serialization.json)
             }
         }
     }
 }
-
-aSoftOSSLibrary(
-    version = asoft.versions.root.get(),
-    description = "A kotlin multiplatform library to deal with currencies"
-)
