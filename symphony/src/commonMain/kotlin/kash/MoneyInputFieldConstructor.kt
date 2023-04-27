@@ -1,15 +1,14 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package presenters
+package kash
 
-import kash.Currency
-import kash.Money
-import kash.MoneyFormatter
-import presenters.internal.DEFAULT_FORMATTER
-import presenters.internal.MoneyInputFieldImpl
+import kash.internal.DEFAULT_FORMATTER
+import kash.internal.MoneyInputFieldImpl
+import symphony.Fields
+import symphony.Label
+import symphony.getOrCreate
 import kotlin.reflect.KProperty
 
-@Deprecated("use kash instead")
 inline fun MoneyInputField(
     name: String,
     isRequired: Boolean = false,
@@ -40,7 +39,6 @@ inline fun MoneyInputField(
     validator = validator,
 )
 
-@Deprecated("use kash instead")
 inline fun Fields.money(
     name: String,
     isRequired: Boolean = false,
@@ -56,10 +54,23 @@ inline fun Fields.money(
     stepAmount: Double? = null,
     noinline validator: ((Money?) -> Unit)? = null
 ): MoneyInputField = getOrCreate(name) {
-    MoneyInputField(name, isRequired, label, hint, value, currency, formatter, selectCurrency, isReadonly, maxAmount, minAmount, stepAmount, validator)
+    MoneyInputField(
+        name,
+        isRequired,
+        label,
+        hint,
+        value,
+        currency,
+        formatter,
+        selectCurrency,
+        isReadonly,
+        maxAmount,
+        minAmount,
+        stepAmount,
+        validator
+    )
 }
 
-@Deprecated("use kash instead")
 inline fun Fields.money(
     name: KProperty<Money?>,
     isRequired: Boolean = false,
@@ -74,4 +85,18 @@ inline fun Fields.money(
     minAmount: Double? = null,
     stepAmount: Double? = null,
     noinline validator: ((Money?) -> Unit)? = null
-) = money(name.name, isRequired, label, hint, value, currency, formatter, selectCurrency, isReadonly, maxAmount, minAmount, stepAmount, validator)
+) = money(
+    name.name,
+    isRequired,
+    label,
+    hint,
+    value,
+    currency,
+    formatter,
+    selectCurrency,
+    isReadonly,
+    maxAmount,
+    minAmount,
+    stepAmount,
+    validator
+)

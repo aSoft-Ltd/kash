@@ -1,13 +1,12 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package presenters.changes
+package kash.changes
 
 import presenters.numerics.Percentage
 import kotlin.js.JsExport
 import kotlin.jvm.JvmField
 
-@Deprecated("use kash instead")
 sealed class ChangeRemark<out T> {
     abstract val feeling: ChangeFeeling
 

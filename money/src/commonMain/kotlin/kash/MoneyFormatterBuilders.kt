@@ -1,6 +1,6 @@
 package kash
 
-import formatter.NumberFormatterOptions
+import liquid.NumberFormatterOptions
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ABBREVIATE
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMAL_SEPARATOR
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ENFORCE_DECIMALS

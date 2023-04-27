@@ -1,8 +1,7 @@
-package presenters.changes
+package kash.changes
 
 import kash.Money
 
-@Deprecated("use kash instead")
 fun moneyChangeBoxOf(
     title: String,
     previous: Money,

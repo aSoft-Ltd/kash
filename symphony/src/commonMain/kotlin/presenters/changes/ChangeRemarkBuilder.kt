@@ -6,6 +6,7 @@ package presenters.changes
 import presenters.numerics.Percentage
 import kotlin.js.JsExport
 
+@Deprecated("use kash instead")
 fun changeRemarkOf(
     previous: Number,
     current: Number,

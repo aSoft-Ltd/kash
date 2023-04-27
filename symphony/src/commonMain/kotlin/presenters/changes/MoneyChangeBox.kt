@@ -7,6 +7,7 @@ import kash.Money
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 
+@Deprecated("use kash instead")
 @Serializable
 data class MoneyChangeBox(
     override val title: String,

@@ -1,20 +1,20 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package presenters.changes
+package kash.changes
 
+import kash.Money
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 
-@Deprecated("use kash instead")
 @Serializable
-data class GenericChangeBox<out T>(
+data class MoneyChangeBox(
     override val title: String,
-    override val previous: T,
-    override val current: T,
+    override val previous: Money,
+    override val current: Money,
     override val details: String,
     override val feeling: ChangeFeeling,
     override val priority: Int = -1,
-) : ChangeBox<T>() {
-    override val change: ChangeRemark<T> get() = ChangeRemark.Indeterminate
+) : ChangeBox<Money>() {
+    override val change: ChangeRemark<Money> by lazy { changeRemarkOf(previous, current, feeling) }
 }

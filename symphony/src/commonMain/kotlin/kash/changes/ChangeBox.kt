@@ -1,12 +1,11 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package presenters.changes
+package kash.changes
 
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 
-@Deprecated("use kash instead")
 @Serializable
 sealed class ChangeBox<out D> {
     abstract val title: String

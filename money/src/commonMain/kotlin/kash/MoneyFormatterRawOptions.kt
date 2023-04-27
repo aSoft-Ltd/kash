@@ -2,7 +2,7 @@
 
 package kash
 
-import formatter.NumberFormatterRawOptions
+import liquid.NumberFormatterRawOptions
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ABBREVIATE
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMALS_ABBREVIATED
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMAL_SEPARATOR

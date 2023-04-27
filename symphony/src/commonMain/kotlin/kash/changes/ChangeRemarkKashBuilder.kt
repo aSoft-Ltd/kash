@@ -1,17 +1,15 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package presenters.changes
+package kash.changes
 
 import kash.Money
 import presenters.numerics.Percentage
 import kotlin.js.JsExport
 import kotlin.js.JsName
 
-@Deprecated("use kash instead")
 private const val CHANGE_MONEY_REMARK_OF = "changeMoneyRemarkOf"
 
-@Deprecated("use kash instead")
 @JsName(CHANGE_MONEY_REMARK_OF)
 fun changeRemarkOf(
     previous: Money,

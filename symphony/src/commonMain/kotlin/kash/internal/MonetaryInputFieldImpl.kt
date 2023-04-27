@@ -1,20 +1,20 @@
-package presenters.internal
+package kash.internal
 
-import formatter.NumberFormatter
+import liquid.NumberFormatter
 import kash.Monetary
+import kash.MonetaryInputField
 import kash.serializers.MonetarySerializer
 import kotlinx.serialization.KSerializer
-import presenters.Formatter
-import presenters.Label
-import presenters.MonetaryInputField
-import presenters.internal.utils.DataTransformer
-import presenters.internal.utils.Typer
-import presenters.internal.validators.ClippingValidator
-import presenters.internal.validators.CompoundValidator
-import presenters.internal.validators.LambdaValidator
-import presenters.internal.validators.RequirementValidator
+import symphony.Formatter
+import symphony.Label
+import symphony.internal.TransformedDataField
+import symphony.internal.utils.DataTransformer
+import symphony.internal.utils.Typer
+import symphony.internal.validators.ClippingValidator
+import symphony.internal.validators.CompoundValidator
+import symphony.internal.validators.LambdaValidator
+import symphony.internal.validators.RequirementValidator
 
-@Deprecated("use kash instead")
 @PublishedApi
 internal class MonetaryInputFieldImpl(
     override val name: String,

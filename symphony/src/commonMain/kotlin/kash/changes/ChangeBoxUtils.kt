@@ -1,8 +1,7 @@
-package presenters.changes
+package kash.changes
 
 import kotlin.jvm.JvmName
 
-@Deprecated("use kash instead")
 @JvmName("toString")
 fun <D> ChangeBox<D>?.toString() = when (this) {
     null -> ""

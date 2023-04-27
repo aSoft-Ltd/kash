@@ -1,4 +1,4 @@
-package presenters.internal
+package kash.internal
 
 import kash.Currency
 import kash.CurrencySerializer
@@ -6,24 +6,25 @@ import kash.Money
 import kash.Monetary
 import kash.MoneyFormatter
 import kash.serializers.MoneySerializer
+import kash.MonetaryInputField
+import kash.MoneyInputField
 import kollections.toIList
 import kotlinx.serialization.KSerializer
-import live.watch
-import presenters.Label
-import presenters.MonetaryInputField
-import presenters.MoneyInputField
-import presenters.Option
-import presenters.SingleChoiceInputField
-import presenters.internal.utils.DataTransformer
-import presenters.internal.utils.Typer
-import presenters.internal.validators.ClippingValidator
-import presenters.internal.validators.CompoundValidator
-import presenters.internal.validators.LambdaValidator
-import presenters.internal.validators.RequirementValidator
-import presenters.validation.Invalid
-import presenters.validation.ValidationResult
+import cinematic.watch
+import symphony.Label
+import symphony.Option
+import symphony.SingleChoiceInputField
+import symphony.internal.FormattedData
+import symphony.internal.TransformedDataField
+import symphony.internal.utils.DataTransformer
+import symphony.internal.utils.Typer
+import symphony.internal.validators.ClippingValidator
+import symphony.internal.validators.CompoundValidator
+import symphony.internal.validators.LambdaValidator
+import symphony.internal.validators.RequirementValidator
+import symphony.validation.Invalid
+import symphony.validation.ValidationResult
 
-@Deprecated("use kash instead")
 @PublishedApi
 internal class MoneyInputFieldImpl(
     override val name: String,
@@ -63,7 +64,7 @@ internal class MoneyInputFieldImpl(
         hint = hint,
         value = value?.toMonetary(),
         isReadonly = isReadonly,
-        formatter = null,
+        formatter = formatter,
         maxAmount = maxAmount?.let { Monetary(it) },
         minAmount = minAmount?.let { Monetary(it) },
         stepAmount = stepAmount,

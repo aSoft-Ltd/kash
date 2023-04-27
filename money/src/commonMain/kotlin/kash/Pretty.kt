@@ -3,8 +3,8 @@
 
 package kash
 
-import formatter.NumberFormatter
-import formatter.NumberFormatterRawOptions
+import liquid.NumberFormatter
+import liquid.NumberFormatterRawOptions
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ABBREVIATE
 import kash.MoneyFormatterOptions.Companion.DEFAULT_DECIMAL_SEPARATOR
 import kash.MoneyFormatterOptions.Companion.DEFAULT_ENFORCE_DECIMALS

@@ -1,9 +1,7 @@
 @file:JsExport
 
-package presenters
+package kash
 
-import kash.Monetary
 import kotlin.js.JsExport
 
-@Deprecated("use kash instead")
 interface MonetaryInputField : MonetaryValueInputField<Monetary>

@@ -1,13 +1,12 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package presenters.numerics
+package kash.numerics
 
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
 import kotlin.math.roundToInt
 
-@Deprecated("use kash instead")
 @Serializable
 data class Ratio(
     val value: Double

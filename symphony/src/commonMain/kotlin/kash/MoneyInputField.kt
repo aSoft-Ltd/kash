@@ -1,14 +1,12 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package presenters
+package kash
 
-import kash.Currency
-import kash.Money
+import symphony.SingleChoiceInputField
 import kotlin.js.JsExport
 import kotlin.js.JsName
 
-@Deprecated("use kash instead")
 interface MoneyInputField : MonetaryValueInputField<Money> {
     val currency: SingleChoiceInputField<Currency>
     val amount: MonetaryInputField

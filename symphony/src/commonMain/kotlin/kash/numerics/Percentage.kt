@@ -1,7 +1,7 @@
 @file:JsExport
 @file:Suppress("NON_EXPORTABLE_TYPE")
 
-package presenters.numerics
+package kash.numerics
 
 import kotlinx.serialization.Serializable
 import kotlin.js.JsExport
@@ -10,7 +10,6 @@ import kotlin.jvm.JvmField
 import kotlin.jvm.JvmStatic
 import kotlin.math.roundToInt
 
-@Deprecated("use kash instead")
 @Serializable
 data class Percentage(
     val asDouble: Double

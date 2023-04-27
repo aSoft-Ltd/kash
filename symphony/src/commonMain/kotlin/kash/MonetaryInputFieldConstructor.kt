@@ -1,22 +1,22 @@
 @file:Suppress("NOTHING_TO_INLINE")
 
-package presenters
+package kash
 
-import formatter.NumberFormatter
-import kash.Monetary
-import kash.MoneyFormatter
-import presenters.internal.DEFAULT_FORMATTER
-import presenters.internal.MonetaryInputFieldImpl
+import liquid.NumberFormatter
+import symphony.Label
+import symphony.Fields
+import symphony.getOrCreate
+import kash.internal.DEFAULT_FORMATTER
+import kash.internal.MonetaryInputFieldImpl
 import kotlin.reflect.KProperty
 
-@Deprecated("use kash instead")
 inline fun MonetaryInputField(
     name: String,
     isRequired: Boolean = false,
     label: String = name,
     hint: String = label,
     value: Monetary? = null,
-    formatter: NumberFormatter? = null,
+    formatter: NumberFormatter? = DEFAULT_FORMATTER,
     isReadonly: Boolean = false,
     maxAmount: Monetary? = null,
     minAmount: Monetary? = null,
@@ -36,14 +36,13 @@ inline fun MonetaryInputField(
     validator = validator,
 )
 
-@Deprecated("use kash instead")
 inline fun Fields.monetary(
     name: String,
     isRequired: Boolean = false,
     label: String = name,
     hint: String = label,
     value: Monetary? = null,
-    formatter: NumberFormatter? = null,
+    formatter: NumberFormatter? = DEFAULT_FORMATTER,
     isReadonly: Boolean = false,
     maxAmount: Monetary? = null,
     minAmount: Monetary? = null,
@@ -53,14 +52,13 @@ inline fun Fields.monetary(
     MonetaryInputField(name, isRequired, label, hint, value, formatter, isReadonly, maxAmount, minAmount, stepAmount, validator)
 }
 
-@Deprecated("use kash instead")
 inline fun Fields.monetary(
     name: KProperty<Monetary?>,
     isRequired: Boolean = false,
     label: String = name.name,
     hint: String = label,
     value: Monetary? = null,
-    formatter: NumberFormatter? = null,
+    formatter: NumberFormatter? = DEFAULT_FORMATTER,
     isReadonly: Boolean = false,
     maxAmount: Monetary? = null,
     minAmount: Monetary? = null,
