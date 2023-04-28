@@ -3,6 +3,7 @@ package kash
 import kommander.expect
 import kommander.toBe
 import symphony.validation.Valid
+import kotlin.test.Ignore
 import kotlin.test.Test
 
 class MoneyInputFieldFormatterTest {

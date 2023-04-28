@@ -101,7 +101,7 @@ internal class MoneyInputFieldImpl(
         ).forEach { res ->
             if (res is Invalid) return res
         }
-        return super.validate(value)
+        return cv.validate(value)
     }
 
 

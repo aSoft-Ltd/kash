@@ -1,11 +1,15 @@
+import expect.JsIgnore
 import expect.expect
 import expect.toBe
 import kash.Currency
 import kash.TZS
+import kommander.IgnoreJs
 import presenters.MoneyInputField
 import presenters.validation.Valid
+import kotlin.test.Ignore
 import kotlin.test.Test
 
+@Ignore
 class MoneyInputFieldFormatterTest {
 
     @Test
