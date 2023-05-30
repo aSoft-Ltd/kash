@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import kash.GBP
 import kash.MXN
 import kash.Template

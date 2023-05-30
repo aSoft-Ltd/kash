@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import kash.*
 import kash.serializers.MoneySerializer
 import kotlinx.serialization.decodeFromString

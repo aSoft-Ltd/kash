@@ -31,7 +31,7 @@ abstract class CurrencyGenerator : AbstractGenerator() {
             import kotlin.js.JsExport
             import kotlinx.serialization.Serializable
             
-            @Serializable(with = CurrencySerializer::class)
+            @Serializable(with = ISO3CurrencySerializer::class)
             sealed class $clazz(val name: String, val globalSymbol: String, val localSymbol: String, val details: String,val lowestDenomination: Short) {
                 override fun toString() = name
                 companion object {
@@ -55,7 +55,7 @@ abstract class CurrencyGenerator : AbstractGenerator() {
         output.appendText("\n")
         for (entry in currencies) {
             val name = entry["name"]
-            output.appendText("\n\t@Serializable(with = CurrencySerializer::class)\n")
+            output.appendText("\n\t@Serializable(with = ISO3CurrencySerializer::class)\n")
             output.appendText("\t/**$name*/\n")
             output.appendText("""${"\t"}object ${entry["cc"]} : $clazz("${entry["cc"]}","${symbol(entry["symbol"]!!)}","${symbol(entry["localSymbol"]!!)}","$name",${entry["lowestDenomination"]})""")
             output.appendText("\n")

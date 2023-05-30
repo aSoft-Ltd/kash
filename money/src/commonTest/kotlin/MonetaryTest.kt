@@ -1,4 +1,4 @@
-import expect.expect
+import kommander.expect
 import kash.*
 import kash.serializers.MonetarySerializer
 import kotlinx.serialization.json.Json

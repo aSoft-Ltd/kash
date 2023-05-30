@@ -3,6 +3,7 @@
 package kash.serializers
 
 import kash.Currency
+import kash.LooseCurrencySerializer
 import kash.Money
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.Serializable
@@ -26,7 +27,11 @@ object MoneySerializer : KSerializer<Money> {
     }
 
     @Serializable
-    private class Pesa(val cents: ULong, val currency: Currency)
+    private class Pesa(
+        val cents: ULong,
+        @Serializable(with = LooseCurrencySerializer::class)
+        val currency: Currency
+    )
 
     private inline fun Money.toPesa() = Pesa(centsAsLong, currency)
     private inline fun Pesa.toMoney() = Money(cents, currency)
