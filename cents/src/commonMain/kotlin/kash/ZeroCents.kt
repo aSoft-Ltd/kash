@@ -12,6 +12,8 @@ object ZeroCents : Cents {
         throw RuntimeException("This operation will lead to negative cents")
     }
 
+    override fun compareTo(other: Cents): Int = asULong.compareTo(other.asULong)
+
     override fun times(other: Double): Cents = ZeroCents
 
     override fun times(other: Int): Cents = ZeroCents

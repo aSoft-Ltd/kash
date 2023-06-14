@@ -18,4 +18,6 @@ internal data class CentsULongImpl(override val asULong: ULong) : Cents {
     override fun div(other: Double): Cents = CentsULongImpl((asULong.toDouble() / other).toULong())
 
     override fun div(other: Int): Cents = CentsULongImpl((asULong / other.toULong()))
+
+    override fun compareTo(other: Cents): Int = asULong.compareTo(other.asULong)
 }
