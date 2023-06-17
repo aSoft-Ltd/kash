@@ -14,7 +14,7 @@ data class MoneyFormatterOptions(
 
     companion object {
         @JvmField
-        val DEFAULT_ABBREVIATE = true
+        val DEFAULT_ABBREVIATE = false
 
         @JvmField
         val DEFAULT_PREFIX = "${Template.CURRENCY_GLOBAL_SYMBOL} "
