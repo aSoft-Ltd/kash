@@ -15,7 +15,7 @@ data class MoneyPresenter(
     val amount: Amount by lazy { cents / 100 }
 
     @Transient
-    val money : Monetary = MonetaryImpl(cents.asULong, currency)
+    val money: Monetary = MonetaryImpl(cents.asULong, currency)
 
     fun toFormattedString(): String = money.format(formatter)
 }
