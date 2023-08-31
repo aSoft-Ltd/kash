@@ -33,8 +33,8 @@ kotlin {
         val commonMain by getting {
             kotlin.srcDir(dir)
             dependencies {
-                api(libs.kash.cents)
-                api(libs.kash.currency)
+                api(projects.kashCents)
+                api(projects.kashCurrency)
             }
         }
         val commonTest by getting {
