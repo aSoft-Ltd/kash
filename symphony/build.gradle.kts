@@ -19,7 +19,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 // api(projects.symphonyInputsCore)
-                api(projects.kashMoney)
+                api(libs.kash.money)
             }
         }
 

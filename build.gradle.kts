@@ -9,14 +9,16 @@ import com.vanniktech.maven.publish.SonatypeHost
     alias(kotlinz.plugins.dokka)
 }
 
+val v = libs.versions.asoft.get()
+
 repositories {
-    publicRepos()
+	publicRepos()
 }
 
-val v = asoft.versions.root.get()
-
-group = "tz.co.asoft"
-version = v
+allprojects {
+    group = "tz.co.asoft"
+    version = v
+}
 
 tasks.dokkaHtmlMultiModule {
     moduleName.set("Kash")
